@@ -19,7 +19,7 @@ This application takes an image of the leaf or crop as input and shows the resul
 > **Crop Ai** has been selected at [GirlScript Summer of Code 2020](https://www.gssoc.tech/)!
 
 <p align="center">
-  <img width="450" height="450" src="https://github.com/Sapna2001/Frontend/blob/master/logo-designs/favicon.png">
+  <img width="300" height="300" src="https://github.com/Sapna2001/Frontend/blob/master/logo-designs/favicon.png">
 </p>
 
 
