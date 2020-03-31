@@ -5,7 +5,7 @@
 This is a crop advisory app for farmers and gardeners. It can diagnose pest damage, plant disease and nutrient deficiencies that are affecting crops and can offer corresponding treatment measures.
 
 <p align="center">
-  <img width="450" height="450" src="https://github.com/CropAi/Frontend/blob/master/logo-designs/logo%20design%202%20updated.jpg">
+  <img width="450" height="450" src="https://github.com/Sapna2001/Frontend/blob/master/logo-designs/LogoDesign-%202.jpg>
 </p>
 
 
@@ -16,10 +16,12 @@ This application takes an image of the leaf or crop as input and shows the resul
 
 ## Important Notice
 
-> **Crop Ai** has been selected at [GirlScript Summer of Code 2020](https://www.gssoc.tech/)!
+**Crop Ai** has been selected at [GirlScript Summer of Code 2020](https://www.gssoc.tech/)!!!
+
+>Only GSSoC participants are allowed to contribute to this repository.
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/Sapna2001/Frontend/blob/master/logo-designs/favicon.png">
+  <img width="300" height="300" src="https://github.com/Sapna2001/Frontend/blob/master/logo-designs/gssoc-logo.png">
 </p>
 
 
