@@ -1,0 +1,4 @@
+Colors: 
+1. Green :#27ae60
+2. Blue: rgb(8, 171, 235)
+3. Blue on hover: rgba(6, 139, 192, 0.753)
