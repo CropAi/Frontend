@@ -1,3 +1,20 @@
+*,*::after,*::before{
+    padding:0;
+    margin:0;
+}
+
+html{
+    height:100%;
+    width:100%;
+}
+
+body{
+    background:url("file:///C:/Users/Lenovo/Desktop/open_src_cropAI_Frontend/Frontend/Web%20Designs/design-1/form-page/Resources/background.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
 .hidden{
   display:none;
 }
