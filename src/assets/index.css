@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background-color:#CDF5E7;
+    background-color:#CDF5E7!important;
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center;
