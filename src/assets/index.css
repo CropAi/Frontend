@@ -1,3 +1,38 @@
+*,*::after,*::before{
+    padding:0;
+    margin:0;
+}
+
+html{
+    height:100%;
+    width:100%;
+}
+
+body{
+    background-color:#CDF5E7!important;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+.icon-class{
+  float: left;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.leaf-class1{
+  float: right;
+  margin-top: 50px;
+}
+
+.leaf-class2{
+  position:absolute;
+  bottom:0px;
+  width: 100%;
+  text-align: center;
+}
+
 .hidden{
   display:none;
 }
