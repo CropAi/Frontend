@@ -5,7 +5,7 @@
 This is a crop advisory app for farmers and gardeners. It can diagnose pest damage, plant disease and nutrient deficiencies that are affecting crops and can offer corresponding treatment measures.
 
 <p align="center">
-  <img width="550" height="450" src="https://github.com/CropAi/Frontend/blob/master/logo-designs/LogoDesign-%202.jpg">
+  <img width="550" height="450" src="./designs/logo-designs/cropAi-logo.png">
 </p>
 
 
@@ -21,7 +21,7 @@ This application takes an image of the leaf or crop as input and shows the resul
 >Only GSSoC participants are allowed to contribute to this repository.
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/Sapna2001/Frontend/blob/master/logo-designs/gssoc-logo.png">
+  <img width="300" height="300" src="./designs/logo-designs/gssoc-logo.png">
 </p>
 
 
