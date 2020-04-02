@@ -1,0 +1,61 @@
+*,*::after,*::before{
+    padding:0;
+    margin:0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size:62.5%;
+}
+
+body{
+    box-sizing:border-box;
+}
+
+.landing-page{
+    min-height:100vh;
+    overflow: hidden;
+}
+
+.navbar{
+    min-height:10vh;
+}
+
+.logo-box{
+    width:14rem;
+}
+
+.logo{
+    width:18rem;
+}
+
+.hero-box{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 90vh;
+
+}
+
+.hero-content{
+    flex:0 0 1;
+    min-width:50%;
+    min-height:85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-images{
+    flex:0 0 1;
+    min-width:50%;
+    min-height:85vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hero-images img{
+    width:100%;
+    height:100%;
+}
