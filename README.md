@@ -27,7 +27,7 @@ This application takes an image of the leaf or crop as input and shows the resul
 
 ## IMPORTANT LINKS
 
-* Link to Backend ->https://github.com/CropAi/Backend.git
-* Link to Data-Modelling ->https://github.com/CropAi/Data-Modeling.git
+[Backend Repository](https://github.com/CropAi/Backend.git)  
+[Data-Modelling Repository](https://github.com/CropAi/Data-Modeling.git)
 
 
