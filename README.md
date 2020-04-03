@@ -27,9 +27,10 @@ https://github.com/CropAi/Backend.git
 
 - Data base : PlantVillage Dataset
 <br /> 
+
 - Data model : Tensorflow-Keras, Flask
 <br/>
-Tensorflow is a popular end-to-end Machine Learning Library from Google which supports developing Machine Learning Models and Data Modelling. 
+ The model is trained on the PlantVillage dataset using transfer learning from a pre-trained model from tensorflow-keras library. 
 https://github.com/CropAi/Data-Modeling.git
 
 
