@@ -1,3 +1,9 @@
+# CROP - AI 
+The intention of the project is to familiarise the student with open source development in the field of Machine Learning, Deep Learning and Android Development. It will be done by making a real-life application that can be used by the consumers. Our aim is to make an end to end crop advisory app for farmers and gardeners. It can diagnose pest damage, plant disease and nutrient deficiencies that are affecting crops and can offer corresponding treatment measures.
+
+## Vision
+The intention of the project is to familiarise the student with open source development in the field of Machine Learning, Deep Learning and Android Development. It will be done by making a real-life application that can be used by the consumers. Our aim is to make an end to end crop advisory app for farmers and gardeners. It can diagnose pest damage, plant disease and nutrient deficiencies that are affecting crops and can offer corresponding treatment measures.
+
 ## Our Pledge
 In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
@@ -31,6 +37,65 @@ This Code of Conduct applies both within project spaces and in public spaces whe
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team mentors at the slack channel. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
 
 Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
+
+## Skills Required: 💪
+- Tensorflow-Keras
+- Java
+- NodeJS
+- HTML
+- CSS
+- Javascript
+- jQuery
+- Bootstrap
+
+### How to contribute:
+ 
+**1.** Fork [this](https://github.com/CropAi/Frontend) repository.
+ 
+**2.** Clone the forked repository.
+```terminal
+git clone https://github.com/<your-github-username>/CropAi/Frontend
+```
+ 
+**3.** Navigate to the project directory.
+```terminal
+cd CropAi/Frontend
+```
+ 
+**4.** Create a new branch.
+```terminal
+git checkout -b <your_branch_name>
+```
+ 
+**5.** Make changes in source code.
+ 
+**6.** Commit your changes.
+ 
+```terminal
+  git add .
+  git commit -m "<your_commit_message>"
+```
+ 
+**7.** Push your local branch to the remote repository.
+```terminal
+git push -u origin <your_branch_name>
+```
+ 
+**8.** Create a Pull Request!
+ 
+**Congratulations!** You have just made your contribution to [CropAi](https://github.com/CropAi/Frontend) project.
+
+## Owners 
+- [Sahil Sulekhiya](https://github.com/Sulekhiya)
+
+## Mentors
+- [Gunesh Shanbhag](https://github.com/gshanbhag525)
+- [Rajat Sharma](https://github.com/rajats98)
+- [Tanishq Saluja](https://github.com/tanishq9)
+- [Vaibhav Bagga](https://github.com/vaibagga)
+
+## Slack Channel 
+- [#proj_cropai](https://gssoc20.slack.com/messages/proj_cropai)
 
 ## Attribution
 This Code of Conduct is adapted from the Contributor Covenant, version 1.4, available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
