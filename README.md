@@ -5,7 +5,7 @@
 This is a crop advisory app for farmers and gardeners. It can diagnose pest damage, plant disease and nutrient deficiencies that are affecting crops and can offer corresponding treatment measures.
 
 <p align="center">
-  <img width="550" height="450" src="./designs/logo-designs/cropAi-logo.png">
+  <img width="488" height="161" src="./designs/logo-designs/cropAi-logo-corped.png">
 </p>
 
 
