@@ -31,31 +31,43 @@ body{
 
 .hero-box{
     display:flex;
-    justify-content: space-between;
     align-items: center;
     max-height: 90vh;
 
 }
-
 .hero-content{
-    flex:0 0 1;
-    min-width:50%;
-    min-height:85vh;
+    width: 40%;
+    margin-left: 6%;
+    margin-top: 8%;
+
+}
+.hero-content .title {
+    font-size: 100px;
+    color: #3A7528;
+    font-family: 'Open Sans Semibold';
+}
+.hero-content .button {
+    background-color: #3A7528;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    font-family: open sans semibold;
+    margin-top: 25px;
+}
+.hero-content h1 {
+    color:#828282;
+    font-family: open sans semibold;
+    font-size: 30px;
+}
+.content{
+    width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 4%;
 }
 
-.hero-images{
-    flex:0 0 1;
-    min-width:50%;
-    min-height:85vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.hero-images img {
+    margin-top: 10%;
+    height: 60vh;
 
-}
-.hero-images img{
-    width:100%;
-    height:100%;
 }
