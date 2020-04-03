@@ -9,6 +9,8 @@ This is a crop advisory app for farmers and gardeners. It can diagnose pest dama
   <img width="488" height="161" src="./designs/logo-designs/cropAi-logo-croped.png">
 </p>
 
+## VISION
+The intention of the project is to familiarise the student with open source development in the field of Machine Learning, Deep Learning and Android Development. It will be done by making a real-life application that can be used by the consumers. Our aim is to make an end to end crop advisory app for farmers and gardeners. It can diagnose pest damage, plant disease and nutrient deficiencies that are affecting crops and can offer corresponding treatment measures.
 
 
 ## WORKING
@@ -95,13 +97,13 @@ git push -u origin <your_branch_name>
 
 
 ## Project Admin
-- Sahil Sulekhiya
-
-
+- [Sahil Sulekhiya](https://github.com/Sulekhiya)
 
 ## Mentors
+- [Gunesh Shanbhag](https://github.com/gshanbhag525)
+- [Rajat Sharma](https://github.com/rajats98)
+- [Tanishq Saluja](https://github.com/tanishq9)
+- [Vaibhav Bagga](https://github.com/vaibagga)
 
- - Gunesh Shanbhag
- - Rajat Sharma
- - Tanishq Saluja
- - Vaibhav Bagga
+## Slack Channel 
+- [#proj_cropai](https://gssoc20.slack.com/messages/proj_cropai)
