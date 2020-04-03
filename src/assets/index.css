@@ -36,3 +36,60 @@ body{
 .hidden{
   display:none;
 }
+
+#landing_container{
+  padding-top: 200px;
+  color: black;
+  width: 50%;
+}
+
+.heading{
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 70px;
+  color: #164045;
+}
+
+.button-container{
+  text-align: center;
+  width: 100%;
+}
+
+.button-Index{
+  background-color:#12a853;
+	border-radius:28px;
+	border:1px solid #12a853;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+  font-size: 25px;
+	text-shadow:0px 1px 0px #12a853;
+  margin: 0px 30px 0px 30px;
+}
+
+.button-Index:link {
+  color: white;
+  text-decoration:none;
+}
+
+/* visited link */
+.button-Index:visited {
+  color: white;
+  text-decoration:none;
+}
+
+/* mouse over link */
+.button-Index:hover {
+  color: white;
+  text-decoration:none;
+  background-color: #228748;
+}
+
+/* selected link */
+.button-Index:active {
+  color: white;
+  text-decoration:none;
+}
