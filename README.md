@@ -1,7 +1,7 @@
 # FRONTEND FOR CROP ANALYZER APP :fallen_leaf:
 
 ## INTRODUCTION
-![GSSOC'20](https://img.shields.io/badge/GSSOC-20-orange?style=for-the-badge)
+![GSSOC'20](https://img.shields.io/badge/GSSOC-20-orange?style=for-the-badge)<br /> 
 This is a crop advisory app for farmers and gardeners. It can diagnose pest damage, plant disease and nutrient deficiencies that are affecting crops and can offer corresponding treatment measures.
 
 <p align="center">
@@ -19,9 +19,17 @@ This application takes an image of the leaf or crop as input and shows the resul
 ## Tech stack used 
 - Front end : HTML, CSS, Bootstrap, jQuery
 https://github.com/CropAi/Frontend
-- Back end : Tensorflow-Keras, NodeJS
+<br /> 
+
+- Back end : NodeJS and Express
 https://github.com/CropAi/Backend.git
-- Data base :
+<br /> 
+
+- Data base : PlantVillage Dataset
+<br /> 
+- Data model : Tensorflow-Keras, Flask
+<br/>
+Tensorflow is a popular end-to-end Machine Learning Library from Google which supports developing Machine Learning Models and Data Modelling. 
 https://github.com/CropAi/Data-Modeling.git
 
 
