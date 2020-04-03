@@ -1,4 +1,4 @@
-# FRONTEND FOR CROP ANALYZER APP
+# FRONTEND FOR CROP ANALYZER APP :fallen_leaf:
 
 ## INTRODUCTION
 
@@ -9,9 +9,15 @@ This is a crop advisory app for farmers and gardeners. It can diagnose pest dama
 </p>
 
 
+
 ## WORKING
 
 This application takes an image of the leaf or crop as input and shows the results. It diagnoses the plant disease, pest damage, nutrient deficiencies and other factors affecting the growth of the crop and offers corresponding treatment measures to cure it. The result will be mainly presented in three categories, which are symptoms, treatments, and recommended products.
+
+## Tech stack used 
+- Front end : 
+- Back end :
+- Data base :
 
 
 ## Important Notice
