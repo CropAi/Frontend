@@ -18,11 +18,11 @@ This application takes an image of the leaf or crop as input and shows the resul
 
 
 ## Tech stack used 
-- Front end : HTML, CSS, Bootstrap, jQuery
+- Front end : HTML, CSS, Bootstrap, jQuery\
 [Front end Repository](https://github.com/CropAi/Frontend)
 <br /> 
 
-- Back end : NodeJS and Express
+- Back end : NodeJS and Express\
 [Backend Repository](https://github.com/CropAi/Backend.git)
 <br /> 
 
@@ -30,7 +30,7 @@ This application takes an image of the leaf or crop as input and shows the resul
 
 <br /> 
 
-- Data model : Tensorflow-Keras, Flask
+- Data model : Tensorflow-Keras, Flask\
 [Data-Modelling Repository](https://github.com/CropAi/Data-Modeling.git)
 <br/>
  The model is trained on the PlantVillage dataset using transfer learning from a pre-trained model from tensorflow-keras library. 
