@@ -49,7 +49,7 @@ Before contributing to this project do check [CONTRIBUTE.md](./CONTRIBUTE.md) fi
 
 ## 👨 Project Admin
 
-- Sahil Sulekhiya <p>[<img src="https://img.icons8.com/windows/32/000000/github-2.png" display = "inline-block">](https://github.com/Sulekhiya) [<img src="https://img.icons8.com/color/48/000000/linkedin-2.png" display = "inline-block">](https://www.linkedin.com/in/sulekhiya/)</p>
+- Sahil Sulekhiya <p>[<img src="https://img.icons8.com/windows/32/000000/github-2.png" display = "inline-block">](https://github.com/Sulekhiya) [<img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin-2.png"/>](https://www.linkedin.com/in/sulekhiya/)</p>
 
 ## 👬  Mentors
 
