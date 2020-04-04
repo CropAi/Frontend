@@ -47,16 +47,19 @@ This application takes an image of the leaf or crop as input and shows the resul
 
 Before contributing to this project do check [CONTRIBUTE.md](./CONTRIBUTE.md) file and [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) file.
 
-## Project Admin
+## 👨 Project Admin
 
-- [Sahil Sulekhiya](https://github.com/Sulekhiya)
+- Sahil Sulekhiya <p>[<img src="https://img.icons8.com/windows/32/000000/github-2.png" display = "inline-block">](https://github.com/Sulekhiya) [<img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin-2.png"/>](https://www.linkedin.com/in/sulekhiya/)</p>
 
-## Mentors
+## 👬  Mentors
 
-- [Gunesh Shanbhag](https://github.com/gshanbhag525)
-- [Rajat Sharma](https://github.com/rajats98)
-- [Tanishq Saluja](https://github.com/tanishq9)
-- [Vaibhav Bagga](https://github.com/vaibagga)
+- Rajat Sharma  <p>[<img src="https://img.icons8.com/windows/32/000000/github-2.png" display = "inline-block">](https://github.com/rajats98) [<img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin-2.png"/>](https://www.linkedin.com/in/rajatsharmadtu/)</p>
+- Vaibhav Bagga    <p>[<img src="https://img.icons8.com/windows/32/000000/github-2.png" display = "inline-block">](https://github.com/vaibagga) [<img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin-2.png"/>](https://www.linkedin.com/in/vaibhav-bagga-471106149/)</p> 
+- Tanishq Saluja   <p>[<img src="https://img.icons8.com/windows/32/000000/github-2.png" display = "inline-block">](https://github.com/tanishq9) [<img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin-2.png"/>](https://www.linkedin.com/in/tanishqsaluja/)</p>
+- Gunesh Shanbhag    <p>[<img src="https://img.icons8.com/windows/32/000000/github-2.png" display = "inline-block">](https://github.com/gshanbhag525) [<img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin-2.png"/>](https://www.linkedin.com/in/gunesh-shanbhag525/)</p>
+
+Feel free to ask your queries!! 🙌
+
 
 ## Slack Channel
 
