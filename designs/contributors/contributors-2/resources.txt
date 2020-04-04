@@ -1,0 +1,4 @@
+Background Color- Green - #63c093
+font color- #242e3a
+Meet The Team font- OldSansBlack
+Mentors names font - Mithella
