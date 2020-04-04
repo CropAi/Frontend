@@ -101,3 +101,16 @@ padding: 2%;
 width: 1000px !important;
 display:none;
 }
+
+/* toggle btn */
+#target {
+font-size: 20px;
+padding: 2%;
+width: 1000px !important;
+display:none;
+}
+
+.Hide
+{
+  display:none;
+}
