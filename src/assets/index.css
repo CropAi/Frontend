@@ -1,95 +1,103 @@
 *,*::after,*::before{
-    padding:0;
-    margin:0;
+  padding:0;
+  margin:0;
 }
 
 html, body, #background, #landing_container, #input_container, #result_container{
-    height:100vh;
-    width:100vw;
+  height:100vh;
+  width:100vw;
 }
 
 body{
-    background-color:#CDF5E7!important;
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position:center;
+  background-color:#CDF5E7!important;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
 }
 
 .icon-class{
-  float: left;
-  margin-left: 50px;
-  margin-top: 50px;
+float: left;
+margin-left: 50px;
+margin-top: 50px;
 }
 
 .leaf-class1{
-  float: right;
-  margin-top: 50px;
+float: right;
+margin-top: 50px;
 }
 
 .leaf-class2{
-  position:absolute;
-  bottom:0px;
-  width: 100%;
-  text-align: center;
+position:absolute;
+bottom:0px;
+width: 100%;
+text-align: center;
 }
 
 .hidden{
-  display:none;
+display:none;
 }
 
 #landing_container{
-  padding-top: 200px;
-  color: black;
-  width: 50%;
+padding-top: 100px;
+color: black;
+width: 50%;
 }
 
 .heading{
-  font-family: sans-serif;
-  text-align: center;
-  font-size: 70px;
-  color: #164045;
+font-family: sans-serif;
+text-align: center;
+font-size: 70px;
+color: #164045;
 }
 
 .button-container{
-  text-align: center;
-  width: 100%;
+text-align: center;
+width: 100%;
 }
 
 .button-Index{
-  background-color:#12a853;
-	border-radius:28px;
-	border:1px solid #12a853;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-  font-size: 25px;
-	text-shadow:0px 1px 0px #12a853;
-  margin: 0px 30px 0px 30px;
+background-color:#12a853;
+border-radius:28px;
+border:1px solid #12a853;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-family:Arial;
+font-size:17px;
+padding:16px 31px;
+font-size: 25px;
+text-shadow:0px 1px 0px #12a853;
+margin: 0px 30px 0px 30px;
 }
 
 .button-Index:link {
-  color: white;
-  text-decoration:none;
+color: white;
+text-decoration:none;
 }
 
 /* visited link */
 .button-Index:visited {
-  color: white;
-  text-decoration:none;
+color: white;
+text-decoration:none;
 }
 
 /* mouse over link */
 .button-Index:hover {
-  color: white;
-  text-decoration:none;
-  background-color: #228748;
+color: white;
+text-decoration:none;
+background-color: #228748;
 }
 
 /* selected link */
 .button-Index:active {
-  color: white;
-  text-decoration:none;
+color: white;
+text-decoration:none;
+}
+
+/* toggle div for the ABOUT button */
+#about_content {
+font-size: 20px;
+padding: 2%;
+width: 1000px !important;
+display:none;
 }
