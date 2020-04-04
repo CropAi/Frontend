@@ -1,5 +1,6 @@
 ## Fixes issue
 Closes: #issue_number
+Addresses: #issue_number (if multiple persons are assigned, the issue)
 
 ## Proposed changes
 Brief description of what is fixed or changed
