@@ -38,7 +38,7 @@ body{
 }
 
 #landing_container{
-  padding-top: 200px;
+  padding-top: 100px;
   color: black;
   width: 50%;
 }
@@ -92,4 +92,17 @@ body{
 .button-Index:active {
   color: white;
   text-decoration:none;
+}
+
+/* toggle btn */
+#target {
+font-size: 20px;
+padding: 2%;
+width: 1000px !important;
+display:none;
+}
+
+.Hide
+{
+  display:none;
 }
