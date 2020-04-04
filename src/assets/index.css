@@ -3,9 +3,9 @@
   margin:0;
 }
 
-html{
-  height:100%;
-  width:100%;
+html, body, #background, #landing_container, #input_container, #result_container{
+  height:100vh;
+  width:100vw;
 }
 
 body{
@@ -93,7 +93,6 @@ background-color: #228748;
 color: white;
 text-decoration:none;
 }
-
 #target {
 font-size: 20px;
 padding: 2%;
