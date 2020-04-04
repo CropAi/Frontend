@@ -23,3 +23,6 @@ const show_result_container = () => {
     resultContainer.classList.remove("hidden");
 }
 
+$('#toggle').click(function() {
+    $('#target').toggle('slow');
+});
