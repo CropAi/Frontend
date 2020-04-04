@@ -23,6 +23,6 @@ const show_result_container = () => {
     resultContainer.classList.remove("hidden");
 }
 
-$('#toggle').click(function() {
-    $('#target').toggle('slow');
+$('#about_btn').click(function() {
+    $('#about_content').toggle('slow');
 });

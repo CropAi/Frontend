@@ -93,14 +93,11 @@ background-color: #228748;
 color: white;
 text-decoration:none;
 }
-#target {
+
+/* toggle btn */
+#about_content {
 font-size: 20px;
 padding: 2%;
 width: 1000px !important;
 display:none;
-}
-
-.Hide
-{
-  display:none;
 }
