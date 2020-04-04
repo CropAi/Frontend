@@ -23,13 +23,9 @@ const show_result_container = () => {
     resultContainer.classList.remove("hidden");
 }
 
-<<<<<<< HEAD
+
 $('#about_btn').click(function() {
     $('#about_content').toggle('slow');
 });
-=======
 
-$('#toggle').click(function() {
-    $('#target').toggle('slow');
-});
->>>>>>> 66eefb19de1010b289b8c19b18a34f1c7904b098
+
