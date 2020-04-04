@@ -3,6 +3,7 @@
 <!--- Use one of fixes or addresses and remove the other one. -->
 
 Closes: #issue_number
+
 Addresses: #issue_number (if multiple persons are assigned, the issue)
 
 ## Proposed changes
