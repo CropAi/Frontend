@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="./assets/index.css">
+  <link rel="stylesheet" href="./assets/card.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -12,7 +13,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
- 
+
   </head>
 
   <body>
@@ -26,22 +27,57 @@
     </div>
 
     <div id="background">
-      <div id="landing_container" >
+      <div id="landing_container" class = "hidden">
         <h1 class="heading">CROP AI</h1>
         <div class="button-container">
           <a href="#" class="button-Index" id="about_btn">ABOUT</a>
           <a href="#" class="button-Index" onclick="show_input_container()">ANALYZE</a>
           <div id="about_content">This is a crop advisory app for farmers and gardeners. It can diagnose pest damage, plant disease and nutrient deficiencies that are affecting crops and can offer corresponding treatment measures.</div>
-         
+
         </div>
       </div>
 
       <div id="input_container" class="hidden"></div>
-      
-      <div id="result_container" class="hidden"></div>
-    
+
+      <div id="result_container">
+        <div class="container">
+          <div class="card-group vgr-cards">
+            <div class="card">
+              <div class="card-img-body">
+                <img class="crop_img card-img" src="./img/leaf.jfif" alt="Card image cap">
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Pepper Bell Bacterial Spots </h4>
+                <p class="card-text">
+                  <div id="card-content">
+                    <p class="list_content">Symptoms</p>
+                    <ul class="information">
+                      <li>Leaf spots that appear on the lower surface of older leaves as small, pimples and on the upper leaf surface</li>
+                      <li>The spots develop gray to tan centers with darker borders.</li>
+                      <li>Lesions may also develop on stems. Fruits develop small, raised rough spots that do not affect eating quality.</li>
+                    </ul>
+                    <p class="list_content">Treatment </p>
+                    <ul class="information">
+                      <li>Reat seeds by soaking them for 2 minutes in a 10% chlorine bleach solution (1 part bleach; 9 parts water).</li>
+                      <li>Much plants deeply with a thick organic material like newspaper covered with straw or grass clippings.</li>
+                      <li>Spray every 10-14 days with fixed copper (organic fungicide) to slow down the spread of infection.</li>
+                      <li>Rotate peppers to a different location if infections are severe and cover the soil with black plastic mulch or black landscape fabric prior to planting</li>
+                    </ul>
+                    <p class="list_content">Products</p>
+                    <ul class="information">
+                        <li><a href="https://www.planetnatural.com/product/organic-neem-oil/">Neem Oil</a></li>
+                        <li><a href="https://www.planetnatural.com/product/garden-dust/">Garden Dust</a></li>
+                    </ul>
+                  </div>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-    
+
     <div class="leaf-class2">
       <img src="./img/bottom-plants.png" alt="bg-design" height="250px" width="1000px">
     </div>

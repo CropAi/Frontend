@@ -31,6 +31,7 @@ position:absolute;
 bottom:0px;
 width: 100%;
 text-align: center;
+position: fixed;
 }
 
 .hidden{
@@ -100,4 +101,8 @@ font-size: 20px;
 padding: 2%;
 width: 1000px !important;
 display:none;
+}
+/* ----------------------- */
+#result_container{
+  padding-top: 150px;
 }
