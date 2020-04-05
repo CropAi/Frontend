@@ -12,7 +12,17 @@
   border-radius: 0;
   padding: 20px;
 }
-
+.card-title{
+  color: #164045;
+}
+.list_content{
+  text-decoration: underline;
+  font-weight: bold;
+  color: #164045;
+}
+.information{
+  color: #164045;
+}
 .vgr-cards .card {
   display: -webkit-box;
   display: flex;

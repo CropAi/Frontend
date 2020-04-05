@@ -102,3 +102,7 @@ padding: 2%;
 width: 1000px !important;
 display:none;
 }
+/* ----------------------- */
+#result_container{
+  padding-top: 150px;
+}
