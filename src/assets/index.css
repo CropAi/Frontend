@@ -24,6 +24,10 @@ margin-top: 50px;
 .leaf-class1{
 float: right;
 margin-top: 50px;
+position:fixed;
+right:0;
+z-index: -10;
+opacity:80%;
 }
 
 .leaf-class2{
@@ -32,6 +36,8 @@ bottom:0px;
 width: 100%;
 text-align: center;
 position: fixed;
+z-index: -10;
+opacity:80%;
 }
 
 .hidden{
