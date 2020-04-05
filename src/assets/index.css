@@ -4,8 +4,13 @@
 }
 
 html, body, #background, #landing_container, #input_container, #result_container{
-  height:100vh;
-  width:100vw;
+  /* height:100vh; */
+  width:100vw; 
+}
+
+.input_container_form{
+  margin-top: 150px;
+  margin-left: 260px;
 }
 
 body{
@@ -101,3 +106,4 @@ padding: 2%;
 width: 1000px !important;
 display:none;
 }
+

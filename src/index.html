@@ -36,7 +36,13 @@
         </div>
       </div>
 
-      <div id="input_container" class="hidden"></div>
+      <div id="input_container" class="hidden">
+        <form action="/action_page.php" class="input_container_form">
+          <label for="files">Select files:</label>
+          <input type="file" id="files" name="files" multiple><br><br>
+          <input type="submit">
+        </form>
+      </div>
       
       <div id="result_container" class="hidden"></div>
     
