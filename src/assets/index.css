@@ -15,12 +15,12 @@ body{
   background-position:center;
 }
 
-.icon-class{
+#logo{
 float: left;
 margin-left: 50px;
 margin-top: 50px;
 }
-
+/****background images*****/
 .leaf-class1{
 float: right;
 margin-top: 50px;
@@ -38,7 +38,7 @@ position: fixed;
 z-index: -10;
 opacity:80%;
 }
-
+/***********************/
 .hidden{
 display:none;
 }
