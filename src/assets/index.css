@@ -31,8 +31,8 @@ opacity:80%;
 }
 
 .leaf-class2{
+width: 100%;
 bottom:0px;
-width: 80%;
 text-align: center;
 position: fixed;
 z-index: -10;
