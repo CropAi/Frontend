@@ -24,13 +24,19 @@ margin-top: 50px;
 .leaf-class1{
 float: right;
 margin-top: 50px;
+position:fixed;
+right:0;
+z-index: -10;
+opacity:80%;
 }
 
 .leaf-class2{
-position:absolute;
-bottom:0px;
 width: 100%;
+bottom:0px;
 text-align: center;
+position: fixed;
+z-index: -10;
+opacity:80%;
 }
 
 .hidden{
@@ -100,4 +106,8 @@ font-size: 20px;
 padding: 2%;
 width: 1000px !important;
 display:none;
+}
+/* ----------------------- */
+#result_container{
+  padding-top: 150px;
 }
