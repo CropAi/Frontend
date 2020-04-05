@@ -1,0 +1,7 @@
+1. Add names and description on hover of each image
+2. Gradient: 45deg top bottom B0F3F1 71% to FFCFDF 54%
+3. Font-color: black
+
+Top Crard for admin
+Bottom three for mentors
+5*5 grids for participants
