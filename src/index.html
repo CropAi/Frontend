@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="./assets/index.css">
+  <link rel="stylesheet" href="./assets/card.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -39,32 +40,39 @@
       <div id="input_container" class="hidden"></div>
 
       <div id="result_container">
-        <div id="box">
-          <div id="float-child">
-            <img id= "pepper-bell" src="./img/leaf.jfif" alt="Image not found"  height= 300px width="200px">
-          </div>
-          <div id="float-child">
-            <div id="heading">
-              <h3>Pepper Bell Bacterial Spots </h3>
+        <div class="container">
+          <div class="card-group vgr-cards">
+            <div class="card">
+              <div class="card-img-body">
+                <img class="card-img" src="./img/leaf.jfif" alt="Card image cap">
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Pepper Bell Bacterial Spots </h4>
+                <p class="card-text">
+                  <div id="float-child">
+                    <p id="list_head">Symptoms</p>
+                    <ul id="symptoms">
+                      <li>Leaf spots that appear on the lower surface of older leaves as small, pimples and on the upper leaf surface</li>
+                      <li>The spots develop gray to tan centers with darker borders.</li>
+                      <li>Lesions may also develop on stems. Fruits develop small, raised rough spots that do not affect eating quality.</li>
+                    </ul>
+                    <p id="list_head">Treatment </p>
+                    <ul id="symptoms">
+                      <li>Reat seeds by soaking them for 2 minutes in a 10% chlorine bleach solution (1 part bleach; 9 parts water).</li>
+                      <li>Much plants deeply with a thick organic material like newspaper covered with straw or grass clippings.</li>
+                      <li>Spray every 10-14 days with fixed copper (organic fungicide) to slow down the spread of infection.</li>
+                      <li>Rotate peppers to a different location if infections are severe and cover the soil with black plastic mulch or black landscape fabric prior to planting</li>
+                    </ul>
+                    <p id="list_head">Products</p>
+                    <ul id="symptoms">
+                        <li><a href="https://www.planetnatural.com/product/organic-neem-oil/">Neem Oil</a></li>
+                        <li><a href="https://www.planetnatural.com/product/garden-dust/">Garden Dust</a></li>
+                    </ul>
+                  </div>
+                </p>
+              </div>
             </div>
-            <p id="list_head">Symptoms</p>
-            <ul id="symptoms">
-              <li>Leaf spots that appear on the lower surface of older leaves as small, pimples and on the upper leaf surface</li>
-              <li>The spots develop gray to tan centers with darker borders.</li>
-              <li>Lesions may also develop on stems. Fruits develop small, raised rough spots that do not affect eating quality.</li>
-            </ul>
-            <p id="list_head">Treatment </p>
-            <ul id="symptoms">
-              <li>Reat seeds by soaking them for 2 minutes in a 10% chlorine bleach solution (1 part bleach; 9 parts water).</li>
-              <li>Much plants deeply with a thick organic material like newspaper covered with straw or grass clippings.</li>
-              <li>Spray every 10-14 days with fixed copper (organic fungicide) to slow down the spread of infection.</li>
-              <li>Rotate peppers to a different location if infections are severe and cover the soil with black plastic mulch<br>  or black landscape fabric prior to planting</li>
-            </ul>
-            <p id="list_head">Products</p>
-            <ul id="symptoms">
-                <li><a href="https://www.planetnatural.com/product/organic-neem-oil/">Neem Oil</a></li>
-                <li><a href="https://www.planetnatural.com/product/garden-dust/">Garden Dust</a></li>
-            </ul>
+
           </div>
         </div>
       </div>
