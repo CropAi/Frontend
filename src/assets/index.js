@@ -23,3 +23,9 @@ const show_result_container = () => {
     resultContainer.classList.remove("hidden");
 }
 
+
+$('#about_btn').click(function() {
+    $('#about_content').toggle('slow');
+});
+
+
