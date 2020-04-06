@@ -8,8 +8,12 @@ const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.add("hidden");
-
 } 
+
+const analyze_click = () => {
+    window.history.pushState('Analyze', 'Crop Analysis', '?q=analyze');
+    show_input_container();
+}
 
 const show_input_container = () => {
 
