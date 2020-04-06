@@ -33,7 +33,7 @@
           <img src="../designs/logo-designs/cropAi-logo-croped.png" alt="CropAi Logo" width="15%">
         </a>
       </div>
-      <div id="landing_container" >
+      <div id="landing_container" class="hidden">
         <h1 class="heading">CROP AI</h1>
         <div class="button-container">
           <a href="#" class="button-Index" id="about_btn">ABOUT</a>
@@ -43,12 +43,16 @@
         </div>
       </div>
 
-     <div id="input_container" class="hidden">
+     <div id="input_container">
       <div class="upload-container">
         <h1 class="upload-heading">Upload the Image</h1>
-        <img src="https://res.cloudinary.com/mhmd/image/upload/v1564991372/image_pxlho1.svg" alt="" width="150" class="mb-4">
+        
+        <div class="img-container">
+            <img  class="mb-4 img-uploaded" id="showImage">
+        </div>
+        
         <div class="file-select">
-          <form class="upload-form">
+          <form class="upload-form" onchange="showImage(event)">
             <input type="file" id="leaf_input" name="leaf_input" accept="image/x-png,image/gif,image/jpeg">
             <button>Submit</button>
           </form>
