@@ -15,6 +15,8 @@ const show_input_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
+    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?q=analyze';  // Append '/analyze' to url when analyze button is clicked
+    window.history.pushState({ path: newurl }, '', newurl);
 }
 
 const show_result_container = () => {
