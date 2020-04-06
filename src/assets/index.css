@@ -17,8 +17,8 @@ body{
 
 #logo{
 float: left;
-margin-left: 50px;
-margin-top: 50px;
+margin-left: 0px;
+margin-top: 12px;
 }
 /****background images*****/
 .leaf-class1{
@@ -107,7 +107,73 @@ padding: 2%;
 width: 1000px !important;
 display:none;
 }
-/* ----------------------- */
-#result_container{
-  padding-top: 150px;
+
+/* This is the CSS part used in Input form */
+
+#upload {
+  opacity: 0;
 }
+
+#upload-label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.image-area {
+  border: 2px dashed rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  position: relative;
+}
+
+.h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.upload-heading {
+  color: #fff;
+  margin-top: 0px;
+  justify-content: center;
+  display: flex;
+}
+
+.upload-container {
+  justify-content: center;
+  display: grid;
+  background-color: #3EA3B5;
+  margin: 150px;
+  padding: 50px;
+  position: absolute;
+  margin-left: 35%;
+  margin-top: 4%;
+  border-radius: 7rem;
+}
+
+.upload-container img{
+  margin:auto;
+}
+
+.file-select {
+  justify-content: center;
+  display: flex;
+  margin: 15px;
+}
+
+.upload-form {
+  justify-content: center;
+  display: flex;
+}
+.upload-form button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.upload-form input{
+  opacity: 1;
+  padding-top: 1rem;
+}
+/* .............End............. */
