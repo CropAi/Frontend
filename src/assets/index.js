@@ -12,6 +12,7 @@ const show_landing_container = () => {
 } 
 
 const show_input_container = () => {
+
     landingContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
@@ -35,4 +36,21 @@ const showImage = event => {
     const imageInserted = document.getElementById("showImage");
     imageInserted.src = URL.createObjectURL(event.target.files[0]);
     
+}
+
+/* Getting the query from the url */
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const SectionToBeDisplay = urlParams.get('q')
+console.log(SectionToBeDisplay);
+
+
+if (SectionToBeDisplay=='analyze')
+{
+    show_input_container();
+}
+else if (SectionToBeDisplay=='result')
+{
+    console.log('redirecting to home page')
+    window.location = "index.html";
 }
