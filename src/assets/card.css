@@ -2,7 +2,7 @@
 .container{
   background-color: #dbf26e;
   background-image: linear-gradient(319deg, #dbf26e 0%, #61fa74 37%, #1cfdd6 100%);
-  border-radius: 5%;
+  border-radius: 40px;
 }
 .card {
   border: none;
