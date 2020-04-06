@@ -30,6 +30,16 @@ $('#about_btn').click(function() {
 });
 
 
+// function to insert selected image on form 
+
+const showImage = event => {
+    const imageInserted = document.getElementById("showImage");
+    imageInserted.src = URL.createObjectURL(event.target.files[0]);
+    
+}
+
+
+
 /* Getting the query from the url */
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);

@@ -136,16 +136,14 @@ display:none;
   justify-content: center;
   display: grid;
   background-color: #3EA3B5;
-  margin: 150px;
-  padding: 50px;
+  margin: 2rem auto;
+  padding: 5rem;
   position: absolute;
-  margin-left: 35%;
-  margin-top: 4%;
   border-radius: 7rem;
-}
-
-.upload-container img{
-  margin:auto;
+  top:30%;
+  left:50%;
+  transform:translate(-50%,-30%);
+  width:max-content;
 }
 
 .file-select {
@@ -155,8 +153,10 @@ display:none;
 }
 
 .upload-form {
-  justify-content: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .upload-form button {
   background-color: #fff;
@@ -164,9 +164,32 @@ display:none;
   border: none;
   padding: 1rem;
   border-radius: 1rem;
+  
 }
 .upload-form input{
   opacity: 1;
   padding-top: 1rem;
+  margin-bottom:2rem;
 }
 /* .............End............. */
+
+/* ------------------------------------
+  Styling for image uploaded on form 
+----------------------------------------
+*/
+
+/* parent container for inline image */
+.img-container{
+  max-height:15rem;
+  max-width:15rem;
+  margin:0 auto;
+  overflow: hidden;
+}
+
+
+.img-uploaded{
+  max-width:100%;
+  height: auto;
+  text-align: center;
+}
+
