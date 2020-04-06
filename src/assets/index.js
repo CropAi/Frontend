@@ -38,14 +38,11 @@ const showImage = event => {
     
 }
 
-
-
 /* Getting the query from the url */
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const SectionToBeDisplay = urlParams.get('q')
 console.log(SectionToBeDisplay);
-
 
 
 if (SectionToBeDisplay=='analyze')
