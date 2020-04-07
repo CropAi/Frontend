@@ -140,16 +140,7 @@ else {
 }
     
 window.addEventListener('popstate', () => {
-    
-    console.log(SectionToBeDisplay);
     window.location.reload();
-    if (SectionToBeDisplay === 'analyze') {
-        window.history.pushState("Landing Page", "Crop AI", 'index.html');
-        show_landing_container();
-    }
-    
-
-    
 });
 
 
