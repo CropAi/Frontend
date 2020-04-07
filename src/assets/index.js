@@ -107,27 +107,12 @@ const analyze_click = () => {
     show_input_container();
 }
 
-/*Function to show the input image in the result container*/
-
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        
-        reader.onload = function (e) {
-            $('#leaf_image').attr('src', e.target.result);
-        }
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-$("#leaf_input").change(function(){
-    readURL(this);
-});
-
-// function to insert selected image on form 
+// function to insert input image on form and result section
 const showImage = event => {
-    const imageInserted = document.getElementById("showImage");
-    imageInserted.src = URL.createObjectURL(event.target.files[0]);
-
+    const imageForm = document.getElementById("showImage");
+    const imageResult = document.getElementById("leaf_image");
+    imageForm.src = URL.createObjectURL(event.target.files[0]);
+    imageResult.src = URL.createObjectURL(event.target.files[0]);;
 }
 
 /* Getting the query from the url */
