@@ -101,6 +101,29 @@ width: 1000px !important;
 display:none;
 }
 
+/* Css of result_container button */
+.button-Result{
+  background-color:#12a853;
+  border-radius:28px;
+  border:1px solid #12a853;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:16px 31px;
+  font-size: 25px;
+  text-shadow:0px 1px 0px #12a853;
+  margin: 0px 30px 20px 30px;  
+}
+
+/* mouse over link */
+.button-Result:hover {
+  color: white;
+  text-decoration:none;
+  background-color: #228748;
+  }
+
 /* This is the CSS part used in Input form */
 
 .h1 {
