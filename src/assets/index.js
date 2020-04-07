@@ -2,19 +2,16 @@ const landingContainer = document.getElementById("landing_container");
 const inputContainer = document.getElementById("input_container");
 const resultContainer = document.getElementById("result_container");
 
-
-
 const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.add("hidden");
-}
+} 
 
 const show_input_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
-    resultContainer.classList.add("hiddden");
-
+    resultContainer.classList.add("hidden");
 }
 
 const show_result_container = () => {
@@ -24,10 +21,8 @@ const show_result_container = () => {
 }
 
 
-
-
 // toggle About
-$('#about_btn').click(function () {
+$('#about_btn').click(function() {
     $('#about_content').toggle('slow');
 });
 
@@ -57,7 +52,6 @@ const analysis_report_json = {
     },
 };
 
-// form submission
 
 const update_result = (report) => {
     const show_disease = document.querySelector("#disease");
@@ -93,22 +87,25 @@ const update_result = (report) => {
             .appendChild(list)
             .appendChild(anchor);
     });
-
-
 };
 
-
-
-
-
+// form submission
 const form = document.querySelector(".upload-form");
 form.addEventListener("submit", (e) => {
-    event.preventDefault();
-    window.location.assign('/src/index.html?q=result');
+    e.preventDefault();
+
+    // on successful response
+    window.history.pushState("Result Page", "Crop AI", '?q=result');
+    update_result(analysis_report_json);
     show_result_container();
 
-
 });
+
+
+const analyze_click = () => {
+    window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
+    show_input_container();
+}
 
 
 // function to insert selected image on form 
@@ -118,48 +115,42 @@ const showImage = event => {
 
 }
 
-/* 
-  ---------------------------
-    All Code for routing 
-  -----------------------------  
- 
-  */
-
-const analyze_click = () => {
-    window.location.assign('/src/index.html?q=analyze');
-    show_input_container();
-}
-
-
+/* Getting the query from the url */
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 let SectionToBeDisplay = urlParams.get('q')
 
 SectionToBeDisplay = SectionToBeDisplay || 'landing';
+// console.log(SectionToBeDisplay);
 
-console.log(SectionToBeDisplay);
 
-
-if (SectionToBeDisplay === 'landing') {
-    window.history.pushState('Landing Page', 'Crop Analysis', '/src/index.html');
-    show_landing_container();
-
-}
-
-else if (SectionToBeDisplay === 'analyze') {
-    window.history.pushState('Analyze Page', 'Crop Analysis', '/src/index.html?q=analyze');
+if (SectionToBeDisplay=='analyze'){
+    window.history.pushState("Analyze Page", "Crop AI", '?q=analyze');
     show_input_container();
 }
 
-else if (SectionToBeDisplay === 'result') {
-
-    window.history.pushState('Result Page', 'Crop Analysis', '/src/index.html?q=result');
-    // update it here!!!
-    update_result(analysis_report_json);
+else if (SectionToBeDisplay=='result'){
+    window.history.pushState("Result Page", "Crop AI", '?q=result');
     show_result_container();
 }
-
+ 
 else {
-    window.history.pushState('Landing Page', 'Crop Analysis', '/src/index.html');
+    window.history.pushState("Landing Page", "Crop AI", 'index.html');
     show_landing_container();
 }
+    
+window.addEventListener('popstate', () => {
+    
+    console.log(SectionToBeDisplay);
+    window.location.reload();
+    if (SectionToBeDisplay === 'analyze') {
+        window.history.pushState("Landing Page", "Crop AI", 'index.html');
+        show_landing_container();
+    }
+    
+
+    
+});
+
+
+
