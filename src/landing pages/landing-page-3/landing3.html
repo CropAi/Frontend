@@ -6,86 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page-3</title>
     <link rel="stylesheet" href="../../assets/landing-3.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+
+  <div id="navbar">
+    <div id="navbar-right">
+      <a class="active" href="#home">HOME</a>
+      <a href="">PRODUCT</a>
+      <a href="">CONTACT US</a>
+    </div>
+  </div>
+
+  <script>
+    window.onscroll = function() {scrollFunction()};
     
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("navbar").style.padding = "20px 10px";
+        document.getElementById("navbar").style.backgroundColor = "#ffffffce";
+      } else {
+        document.getElementById("navbar").style.padding = "26px 10px";
+        document.getElementById("navbar").style.backgroundColor = "#ffffff";
+      }
+    }
+  </script>
 
-     <!-- Adding a collapsible navbar-->
-     <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-        <div class="container">
-          <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-           
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand">Crop Ai</a>
-          </div>
-          <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active">
-                <a href="#">Home</a>
-              </li>
-          
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Product</a>
-              </li>
-              <li >
-                <a href="#">Contact us</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
-    
-
-
-      <!-- Main section -->
-      <div class="container" id="main-section">
-     
-        <div class="row" id="main-section">
-            <div class="col-md-4" >
-                <img   class="img-responsive" id="img1" src="../../../designs/Web Designs/design-3/Resources/tree.png" alt=" tree">
-            </div>
-    
-            <div class="col-md-8 ">
-            <h1  class="text-center main-text">
-                CROP AI
-                
-            </h1 >
-            <span  class="text-center desc"> A crop advisory app for farmers and gardeners</span>
-            <br>
-            <button class="btn btn-success text-center main-btn">Start analysing -> </button>
-            <img   class="img-fluid" id="img2" src="../../../designs/Web Designs/design-3/Resources/glass.png" alt=" glass">
-
-            </div>
-          </div>
-
+  <!-- Main section -->
+  <section id="main-section">
+    <div class="row">
+      <div class="col-md-4">
+        <img id="tree-img" src="../../../designs/Web Designs/design-3/Resources/tree.png" alt="tree">
       </div>
+      <div class="pl-5 col-md-6">
+        <h1 class="text-center main-text mt-5 pt-5 pl-5 ml-4"> CROP AI </h1>
+        <p class="text-center ml-5 pl-4 pt-4" style="font-size: 1.4em; color: #545454; letter-spacing: 1.5px;">This is a crop advisory app for farmers and <br>gardeners. </p>
+        <center><button class="ml-5 mt-5 p-2 button-1 pr-4 pl-5">START ANALYSING<a class="ml-3 pr-2" style="font-weight: lighter;font-size: 1.2em;" href="#"><i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i></a></button></center>
+      </div>
+      <div class="col-md-2">
+        <img class="glass-img" src="../../../designs/Web Designs/design-3/Resources/glass.png" alt="glass">
+      </div>
+    </div>
+  </section>
 
-
-
-
-
-    
-    <!-- Latest compiled and minified JQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-    </script>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-    </script>
+  <section class="m-5 p-5">
+    <div class="container">
+      <p>
+        Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+  </section>
 </body>
-
 </html>
