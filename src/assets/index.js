@@ -8,12 +8,13 @@ const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.add("hidden");
-} 
+}
 
 const show_input_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
-    resultContainer.classList.add("hidden");
+    resultContainer.classList.add("hiddden");
+
 }
 
 const show_result_container = () => {
@@ -23,19 +24,15 @@ const show_result_container = () => {
 }
 
 
-const analyze_click = () => {
-    window.history.pushState('Analyze', 'Crop Analysis', '?q=analyze');
-    show_input_container();
-}
 
 
 // toggle About
-$('#about_btn').click(function() {
+$('#about_btn').click(function () {
     $('#about_content').toggle('slow');
 });
 
 // dummy data to be removed after Api integration
-analysis_report_json = {
+const analysis_report_json = {
     Disease: "Pepper Bell Healthy",
     Symptoms: {
         1: "Initial symptoms of infection are the formation of small, circular, water-soaked spots on leaves, stems, petioles and/or peduncles",
@@ -61,15 +58,6 @@ analysis_report_json = {
 };
 
 // form submission
-const form = document.querySelector(".upload-form");
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    // on successful response
-    update_result(analysis_report_json);
-    show_result_container();
-
-});
 
 const update_result = (report) => {
     const show_disease = document.querySelector("#disease");
@@ -105,7 +93,22 @@ const update_result = (report) => {
             .appendChild(list)
             .appendChild(anchor);
     });
+
+
 };
+
+
+
+
+
+const form = document.querySelector(".upload-form");
+form.addEventListener("submit", (e) => {
+    event.preventDefault();
+    window.location.assign('/src/index.html?q=result');
+    show_result_container();
+
+
+});
 
 
 // function to insert selected image on form 
@@ -115,19 +118,48 @@ const showImage = event => {
 
 }
 
-/* Getting the query from the url */
+/* 
+  ---------------------------
+    All Code for routing 
+  -----------------------------  
+ 
+  */
+
+const analyze_click = () => {
+    window.location.assign('/src/index.html?q=analyze');
+    show_input_container();
+}
+
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const SectionToBeDisplay = urlParams.get('q')
+let SectionToBeDisplay = urlParams.get('q')
+
+SectionToBeDisplay = SectionToBeDisplay || 'landing';
+
 console.log(SectionToBeDisplay);
 
 
-if (SectionToBeDisplay=='analyze')
-{
+if (SectionToBeDisplay === 'landing') {
+    window.history.pushState('Landing Page', 'Crop Analysis', '/src/index.html');
+    show_landing_container();
+
+}
+
+else if (SectionToBeDisplay === 'analyze') {
+    window.history.pushState('Analyze Page', 'Crop Analysis', '/src/index.html?q=analyze');
     show_input_container();
 }
-else if (SectionToBeDisplay=='result')
-{
-    console.log('redirecting to home page')
-    window.location = "index.html";
+
+else if (SectionToBeDisplay === 'result') {
+
+    window.history.pushState('Result Page', 'Crop Analysis', '/src/index.html?q=result');
+    // update it here!!!
+    update_result(analysis_report_json);
+    show_result_container();
+}
+
+else {
+    window.history.pushState('Landing Page', 'Crop Analysis', '/src/index.html');
+    show_landing_container();
 }
