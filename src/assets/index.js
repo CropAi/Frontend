@@ -87,8 +87,8 @@ const update_result = (report) => {
             .appendChild(list)
             .appendChild(anchor);
     });
+   
 };
-
 // form submission
 const form = document.querySelector(".upload-form");
 form.addEventListener("submit", (e) => {
@@ -107,6 +107,21 @@ const analyze_click = () => {
     show_input_container();
 }
 
+/*Function to show the input image in the result container*/
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function (e) {
+            $('#leaf_image').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#leaf_input").change(function(){
+    readURL(this);
+});
 
 // function to insert selected image on form 
 const showImage = event => {
@@ -138,10 +153,16 @@ else {
     window.history.pushState("Landing Page", "Crop AI", 'index.html');
     show_landing_container();
 }
-    
+
 window.addEventListener('popstate', () => {
     window.location.reload();
 });
 
-
-
+/* Warning message if input form is not added*/
+function empty() {
+    var x = document.getElementById("leaf_input").value;
+    if (x == "") {
+      alert("Image must be uploaded");
+      return false;
+    }
+  }
