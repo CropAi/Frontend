@@ -59,7 +59,7 @@
 }
 .vgr-cards .card-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   position: absolute;
   margin-left: 50%;
   -webkit-transform: translateX(-50%);

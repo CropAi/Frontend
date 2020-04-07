@@ -10,13 +10,7 @@ const show_landing_container = () => {
     resultContainer.classList.add("hidden");
 } 
 
-const analyze_click = () => {
-    window.history.pushState('Analyze', 'Crop Analysis', '?q=analyze');
-    show_input_container();
-}
-
 const show_input_container = () => {
-
     landingContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
@@ -29,10 +23,18 @@ const show_result_container = () => {
 }
 
 
+const analyze_click = () => {
+    window.history.pushState('Analyze', 'Crop Analysis', '?q=analyze');
+    show_input_container();
+}
+
+
+// toggle About
 $('#about_btn').click(function() {
     $('#about_content').toggle('slow');
 });
 
+// dummy data to be removed after Api integration
 analysis_report_json = {
     Disease: "Pepper Bell Healthy",
     Symptoms: {
@@ -58,13 +60,14 @@ analysis_report_json = {
     },
 };
 
+// form submission
 const form = document.querySelector(".upload-form");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    show_result_container();
 
     // on successful response
     update_result(analysis_report_json);
+    show_result_container();
 });
 
 const update_result = (report) => {
@@ -101,14 +104,31 @@ const update_result = (report) => {
             .appendChild(list)
             .appendChild(anchor);
     });
+   
 };
 
-// function to insert selected image on form 
+/*Function to show the input image in the result container*/
 
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function (e) {
+            $('#leaf_image').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#leaf_input").change(function(){
+    readURL(this);
+});
+
+
+// function to insert selected image on form 
 const showImage = event => {
     const imageInserted = document.getElementById("showImage");
     imageInserted.src = URL.createObjectURL(event.target.files[0]);
-    
+
 }
 
 /* Getting the query from the url */
@@ -127,3 +147,12 @@ else if (SectionToBeDisplay=='result')
     console.log('redirecting to home page')
     window.location = "index.html";
 }
+
+/* Warning message if input form is not added*/
+function empty() {
+    var x = document.getElementById("leaf_input").value;
+    if (x == "") {
+      alert("Image must be uploaded");
+      return false;
+    }
+  }

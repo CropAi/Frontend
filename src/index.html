@@ -53,8 +53,11 @@
         
         <div class="file-select">
           <form class="upload-form" onchange="showImage(event)">
-            <input type="file" id="leaf_input" name="leaf_input" accept="image/x-png,image/gif,image/jpeg">
-            <button>Submit</button>
+            <div class="upload-btn-wrapper">
+              <button class="btn">Upload a file</button>
+               <input type="file" id="leaf_input" name="leaf_input" accept="image/x-png,image/gif,image/jpeg" onchange="loadfile(event)" required>
+            </div>
+            <button onClick="empty()">Submit</button>
           </form>
         </div>
        </div>
@@ -65,7 +68,7 @@
           <div class="card-group vgr-cards">
             <div class="card">
               <div class="card-img-body">
-                <img class="crop_img card-img" src="./img/leaf.jfif" alt="Card image cap">
+                <img class="crop_img card-img" id="leaf_image" alt="Card image cap">
               </div>
               <div class="card-body">
                 <h4 class="card-title" id="disease"></h4>
