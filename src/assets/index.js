@@ -22,9 +22,10 @@ const show_result_container = () => {
 
 
 // toggle About
-$('#about_btn').click(function() {
-    $('#about_content').toggle('slow');
-});
+const showAbout = () => {
+    document.getElementById("about_content").classList.toggle("hidden");
+    
+}
 
 // dummy data to be removed after Api integration
 const analysis_report_json = {
@@ -54,6 +55,13 @@ const analysis_report_json = {
 
 
 const update_result = (report) => {
+    //clearing previous results, if any
+    var tags = ["#symptoms", "#treatment", "#products"];
+    for (var i = 0; i < tags.length; i++) {
+        const del_list = document.querySelector(tags[i]);
+        del_list.innerHTML = '';
+    }
+    //adding current result
     const show_disease = document.querySelector("#disease");
     show_disease.textContent = report.Disease;
 
@@ -87,7 +95,6 @@ const update_result = (report) => {
             .appendChild(list)
             .appendChild(anchor);
     });
-   
 };
 // form submission
 const form = document.querySelector(".upload-form");
@@ -104,6 +111,8 @@ form.addEventListener("submit", (e) => {
 
 const analyze_click = () => {
     window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
+    document.getElementById("leaf_input").value = "";
+    document.getElementById("showImage").src = "";
     show_input_container();
 }
 
@@ -112,7 +121,7 @@ const showImage = event => {
     const imageForm = document.getElementById("showImage");
     const imageResult = document.getElementById("leaf_image");
     imageForm.src = URL.createObjectURL(event.target.files[0]);
-    imageResult.src = URL.createObjectURL(event.target.files[0]);;
+    imageResult.src = URL.createObjectURL(event.target.files[0]);
 }
 
 /* Getting the query from the url */
@@ -124,16 +133,16 @@ SectionToBeDisplay = SectionToBeDisplay || 'landing';
 // console.log(SectionToBeDisplay);
 
 
-if (SectionToBeDisplay=='analyze'){
+if (SectionToBeDisplay == 'analyze') {
     window.history.pushState("Analyze Page", "Crop AI", '?q=analyze');
     show_input_container();
 }
 
-else if (SectionToBeDisplay=='result'){
+else if (SectionToBeDisplay == 'result') {
     window.history.pushState("Result Page", "Crop AI", '?q=result');
     show_result_container();
 }
- 
+
 else {
     window.history.pushState("Landing Page", "Crop AI", 'index.html');
     show_landing_container();
@@ -147,7 +156,7 @@ window.addEventListener('popstate', () => {
 function empty() {
     var x = document.getElementById("leaf_input").value;
     if (x == "") {
-      alert("Image must be uploaded");
-      return false;
+        alert("Image must be uploaded");
+        return false;
     }
-  }
+}

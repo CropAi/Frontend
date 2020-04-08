@@ -1,0 +1,271 @@
+:root{
+  --primary-green:#12a853;
+  --secondary-green:#164045;
+  --white:#fff;
+  --black:#000;
+  --background-blue:#CDF5E7
+}
+
+/* 
+---------------------
+GLOBAL PRESETS
+--------------------- 
+*/
+
+*,*::after,*::before{
+  padding:0;
+  margin:0;
+  box-sizing:inherit;
+}
+
+html{
+  font-size:62.5%;
+  height:100vh;
+  width:100vw;
+}
+
+
+body{
+  background-color:var(--background-blue);
+  box-sizing: border-box;
+  max-height:100vh;
+  min-height:100vh;
+  overflow:hidden;
+}
+
+/* 
+----------------------------
+    GLOBAL CLASSES AND STYLES
+----------------------------
+*/
+.hidden{
+  display:none;
+}
+
+a{
+  text-decoration:none;
+}
+
+
+/* 
+----------------------------
+  Classes for decoration
+----------------------------
+*/
+
+.leaf{
+  width:10rem;
+  opacity:80%;
+  z-index:-10;
+}
+
+.leaf-1{
+  position: fixed;
+  top:2rem;
+  right:10rem;
+  animation:moveUp 2s ease-in-out infinite alternate-reverse;
+  transform-origin: bottom;
+  
+}
+
+.leaf-2{
+  position: fixed;
+  top:8rem;
+  right:10rem;
+  animation:moveDown 2s ease-in-out infinite alternate-reverse;
+  transform-origin: bottom;
+}
+
+
+.grass{
+  width: 100%;
+  bottom:0px;
+  text-align: center;
+  position: fixed;
+  z-index: -10;
+  opacity:80%;
+}
+
+/* Animations on leaves */
+
+@keyframes moveDown{
+  from{
+    transform:translateY(0) rotateZ(2deg);
+    
+  }
+  to{
+    transform:translateY(1rem) rotateZ(-2deg);;
+    
+  }
+}
+
+@keyframes moveUp{
+  from{
+    transform:translateY(-1rem) rotateZ(2deg);
+  
+  }
+  to{
+    transform:translateY(0) rotateZ(-2deg);;
+
+  }
+}
+
+
+
+/* 
+---------------------------
+  TYPOGRAPHY
+---------------------------
+*/
+.display-1{
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 6rem;
+  color: var(--secondary-green);
+}
+
+
+
+/* 
+---------------------
+  LOGO STYLES
+---------------------
+*/
+.logo-box{
+  width:20rem;
+  position: absolute;
+  top:2rem;
+  left:1rem;
+}
+
+.logo{
+  max-width:100%;
+  text-align: center;
+}
+
+
+/* 
+---------------------
+  BUTTONS
+---------------------
+*/
+
+/* landing page */
+
+.btn{
+  padding:1rem 1rem;
+  font-size:1.6rem;
+  border:none;
+  outline:none;
+  text-transform: uppercase;
+}
+
+.btn-green{
+  background:var(--primary-green);
+  color:var(--white);
+  border-radius:2rem;
+  margin:1rem;
+  border:1px solid var(--primary-green);
+  padding:1rem 2rem; 
+  font-size:2rem;
+  transition: transform 200ms ease-in-out;
+  letter-spacing:2px;
+}
+
+ .btn-green:hover{
+    background:var(--primary-green);
+    box-shadow:0rem 0.2rem 0.5rem var(--black);
+    transform:translateY(-2px);
+    color:var(--white);
+ }
+
+
+
+/* 
+---------------------------------
+  Landing Page Styles
+---------------------------------
+*/
+
+
+#landing_container{
+  padding-top:5rem;
+  color: black;
+  width: 90%;
+  margin:15vh auto;
+  text-justify: inter-word;
+ 
+}
+
+
+.btn-container{
+  text-align: center;
+  padding:0;
+  margin:0;
+}
+
+/* About Text */
+
+#about_content{
+  font-size: 2rem;
+  padding:2rem 3rem;
+  width:60%;
+  text-align: center;
+  box-shadow:0 0.5rem 1rem var(--black);
+  background:rgba(255,255,255,0.5)
+
+}
+
+/* 
+-----------------------
+  MEDIA QUERIES
+-----------------------
+*/
+
+@media only screen and (max-width:812px){
+
+  .container{
+    max-width:95%;
+    margin:0 auto;
+    
+  }
+  
+ #about_content{
+    font-size:1.8rem;
+    width:100%;
+    font-weight:normal;
+  } 
+  
+  .display-1{
+    font-size:7rem;
+  }
+  
+}
+
+
+@media only screen and (max-width:400px){
+
+  #landing_container{
+    margin-top:30vh;
+  }
+
+  .leaf{
+    width:5rem;
+    right:10rem;
+  }
+
+  .btn{
+     padding:0.8rem 1rem;
+    font-size:1.5rem;
+  }
+
+  .display-1{
+      font-size:4rem;
+  }
+  #about_content{
+    font-size:1.5rem;
+    width:100%;
+    font-weight:normal;
+  } 
+  
+}
