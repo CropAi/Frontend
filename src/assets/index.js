@@ -91,7 +91,17 @@ const update_result = (report) => {
             .appendChild(list)
             .appendChild(anchor);
     });
-
+    /*
+    Process take in following steps:
+      1) Pass the list of tags in the array
+      2) Get tag value using DOM Model
+      3) Make delete the list or content inside unordered list
+    */
+    var tags = ["#symptoms", "#treatment", "#products"];
+    for(var i=0 ; i<tags.length;i++){
+      const del_list = document.querySelector(tags[i]);
+      del_list.innerHTML = '';
+    }
 };
 // form submission
 const form = document.querySelector(".upload-form");
@@ -108,11 +118,6 @@ form.addEventListener("submit", (e) => {
 
 const analyze_click = () => {
     window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
-    var tags = ["#symptoms", "#treatment", "#products"];
-    for(var i=0 ; i<tags.length;i++){
-      const del_list = document.querySelector(tags[i]);
-      del_list.innerHTML = '';
-    }
     show_input_container();
 }
 
