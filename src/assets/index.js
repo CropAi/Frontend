@@ -6,12 +6,14 @@ const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.add("hidden");
-} 
+}
 
 const show_input_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
+    const showImage = document.getElementById("showImage");
+    showImage.src = "";
 }
 
 const show_result_container = () => {
@@ -87,7 +89,7 @@ const update_result = (report) => {
             .appendChild(list)
             .appendChild(anchor);
     });
-   
+
 };
 // form submission
 const form = document.querySelector(".upload-form");
@@ -112,7 +114,7 @@ const showImage = event => {
     const imageForm = document.getElementById("showImage");
     const imageResult = document.getElementById("leaf_image");
     imageForm.src = URL.createObjectURL(event.target.files[0]);
-    imageResult.src = URL.createObjectURL(event.target.files[0]);;
+    imageResult.src = URL.createObjectURL(event.target.files[0]);
 }
 
 /* Getting the query from the url */
@@ -133,7 +135,7 @@ else if (SectionToBeDisplay=='result'){
     window.history.pushState("Result Page", "Crop AI", '?q=result');
     show_result_container();
 }
- 
+
 else {
     window.history.pushState("Landing Page", "Crop AI", 'index.html');
     show_landing_container();
