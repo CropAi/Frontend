@@ -12,9 +12,6 @@ const show_input_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
-    // Process take place in following steps:
-    //   1) Get DOM model object from
-    //   2) Clear the value associate with input form
 }
 
 const show_result_container = () => {
@@ -57,17 +54,13 @@ const analysis_report_json = {
 
 
 const update_result = (report) => {
-    // Process take place in following steps:
-    //   1) Pass the list of tags in the array
-    //   2) Get tag value using DOM Model
-    //   3) Delete the list or content inside unordered list
-
+    //clearing previous results, if any
     var tags = ["#symptoms", "#treatment", "#products"];
     for(var i=0 ; i<tags.length;i++){
       const del_list = document.querySelector(tags[i]);
       del_list.innerHTML = '';
     }
-
+    //adding current result
     const show_disease = document.querySelector("#disease");
     show_disease.textContent = report.Disease;
 
