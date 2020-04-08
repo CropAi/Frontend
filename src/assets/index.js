@@ -14,6 +14,8 @@ const show_input_container = () => {
     resultContainer.classList.add("hidden");
     const showImage = document.getElementById("showImage");
     showImage.src = "";
+
+
 }
 
 const show_result_container = () => {
@@ -106,6 +108,11 @@ form.addEventListener("submit", (e) => {
 
 const analyze_click = () => {
     window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
+    var tags = ["#symptoms", "#treatment", "#products"];
+    for(var i=0 ; i<tags.length;i++){
+      const del_list = document.querySelector(tags[i]);
+      del_list.innerHTML = '';
+    }
     show_input_container();
 }
 
