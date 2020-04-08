@@ -46,6 +46,7 @@ body {
   height: 40px;
   font-family: open sans semibold;
   margin-top: 25px;
+  font-size:x-large;
 }
 .hero-content h1 {
   color: #828282;
@@ -96,7 +97,7 @@ body {
   float: right;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 640px) {
   #navbar {
     padding: 2px 2px !important;
   }
@@ -127,6 +128,7 @@ body {
     width: 100px;
     height: 30px;
     margin-top: 10px;
+    font-size: large;
   }
   .hero-content {
     margin-top: 15%;
