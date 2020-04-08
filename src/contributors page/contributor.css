@@ -1,0 +1,40 @@
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+.card {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;  
+}
+.text-center{
+    margin-top: 20px;
+    font-size: 50px;
+    color: #2DB7CC;
+}
+.col{
+    display: flex;
+    justify-content: center;
+}
+.switch {
+    margin-left: 30px;
+    border-color: #2DB7CC;
+    color: #2DB7CC;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #2DB7CC;
+}
+.fa{
+    color:black;
+}
