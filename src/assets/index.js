@@ -63,7 +63,7 @@ const update_result = (report) => {
         const del_list = document.querySelector(tags[i]);
         del_list.innerHTML = '';
 
-        //adding current result
+    }  //adding current result
         const show_disease = document.querySelector("#disease");
         show_disease.textContent = report.Disease;
 
@@ -97,8 +97,7 @@ const update_result = (report) => {
                 .appendChild(list)
                 .appendChild(anchor);
         });
-    };
-}
+};
     // form submission
     const form = document.querySelector(".upload-form");
     form.addEventListener("submit", (e) => {
