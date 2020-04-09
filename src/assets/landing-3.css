@@ -1,7 +1,6 @@
 body{
     height: 100%; 
     font-family: 'Open Sans', sans-serif;
-    overflow: hidden;
 }
 
 #navbar {
@@ -40,10 +39,12 @@ body{
 
 #main-section{
       
-      background-image: linear-gradient(to bottom right, #5dcead, #e0f7ae);
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 792px;
+    background-image: linear-gradient(to bottom right, #5dcead, #e0f7ae);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 792px;
+    overflow: hidden;
+
 }
 
 #tree-img{
