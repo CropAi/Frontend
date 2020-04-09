@@ -46,7 +46,9 @@ a{
   text-decoration:none;
 }
 
-
+.fade{
+  animation: fadeIn 1s ease-in-out;
+}
 /* 
 ----------------------------
   Classes for decoration
@@ -85,31 +87,6 @@ a{
   z-index: -10;
   opacity:80%;
 }
-
-/* Animations on leaves */
-
-@keyframes moveDown{
-  from{
-    transform:translateY(0) rotateZ(2deg);
-    
-  }
-  to{
-    transform:translateY(1rem) rotateZ(-2deg);;
-    
-  }
-}
-
-@keyframes moveUp{
-  from{
-    transform:translateY(-1rem) rotateZ(2deg);
-  
-  }
-  to{
-    transform:translateY(0) rotateZ(-2deg);;
-
-  }
-}
-
 
 
 /* 
@@ -212,7 +189,9 @@ a{
   width:60%;
   text-align: center;
   box-shadow:0 0.5rem 1rem var(--black);
-  background:rgba(255,255,255,0.5)
+  background:rgba(255,255,255,0.5);
+  opacity:1;
+  transition: opacity 2s;
 
 }
 
@@ -268,4 +247,55 @@ a{
     font-weight:normal;
   } 
   
+}
+
+
+/* Animations on leaves */
+
+@keyframes moveDown{
+  from{
+    transform:translateY(0) rotateZ(2deg);
+    
+  }
+  to{
+    transform:translateY(1rem) rotateZ(-2deg);;
+    
+  }
+}
+
+
+
+/* 
+----------------------------
+  ANIMATIONS
+----------------------------
+*/
+
+@keyframes moveUp{
+  from{
+    transform:translateY(-1rem) rotateZ(2deg);
+  
+  }
+  to{
+    transform:translateY(0) rotateZ(-2deg);;
+
+  }
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0
+  }
+  to{
+    opacity: 1;
+  }
 }

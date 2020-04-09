@@ -24,6 +24,7 @@ const show_result_container = () => {
 // toggle About
 const showAbout = () => {
     document.getElementById("about_content").classList.toggle("hidden");
+    document.getElementById("about_content").classList.add("fade");
     
 }
 
