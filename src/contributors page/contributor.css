@@ -17,18 +17,18 @@
     font-size: 50px;
     color: #2DB7CC;
 }
-.col{
+.col-sm{
     display: flex;
     justify-content: center;
 }
 .switch {
-    margin-left: 30px;
+    margin-right: 20px;
     border-color: #2DB7CC;
     color: #2DB7CC;
 }
 .navbar-light .navbar-nav .nav-link {
     color: black;
-    font-size: 25px;
+    font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
@@ -37,4 +37,8 @@
 }
 .fa{
     color:black;
+}
+.card-body a i{
+    display:flex;
+    justify-content: flex-end;
 }
