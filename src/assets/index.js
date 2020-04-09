@@ -58,12 +58,11 @@ const analysis_report_json = {
 const update_result = (report) => {
     //clearing previous results, if any
     var tags = ["#symptoms", "#treatment", "#products"];
-
-    for (var i = 0; i < tags.length; i++) {
-        const del_list = document.querySelector(tags[i]);
-        del_list.innerHTML = '';
-
-    }  //adding current result
+    for(var i=0 ; i<tags.length;i++){
+      const del_list = document.querySelector(tags[i]);
+      del_list.innerHTML = '';
+    }
+    //adding current result
     const show_disease = document.querySelector("#disease");
     show_disease.textContent = report.Disease;
 
@@ -113,7 +112,7 @@ form.addEventListener("submit", (e) => {
 
 const analyze_click = () => {
     window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
-    document.getElementById("leaf_input").value = "";
+    document.getElementById("leaf_input").value="";
     document.getElementById("showImage").src = "";
     show_input_container();
 }
