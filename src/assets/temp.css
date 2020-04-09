@@ -169,7 +169,8 @@ a{
   padding-top:5rem;
   color: black;
   width: 90%;
-  margin:15vh auto;
+  margin:0 auto;
+  margin-top:35vh;
   text-justify: inter-word;
  
 }
@@ -203,6 +204,9 @@ a{
 
 @media only screen and (max-width:812px){
 
+    #landing_container{
+      margin-top:40vh;
+    }
   .container{
     max-width:95%;
     margin:0 auto;
@@ -234,12 +238,15 @@ a{
   }
 
   .btn{
-     padding:0.8rem 1rem;
-    font-size:1.5rem;
+    padding:0.8rem 1rem;
+    display:block;
+    font-size:1.8rem;
+    text-align:center;
+    margin:2rem auto;
   }
 
   .display-1{
-      font-size:4rem;
+      font-size:5rem;
   }
   #about_content{
     font-size:1.5rem;
