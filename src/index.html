@@ -81,33 +81,32 @@
 
 
   <!-- RESULT CONTAINER -->
-  <div id="result_container" class="hidden">
-    <div class="container1">
-      <div class="card-group vgr-cards">
-        <div class="card">
-          <div class="card-img-body">
-            <img class="crop_img card-img" id="leaf_image" alt="Card image cap">
-          </div>
-          <div class="card-body">
-            <h4 class="card-title" id="disease"></h4>
-            <p class="card-text">
-              <div id="card-content">
-                <p class="list_content">Symptoms</p>
-                <ul class="information" id="symptoms"></ul>
-                <p class="list_content">Treatment </p>
-                <ul class="information" id="treatment"></ul>
-                <p class="list_content">Products</p>
-                <ul class="information" id="products"></ul>
-              </div>
-            </p>
-          </div>
+<div id="result_container" class="hidden">
+    <h4 class="display-4">Analysis Report:</h4>
+
+        <div class="container result">
+            <div class="img-result-container img-fluid">
+              <img class="crop_img card-img" id="leaf_image" >
+            </div>
+            
+            <div class="card-body">
+              <h4 class="card-title" id="disease"></h4>
+              <p class="card-text">
+                <div id="card-content">
+                  <p class="list_content">Symptoms</p>
+                  <ol class="information" id="symptoms"></ol>
+                  <p class="list_content">Treatment </p>
+                  <ol class="information" id="treatment"></ol>
+                  <p class="list_content">Products</p>
+                  <ol class="information" id="products"></ol>
+                </div>
+              </p>
+            </div>
         </div>
-      </div>
-      <div class="button-container">
-        <button class="button-Result" onclick="analyze_click()">Analyze Other Crop</button>
-      </div>
-    </div>
-  </div>
+        <div class="btn-container pb-4">
+          <button class="btn btn-green btn-sm " onclick="analyze_click()">Analyze Other Crop</button>
+        </div>
+</div>
 
 
   <!-- Bottom Decoration plant -->

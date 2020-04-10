@@ -31,7 +31,7 @@ body{
   box-sizing: border-box;
   max-height:100vh;
   min-height:100vh;
-  overflow:hidden;
+  overflow-x:hidden;
 }
 
 /* 
@@ -50,6 +50,8 @@ a{
 .fade{
   animation: fadeIn 1s ease-in-out;
 }
+
+
 /* 
 ----------------------------
   Classes for decoration
@@ -105,6 +107,12 @@ a{
 .display-3{
     text-align:center;
     
+}
+
+.display-4{
+  text-align:left;
+  font-size:4rem;
+  padding-left:3rem;
 }
 
 
@@ -404,4 +412,124 @@ a{
     #input_container{
         top:60%
     }
+}
+
+
+/* 
+  -----------------
+    RESULT SECTION 
+  -----------------
+*/
+
+#result_container{
+  
+  height:max-content;
+  width:50vw;
+  margin:2rem auto;
+  box-shadow: 4px 4px 8px var(--black);
+  border-radius:3rem;
+  position:relative;
+  padding:2rem;
+  overflow:hidden;
+
+}
+
+ .img-result-container{
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:-2rem;
+  right:-2rem;
+  z-index:-4;
+  width:18rem;
+  height:20rem;
+  
+}
+
+.img-result-container img{
+  border-top-right-radius: 4rem;
+  z-index:-4;
+  width:18rem;
+  height:20rem;
+ 
+}
+
+
+.list_content{
+  font-size:1.8rem;
+  font-weight:bold;
+}
+
+
+.card-title{
+  font-size:3rem;
+  text-align:left;
+}
+
+.information li{
+  font-size:1.7rem;
+}
+
+.information a:link,
+.information a:visited{
+  text-decoration: none;
+  color:rgb(19, 16, 231);
+  font-weight:bold;
+}
+
+.information a:hover,
+.information a:active{
+  text-decoration: none;
+  color:rgb(41, 91, 148);
+  font-weight:bold;
+}
+
+
+/* 
+--------------------------
+  Media Queries for Result
+---------------------------
+*/
+
+@media only screen and (max-width:980px){
+
+  #result_container{
+    width:90%;
+    margin-top:10rem;
+  }
+}
+
+@media only screen and (max-width:680px){
+
+  #result_container{
+    padding:1rem;
+  }
+  .display-4{
+    font-size:3rem;
+    text-align:center;
+    
+  }
+
+  .result .img-result-container{
+    display:none;
+  }
+
+  .card-title{
+    font-size:2rem;
+  }
+
+  .list_content{
+    font-size:1.5rem;
+  }
+
+  .information li{
+    font-size:1.3rem;
+  }
+
+}
+
+@media only screen and (max-width:480px){
+  #result_container{
+    padding:1rem;
+  }
 }
