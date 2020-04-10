@@ -466,6 +466,8 @@ a{
   position:relative;
   padding:2rem;
   overflow-x:hidden;
+  background:linear-gradient(to bottom right,#cfd9df,#e2ebf0);
+  opacity:0.85;
 
 
 }
