@@ -25,7 +25,7 @@ const show_result_container = () => {
 const showAbout = () => {
     document.getElementById("about_content").classList.toggle("hidden");
     document.getElementById("about_content").classList.add("fade");
-    
+
 }
 
 // dummy data to be removed after Api integration
@@ -154,11 +154,12 @@ const update_result = (report) => {
         window.location.reload();
     });
 
-    /* Warning message if input form is not added*/
-    function empty() {
-        var x = document.getElementById("leaf_input").value;
-        if (x == "") {
-            alert("Image must be uploaded");
-            return false;
-        }
+
+/* Warning message if input form is not added*/
+function empty() {
+    var x = document.getElementById("leaf_input").value;
+    if (x == "") {
+        alert("Image must be uploaded");
+        return false;
     }
+}

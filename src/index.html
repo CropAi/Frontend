@@ -5,126 +5,128 @@
   <title>Crop AI</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- CDN's for usage -->
 
   <!-- Latest Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="./assets/card.css">
 
+
   <!-- <link rel="stylesheet" href="./assets/index.css"> -->
 
   <!-- DO NOT use the below stylesheet for styling component! -->
-  <link rel="stylesheet" href="./assets/temp.css" >
-  
+  <link rel="stylesheet" href="./assets/temp.css">
+
 </head>
 
-  <body>
+<body>
 
-    <!-- Decoration Leaf on the right -->
-    <div class="leaf leaf-1">
-      <img src="./img/plant.png" alt="bg-design">
+  <!-- Decoration Leaf on the right -->
+  <div class="leaf leaf-1">
+    <img src="./img/plant.png" alt="bg-design">
+  </div>
+
+  <div class="leaf leaf-2">
+    <img src="./img/plant.png" alt="bg-design">
+  </div>
+
+
+  <!-- Organisation logo -->
+  <div class="logo-box">
+    <a href="./index.html" id="logo-url">
+      <img src="../designs/logo-designs/cropAi-logo-croped.png" alt="CropAi Logo" class="logo">
+    </a>
+  </div>
+
+  <!-- Landing Container  -->
+  <div id="landing_container" class="hidden">
+    <div class="container">
+      <h1 class="display-1">CROP AI</h1>
+      <div class="btn-container">
+        <button class="btn btn-green" onclick="showAbout()">About</button>
+        <button class="btn btn-green" onclick="analyze_click()">ANALYZE<button />
+      </div>
     </div>
 
-    <div class="leaf leaf-2">
-      <img src="./img/plant.png" alt="bg-design">
-    </div>
+    <p id="about_content" class="mt-1 mx-auto hidden">
+      This is a crop advisory app for farmers and gardeners. It can diagnose pest damage, plant disease and nutrient
+      deficiencies that are affecting crops and can offer corresponding treatment measures.
+    </p>
+  </div>
 
-   
-      <!-- Organisation logo -->
-      <div class="logo-box">
-        <a href="./index.html" id="logo-url">
-          <img src="../designs/logo-designs/cropAi-logo-croped.png" alt="CropAi Logo" class="logo">
-        </a>
-      </div>
-
-      <!-- Landing Container  -->
-      <div id="landing_container" class="hidden">
-        <div class="container">
-            <h1 class="display-1">CROP AI</h1>
-            <div class="btn-container">
-            <button class="btn btn-green" onclick="showAbout()">About</button>
-            <button  class="btn btn-green" onclick="analyze_click()">ANALYZE<button />
-            </div>
-        </div>
-        
-        <p id="about_content" class="mt-1 mx-auto hidden">
-          This is a crop advisory app for farmers and gardeners. It can diagnose pest damage, plant disease and nutrient deficiencies that are affecting crops and can offer corresponding treatment measures.
-        </p>
-      </div>
-
-      <!-- INPUT CONTAINER -->
-     <div id="input_container" class="hidden">
-      
-      <div class="upload-container">
-        <h1 class="upload-heading">Upload the Image</h1>
-        
-        <div class="img-container">
-            <img  class="mb-4 img-uploaded" id="showImage">
-        </div>
-        
-        <div class="file-select">
-          <form class="upload-form" onchange="showImage(event)">
-            <div class="upload-btn-wrapper">
-              <button class="btn">Upload a file</button>
-               <input type="file" id="leaf_input" name="leaf_input" accept="image/x-png,image/gif,image/jpeg" required>
-            </div>
-            <button onClick="empty()">Submit</button>
-          </form>
-        </div>
-       </div>
-      </div>
-
-      <!-- RESULT CONTAINER -->
-      <div id="result_container" class = "hidden">
-        <div class="container1">
-          <div class="card-group vgr-cards">
-            <div class="card">
-              <div class="card-img-body">
-                <img class="crop_img card-img" id="leaf_image" alt="Card image cap">
-              </div>
-              <div class="card-body">
-                <h4 class="card-title" id="disease"></h4>
-                <p class="card-text">
-                  <div id="card-content">
-                    <p class="list_content">Symptoms</p>
-                    <ul class="information" id="symptoms"></ul>
-                    <p class="list_content">Treatment </p>
-                    <ul class="information" id="treatment"></ul>
-                    <p class="list_content">Products</p>
-                    <ul class="information" id="products"></ul>
-                  </div>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="button-container">
-            <button class="button-Result" onclick="analyze_click()">Analyze Other Crop</button>
-          </div>
-        </div>
-      </div>
-    
-
-    <!-- Bottom Decoration plant -->
-    <div class="grass">
-      <img src="./img/bottom-plants.png" alt="bg-design" width="80%">
-    </div>
-
+  <!-- INPUT CONTAINER -->
   
-    <!-- CDN's Scripts -->
+  <div id="input_container" class="hidden">
+    <h3 class="display-3">Upload the Image</h3>
+
+      <div class="img-container mx-auto">
+        <img class="mb-4 img-uploaded img-fluid" id="showImage">
+        <p class="img-tagline">Find you image here</p>
+      </div>
+
+      <div class="file-select mx-auto p-2">
+        <form class="upload-form" onchange="showImage(event)">
+          <div class="upload-btn-wrapper mx-auto">
+            <button class="btn btn-blue btn-sm">Upload a file</button>
+            <input type="file" id="leaf_input" name="leaf_input" accept="image/x-png,image/gif,image/jpeg" required>
+          </div>
+          <button class="btn btn-green btn-submit" type="submit" onClick="empty()">Submit</button>
+        </form>
+      </div>
+  </div>
+
+
+  <!-- RESULT CONTAINER -->
+  <div id="result_container" class="hidden">
+    <div class="container1">
+      <div class="card-group vgr-cards">
+        <div class="card">
+          <div class="card-img-body">
+            <img class="crop_img card-img" id="leaf_image" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <h4 class="card-title" id="disease"></h4>
+            <p class="card-text">
+              <div id="card-content">
+                <p class="list_content">Symptoms</p>
+                <ul class="information" id="symptoms"></ul>
+                <p class="list_content">Treatment </p>
+                <ul class="information" id="treatment"></ul>
+                <p class="list_content">Products</p>
+                <ul class="information" id="products"></ul>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <button class="button-Result" onclick="analyze_click()">Analyze Other Crop</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bottom Decoration plant -->
+  <div class="grass">
+    <img src="./img/bottom-plants.png" alt="bg-design" width="80%">
+  </div>
+
+
+  <!-- CDN's Scripts -->
 
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-  </script>
+    </script>
 
   <!-- Custom Scripts -->
   <script src="./assets/index.js" charset="utf-8"></script>
-  </body>
+</body>
 
-  
+
 
 </html>
