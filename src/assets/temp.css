@@ -29,9 +29,10 @@ html{
 body{
   background-color:var(--background-blue);
   box-sizing: border-box;
-  max-height:100vh;
   min-height:100vh;
+  max-height:100vh;
   overflow-x:hidden;
+
 }
 
 /* 
@@ -140,8 +141,6 @@ a{
 ---------------------
 */
 
-/* landing page */
-
 .btn{
   padding:1rem 1rem;
   font-size:1.6rem;
@@ -202,12 +201,14 @@ a{
   padding-top:5rem;
   color: black;
   width: 90%;
-  margin:0 auto;
-  margin-top:20vh;
-  text-justify: inter-word;
+  overflow:hidden;
+  min-height:60vh;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
  
 }
-
 
 .btn-container{
   text-align: center;
@@ -220,7 +221,7 @@ a{
 #about_content{
   font-size: 2rem;
   padding:2rem 3rem;
-  width:60%;
+  width:80%;
   text-align: center;
   box-shadow:0 0.5rem 1rem var(--black);
   background:rgba(255,255,255,0.5);
@@ -236,9 +237,6 @@ a{
 
 @media only screen and (max-width:812px){
 
-    #landing_container{
-      margin-top:30vh;
-    }
   .container{
     max-width:95%;
     margin:0 auto;
@@ -252,16 +250,23 @@ a{
   } 
   
   .display-1{
-    font-size:7rem;
+    font-size:6rem;
+  }
+
+  .btn{
+    
+    font-size:1.7rem;
   }
   
 }
 
 
-@media only screen and (max-width:400px){
+@media only screen and (max-width:420px){
 
   #landing_container{
-    margin-top:30vh;
+    top:60%;
+    width:90%;
+    padding:1rem 0rem;
   }
 
   .leaf{
@@ -272,18 +277,20 @@ a{
   .btn{
     padding:0.8rem 1rem;
     display:block;
-    font-size:1.8rem;
+    font-size:1.7rem;
     text-align:center;
-    margin:2rem auto;
+    margin:1.5rem auto;
   }
 
   .display-1{
-      font-size:5rem;
+      font-size:4rem;
   }
+
   #about_content{
     font-size:1.5rem;
     width:100%;
     font-weight:normal;
+    padding:0.6rem;
   } 
   
 }
@@ -392,13 +399,13 @@ a{
         top:50%;
     }
     .display-3{
-        font-size:3rem;
+        font-size:2.6rem;
     }
     .btn-submit{
-        font-size:1.4rem;
+        font-size:1.3rem;
     }
     .btn-blue{
-        font-size:1.4rem;
+        font-size:1.3rem;
     }
     .upload-btn-wrapper input[type=file] {
         font-size: 1.4rem;
@@ -410,10 +417,38 @@ a{
 
 @media only screen and (max-width:600px){
     #input_container{
-        top:60%
+        top:70%;
+        width:90%;
+        transform:translate(-50%,-50%);
+        
     }
 }
 
+@media only screen and (max-width:830px) and (min-height:300px){
+ #input_container{
+    padding:4rem;
+    top:50%;
+    width:max-content;
+    max-height:80vh;
+    overflow:hidden;
+ }
+  .img-container{
+    width:14rem;
+    height:12rem;
+  }
+  .img-container img{
+    width:14rem;
+    height:12rem;
+  }
+  .btn-blue{
+     font-size:1.2rem;
+     padding:0.3rem 1rem;
+  }
+  .btn-submit{
+    font-size:1.2rem;
+     padding:0.3rem 1rem;
+  }
+}
 
 /* 
   -----------------
@@ -424,13 +459,13 @@ a{
 #result_container{
   
   height:max-content;
-  width:50vw;
+  width:70vw;
   margin:2rem auto;
   box-shadow: 4px 4px 8px var(--black);
   border-radius:3rem;
   position:relative;
   padding:2rem;
-  overflow:hidden;
+
 
 }
 
