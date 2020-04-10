@@ -465,6 +465,7 @@ a{
   border-radius:3rem;
   position:relative;
   padding:2rem;
+  overflow-x:hidden;
 
 
 }
@@ -478,6 +479,7 @@ a{
   z-index:-4;
   width:18rem;
   height:20rem;
+  overflow:hidden;
   
 }
 
@@ -503,6 +505,7 @@ a{
 
 .information li{
   font-size:1.7rem;
+  color:var(--black)
 }
 
 .information a:link,
@@ -565,6 +568,7 @@ a{
 
 @media only screen and (max-width:480px){
   #result_container{
-    padding:1rem;
+    padding:0.6rem 0.2rem;
+    width:98%;
   }
 }
