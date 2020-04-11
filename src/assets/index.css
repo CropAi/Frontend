@@ -88,7 +88,7 @@ a{
   bottom:0px;
   text-align: center;
   position: fixed;
-  /* z-index: -10; */
+  z-index: -10;
   opacity:80%;
 }
 
@@ -581,45 +581,51 @@ a{
   ------------------------------
 */
 .bottom-content{
-  width: 15%;
-  margin: 30px auto;
-  z-index: 1;
+  width:30%;
   position: absolute;
-  top: 50%;
-  left: 67%;
+  top:90%;
+  left:50%;
 }
-.list-group-mine{
+
+.bottom_container{
+  margin: 0px;
+}
+.list-inline-mine{
   text-align: center;
-  font-size: 14px;
 }
-.list-group-mine .list-group-item{
+.list-inline-mine .list-inline-item{
+  font-size: 15px;
   background-color: white;
 }
-.list-group-mine:hover .list-group-item:hover{
+.list-inline-mine:hover .list-inline-item:hover{
   font-size: 20px;
   background-color: green;
 }
 
 
-.list-group-item a:link {
+.list-inline-item a:link {
+  padding: 25px;
   color: green;
   text-decoration: none;
 }
 
 /* visited link */
-.list-group-item a:visited {
+.list-inline-item a:visited {
+    padding: 25px;
   color: green;
   text-decoration: none;
 }
 
 /* mouse over link */
-.list-group-item a:hover {
+.list-inline-item a:hover {
+    padding: 25px;
   color: white;
   text-decoration: none;
 }
 
 /* selected link */
-.list-group-item a:active {
+.list-inline-item a:active {
+    padding: 25px;
   color: blue;
   text-decoration: none;
 }
