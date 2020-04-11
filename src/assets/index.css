@@ -581,51 +581,40 @@ a{
   ------------------------------
 */
 .bottom-content{
-  width:30%;
+  width: 45%;
+  background-color: #12a845;
+  color: white;
+  padding:10px;
+  border-radius: 30px 30px;
   position: absolute;
-  top:90%;
-  left:50%;
+  top:85%;
+  left: 25%;
+  margin: 20px;
 }
-
-.bottom_container{
+.bottom-content .paragraph-content{
+  font-size: 18px;
   margin: 0px;
 }
-.list-inline-mine{
-  text-align: center;
-}
-.list-inline-mine .list-inline-item{
-  font-size: 15px;
-  background-color: white;
-}
-.list-inline-mine:hover .list-inline-item:hover{
-  font-size: 20px;
-  background-color: green;
-}
-
-
-.list-inline-item a:link {
-  padding: 25px;
-  color: green;
+.bottom-content .paragraph-content a:link {
+  color: black;
   text-decoration: none;
 }
 
 /* visited link */
-.list-inline-item a:visited {
-    padding: 25px;
-  color: green;
+.bottom-content .paragraph-content a:visited {
+  color: red;
   text-decoration: none;
 }
 
 /* mouse over link */
-.list-inline-item a:hover {
-    padding: 25px;
-  color: white;
+.bottom-content .paragraph-content a:hover {
+  font-size: 22px;
+  color: blue;
   text-decoration: none;
 }
 
 /* selected link */
-.list-inline-item a:active {
-    padding: 25px;
-  color: blue;
+.bottom-content .paragraph-content a:active {
+  color: red;
   text-decoration: none;
 }
