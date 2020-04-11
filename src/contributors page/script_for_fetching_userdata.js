@@ -1,5 +1,3 @@
-const fetch = require('node-fetch');
- 
 let contributor_information = async contributor_data_default => {
   let contributor_data = [];
   const mentor_usernames = ['rajats98','vaibagga','tanishq9','gshanbhag525','Sulekhiya'];
@@ -20,8 +18,8 @@ let contributor_information = async contributor_data_default => {
    
     let users = await response.json();
  
-    for (let i = 0; i < users.length; i++) {
-      let user = users[i];
+    for (let j = 0; j < users.length; j++) {
+      let user = users[j];
       let {login, avatar_url, html_url} = user;
        
       if(!contributor_data[login]){
