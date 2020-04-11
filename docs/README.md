@@ -51,7 +51,7 @@ GirlScript Summer of Code is the 3 month long Open Source program during summers
 
 GirlScript Summer of Code 2019 witnessed overwhelming participation and 2020 edition will carry the legacy forward while promising to be even more impactful and grand
 <p align="center">
-  <a href="https://miro.medium.com/max/1400/1*CKaCnG11p5i0KiQyaoyBvg.png"><img width="200" height="200" src="../designs/logo-designs/gssoc-logo.png"></a>
+  <a href="https://raw.githubusercontent.com/annu12340/Frontend/master/designs/logo-designs/gssoc-logo-with-text.png"><img width="200" height="200" src="../designs/logo-designs/gssoc-logo.png"></a>
 </p>
 
 Before contributing to this project do check [CONTRIBUTING.md](./CONTRIBUTING.md) file and [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) file.
