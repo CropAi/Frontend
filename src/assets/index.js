@@ -6,7 +6,7 @@ const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.add("hidden");
-} 
+}
 
 const show_input_container = () => {
     landingContainer.classList.add("hidden");
@@ -22,9 +22,11 @@ const show_result_container = () => {
 
 
 // toggle About
-$('#about_btn').click(function() {
-    $('#about_content').toggle('slow');
-});
+const showAbout = () => {
+    document.getElementById("about_content").classList.toggle("hidden");
+    document.getElementById("about_content").classList.add("fade");
+
+}
 
 // dummy data to be removed after Api integration
 const analysis_report_json = {
@@ -54,100 +56,111 @@ const analysis_report_json = {
 
 
 const update_result = (report) => {
-    const show_disease = document.querySelector("#disease");
-    show_disease.textContent = report.Disease;
+    //clearing previous results, if any
+    var tags = ["#symptoms", "#treatment", "#products"];
 
-    const show_symptoms = document.querySelector("#symptoms");
-    const symptoms = Object.values(report.Symptoms);
-    symptoms.forEach((item) => {
-        const list = document.createElement("li");
-        list.textContent = item;
-        document.querySelector("#symptoms").appendChild(list);
-    });
+    for (var i = 0; i < tags.length; i++) {
+        const del_list = document.querySelector(tags[i]);
+        del_list.innerHTML = '';
 
-    const treatment = Object.values(report.Treatment);
-    treatment.forEach((item) => {
-        const list = document.createElement("li");
-        list.textContent = item;
-        document.querySelector("#treatment").appendChild(list);
-    });
+    }  //adding current result
+        const show_disease = document.querySelector("#disease");
+        show_disease.textContent = report.Disease;
 
-    const product = Object.values(report.Recommended_Product);
-    product.forEach((item) => {
-        const med = item.split(":")[0].trim();
-        const url = `${item.split(":")[1].trim()}:${item.split(":")[2].trim()}`;
+        const show_symptoms = document.querySelector("#symptoms");
+        const symptoms = Object.values(report.Symptoms);
+        symptoms.forEach((item) => {
+            const list = document.createElement("li");
+            list.textContent = item;
+            document.querySelector("#symptoms").appendChild(list);
+        });
 
-        const list = document.createElement("li");
-        const anchor = document.createElement("a");
-        anchor.setAttribute("href", url);
+        const treatment = Object.values(report.Treatment);
+        treatment.forEach((item) => {
+            const list = document.createElement("li");
+            list.textContent = item;
+            document.querySelector("#treatment").appendChild(list);
+        });
 
-        anchor.textContent = med;
-        document
-            .querySelector("#products")
-            .appendChild(list)
-            .appendChild(anchor);
-    });
-   
+        const product = Object.values(report.Recommended_Product);
+        product.forEach((item) => {
+            const med = item.split(":")[0].trim();
+            const url = `${item.split(":")[1].trim()}:${item.split(":")[2].trim()}`;
+
+            const list = document.createElement("li");
+            const anchor = document.createElement("a");
+            anchor.setAttribute("href", url);
+
+            anchor.textContent = med;
+            document
+                .querySelector("#products")
+                .appendChild(list)
+                .appendChild(anchor);
+        });
 };
-// form submission
-const form = document.querySelector(".upload-form");
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    // form submission
+    const form = document.querySelector(".upload-form");
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-    // on successful response
-    window.history.pushState("Result Page", "Crop AI", '?q=result');
-    update_result(analysis_report_json);
-    show_result_container();
+        // on successful response
+        window.history.pushState("Result Page", "Crop AI", '?q=result');
+        update_result(analysis_report_json);
+        show_result_container();
 
-});
+    });
 
 
 const analyze_click = () => {
-    window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
-    show_input_container();
-}
+        const DUMMY_URL = "./img/dummy-image.svg";
+        window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
+        document.getElementById("leaf_input").value = "";
+        document.getElementById("showImage").src = DUMMY_URL;
+        show_input_container();
+    }
 
-// function to insert input image on form and result section
-const showImage = event => {
-    const imageForm = document.getElementById("showImage");
-    const imageResult = document.getElementById("leaf_image");
-    imageForm.src = URL.createObjectURL(event.target.files[0]);
-    imageResult.src = URL.createObjectURL(event.target.files[0]);;
-}
+    // function to insert input image on form and result section
+    const showImage = event => {
+        const imageForm = document.getElementById("showImage");
+        const imageResult = document.getElementById("leaf_image");
+        imageForm.src = URL.createObjectURL(event.target.files[0]);
+        imageResult.src = URL.createObjectURL(event.target.files[0]);
+    }
 
-/* Getting the query from the url */
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-let SectionToBeDisplay = urlParams.get('q')
+    /* Getting the query from the url */
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    let SectionToBeDisplay = urlParams.get('q')
 
-SectionToBeDisplay = SectionToBeDisplay || 'landing';
-// console.log(SectionToBeDisplay);
+    SectionToBeDisplay = SectionToBeDisplay || 'landing';
+    // console.log(SectionToBeDisplay);
 
 
-if (SectionToBeDisplay=='analyze'){
-    window.history.pushState("Analyze Page", "Crop AI", '?q=analyze');
-    show_input_container();
-}
+    if (SectionToBeDisplay == 'analyze') {
+        window.history.pushState("Analyze Page", "Crop AI", '?q=analyze');
+        show_input_container();
+    }
 
-else if (SectionToBeDisplay=='result'){
-    window.history.pushState("Result Page", "Crop AI", '?q=result');
-    show_result_container();
-}
- 
-else {
-    window.history.pushState("Landing Page", "Crop AI", 'index.html');
-    show_landing_container();
-}
+    else if (SectionToBeDisplay == 'result') {
+        window.history.pushState("Result Page", "Crop AI", '?q=result');
+        show_result_container();
+    }
 
-window.addEventListener('popstate', () => {
-    window.location.reload();
-});
+    else {
+        window.history.pushState("Landing Page", "Crop AI", 'index.html');
+        show_landing_container();
+    }
+
+    window.addEventListener('popstate', () => {
+        window.location.reload();
+    });
+
 
 /* Warning message if input form is not added*/
 function empty() {
     var x = document.getElementById("leaf_input").value;
     if (x == "") {
-      alert("Image must be uploaded");
-      return false;
+        alert("Image must be uploaded");
+        return false;
     }
-  }
+}
