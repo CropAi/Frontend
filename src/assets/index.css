@@ -379,17 +379,16 @@ a{
     height:16rem;
 }
 
-.img-tagline{
-    text-align:center;
-    position:fixed;
-    top:40%;
-    left:50%;
-    transform:translate(-55%,-40%);
-    font-size:1.3rem;
-    z-index:-4;
-    color:var(--secondary-green);
-    font-weight:bold;
+.img-dummy{
+  position:absolute;
+  top:0;
+  left:0;
+  transform:translate(0);
+  width:16rem;
+  height:16rem;
+  z-index:-10;
 }
+
 
 /* Media Queries for Input */
 
