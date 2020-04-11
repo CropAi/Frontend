@@ -586,10 +586,9 @@ a{
   color: white;
   padding:10px;
   border-radius: 30px 30px;
-  position: absolute;
-  top:85%;
-  left: 25%;
-  margin: 20px;
+  margin-left: 27%;
+  margin-top: 40%;
+  float: left;
 }
 .bottom-content .paragraph-content{
   font-size: 18px;

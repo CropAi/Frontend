@@ -1,27 +1,28 @@
 const landingContainer = document.getElementById("landing_container");
 const inputContainer = document.getElementById("input_container");
 const resultContainer = document.getElementById("result_container");
-const bottomContainer = document.getElementById("bottom-data")
+const bottomContainer = document.getElementById("bottom-data");
+
 
 const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.add("hidden");
-    bottomContainer.classList.remove("hidden");
+    bottomContainer.style.margin = "40% 1% 0% 27%";
 }
 
 const show_input_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
-    bottomContainer.classList.remove("hidden");
+    bottomContainer.style.margin = "40% 1% 0% 27%";
 }
 
 const show_result_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.remove("hidden");
-    bottomContainer.classList.add("hidden");
+    bottomContainer.style.margin = "5% 2% 0% 27%";
 }
 
 
