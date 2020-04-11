@@ -41,6 +41,10 @@ This application takes an image of the leaf or crop as input and shows the resul
 
 > Only GSSoC participants are allowed to contribute to this repository.
 
+<p align="center">
+<img src="../designs/logo-designs/gssoc-logo-with-text.png">
+</p>
+
 ### About GirlScript
 GirlScript Foundation, a non-profit registered by Government of India, has come up with a unique and India's first women oriented technical festival.
 
@@ -50,9 +54,7 @@ GirlScript started as a project has been selected by Mozilla under Open Leadersh
 GirlScript Summer of Code is the 3 month long Open Source program during summers conducted by GirlScript Foundation, started in 2018, with an aim to help beginners get started with Open Source Development while encouraging diversity. Throughout the program, participants contribute to different projects under guidance of experienced mentors. Top participants get exciting goodies and opportunities.
 
 GirlScript Summer of Code 2019 witnessed overwhelming participation and 2020 edition will carry the legacy forward while promising to be even more impactful and grand
-<p align="center">
-<img width="750" height="350" src="../designs/logo-designs/gssoc-logo-with-text.png">
-</p>
+
 
 Before contributing to this project do check [CONTRIBUTING.md](./CONTRIBUTING.md) file and [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) file.
 
