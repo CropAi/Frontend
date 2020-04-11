@@ -368,8 +368,8 @@ a{
 }
 
 .img-container{
-    width:18rem;
-    height:18rem;
+    width:16rem;
+    height:16rem;
     margin:0 auto;
     position:relative;
 }
@@ -377,9 +377,10 @@ a{
 .img-uploaded{
     width:16rem;
     height:16rem;
+    text-align:center;
 }
 
-.img-dummy{
+/* .img-dummy{
   position:absolute;
   top:0;
   left:0;
@@ -387,7 +388,7 @@ a{
   width:16rem;
   height:16rem;
   z-index:-10;
-}
+} */
 
 
 /* Media Queries for Input */
