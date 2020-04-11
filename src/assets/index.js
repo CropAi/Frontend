@@ -111,10 +111,11 @@ const update_result = (report) => {
     });
 
 
-    const analyze_click = () => {
+const analyze_click = () => {
+        const DUMMY_URL = "./img/dummy-image.svg";
         window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
         document.getElementById("leaf_input").value = "";
-        document.getElementById("showImage").src = "";
+        document.getElementById("showImage").src = DUMMY_URL;
         show_input_container();
     }
 
