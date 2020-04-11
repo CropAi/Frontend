@@ -19,6 +19,11 @@ body {
   overflow: hidden;
 }
 
+.logo-box{
+  margin-top: 1px;
+  display: contents;
+}
+
 .logo {
   width: 15rem;
   display: inline-block;
@@ -46,7 +51,7 @@ body {
   height: 40px;
   font-family: open sans semibold;
   margin-top: 25px;
-  font-size:x-large;
+  font-size: x-large;
 }
 .hero-content h1 {
   color: #828282;
@@ -78,10 +83,10 @@ body {
   float: left;
   color: #737373;
   text-align: center;
-  padding: 12px;
-  padding-right: 40px;
+  padding: 5px;
+  padding-right: 20px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 25px;
   border-radius: 4px;
   transition: 1s;
@@ -98,52 +103,65 @@ body {
 }
 
 @media screen and (max-width: 640px) {
+ 
   #navbar {
-    padding: 2px 2px !important;
+    padding: 10px 10px !important;
   }
+  
   #navbar a {
     float: none;
     text-align: right;
     list-style: none;
     font-size: 10px;
   }
-  #navbar-right {
-    float: none;
-  }
+
   .hero-images img {
     margin-top: 40%;
     max-width: 110%;
   }
+  
   .logo {
-    display: none;
+    width: 10rem;
+    margin-top: 0;
   }
+  
   .hero-content h1 {
     font-size: 25px;
   }
+  
   .hero-content .title {
     font-size: 40px;
     margin-top: 20%;
   }
+ 
   .hero-content .button {
     width: 100px;
     height: 30px;
     margin-top: 10px;
     font-size: large;
   }
+ 
   .hero-content {
     margin-top: 15%;
     width: 100%;
     margin-left: 0;
     text-align: center;
   }
+  
   .content {
     display: inline-block;
   }
+  
   .col-7 {
     max-width: 90%;
   }
+
+  .logo-box{
+    margin-top: 0;
+  }
 }
 @media screen and (max-width: 1076px) {
+  
   .hero-images img {
     margin-top: 40%;
   }
