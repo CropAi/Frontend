@@ -112,7 +112,7 @@ const update_result = (report) => {
 
 
 const analyze_click = () => {
-        const DUMMY_URL = "../designs/dummy-image.svg";
+        const DUMMY_URL = "./img/dummy-image.svg";
         window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
         document.getElementById("leaf_input").value = "";
         document.getElementById("showImage").src = DUMMY_URL;
