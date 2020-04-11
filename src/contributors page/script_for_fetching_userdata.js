@@ -1,143 +1,46 @@
-const fetch = require("node-fetch");
+const fetch = require('node-fetch');
  
-let contributor_data = [];
-let mentor_usernames = ['rajats98','vaibagga','tanishq9','gshanbhag525'];
-
-// Extracting the information of Admin 
-fetch('https://api.github.com/users/Sulekhiya')
-    .then(
-        function(response) {
-            response.json().then(function(data) {
-            let admin = {}
-            admin.login =  data.login;
-            admin.avatar_url = data.avatar_url;
-            admin.html_url = data.html_url;
-            admin.designation = "Admin";
-            admin.repository =  [];
-            contributor_data.push(admin);
-        })
-   })
+let contributor_information = async contributor_data_default => {
+  let contributor_data = [];
+  const mentor_usernames = ['rajats98','vaibagga','tanishq9','gshanbhag525','Sulekhiya'];
+  const repos = ['Frontend','Backend','Data-Modeling','Android-Application'];
+  const requests = repos.map(repo => fetch(`https://api.github.com/repos/CropAi/${repo}/contributors`));
+  let responses;
+  // Extracting the information of participants
+  try{
+    responses = await Promise.all(requests);
+  }
+  catch(e){
+    return contributor_data_default;
+  }
  
-// Extracting the information of mentors 
-for(let i = 0; i < mentor_usernames.length; i++)
-{
+  for (var i = 0; i < responses.length; i++) {
+    response = responses[i]
+    const repo = response.url.split('/')[5];
    
-    fetch('https://api.github.com/users/'+mentor_usernames[i])
-    .then(
-        function(response) {
-        response.json().then(function(data) {
-            let mentor = {}
-            mentor.login = data.login;
-            mentor.avatar_url = data.avatar_url;
-            mentor.html_url = data.html_url;
-            mentor.designation = "Mentor";
-            mentor.repository =  [];
-            contributor_data.push(mentor);
-        })
-   })
+    let users = await response.json();
+ 
+    for (let i = 0; i < users.length; i++) {
+      let user = users[i];
+      let {login, avatar_url, html_url} = user;
+       
+      if(!contributor_data[login]){
+        contributor_data[login] = {login, avatar_url, html_url };
+        contributor_data[login].repository = [];
+      }
+      contributor_data[login].repository.push(repo);
+ 
+      if(mentor_usernames.includes(login)){
+        contributor_data[login].designation = login === "Sulekhiya" ? "admin" : "mentor";
+      }
+      else{
+        contributor_data[login].designation = "participant";
+      }
+    }
+  }
+  return contributor_data;
 }
-
-// Extracting the information of participants of Frontend repository
-fetch('https://api.github.com/repos/CropAi/Frontend/contributors')
-.then(
-  function(response) {
-       response.json().then(function(data) {
-        for(let i = 0; i < data.length; i++)
-        {
-            var res = contributor_data.find(user => user.login === data[i].login);
-
-            if(res)
-            {
-               res.repository.push("Frontend");
-            }
-            else
-            {
-                let contributor = {};
-                contributor.login = data[i].login;
-                contributor.avatar_url = data[i].avatar_url;
-                contributor.html_url = data[i].html_url;
-                contributor.designation = "Participant";
-                contributor.repository = ["Frontend"]; 
-                contributor_data.push(contributor);
-            }
-        }
-    })
-})
-
-// Extracting the information of participants of Backend repository    
-fetch('https://api.github.com/repos/CropAi/Backend/contributors')
-.then(
-  function(response) {
-       response.json().then(function(data) {
-        for(let i = 0; i < data.length; i++)
-        {
-            var res = contributor_data.find(user => user.login === data[i].login);
-            if(res)
-            {
-               res.repository.push("Backend");
-            }
-            else
-            {
-                let contributor = {};
-                contributor.login = data[i].login;
-                contributor.avatar_url = data[i].avatar_url;
-                contributor.html_url = data[i].html_url;
-                contributor.designation = "Participant";
-                contributor.repository = ["Backend"]; 
-                contributor_data.push(contributor);
-            }
-        }
-    })
-})
-
-// Extracting the information of participants of Data-Modeling repository
- fetch('https://api.github.com/repos/CropAi/Data-Modeling/contributors')
- .then(
-   function(response) {
-        response.json().then(function(data) {
-         for(let i = 0; i < data.length; i++)
-         {
-             var res = contributor_data.find(user => user.login === data[i].login);
-             if(res)
-             {
-                res.repository.push("Data-Modeling");
-             }
-             else
-             {
-                 let contributor = {};
-                 contributor.login = data[i].login;
-                 contributor.avatar_url = data[i].avatar_url;
-                 contributor.html_url = data[i].html_url;
-                 contributor.designation = "Participant";
-                 contributor.repository = ["Data-Modeling"]; 
-                 contributor_data.push(contributor);
-             }
-         }
-    })
-})
-
- // Extracting the information of participants of Android-Application repository
- fetch('https://api.github.com/repos/CropAi/Android-Application/contributors')
- .then(
-   function(response) {
-        response.json().then(function(data) {
-         for(let i = 0; i < data.length; i++)
-         {
-             var res = contributor_data.find(user => user.login === data[i].login);
-             if(res)
-             {
-                res.repository.push("Android-Application");
-             }
-             else
-             {
-                 let contributor = {};
-                 contributor.login = data[i].login;
-                 contributor.avatar_url = data[i].avatar_url;
-                 contributor.html_url = data[i].html_url;
-                 contributor.designation = "Participant";
-                 contributor.repository = ["Android-Application"]; 
-                 contributor_data.push(contributor);
-             }
-         }
-    })
-})
+ 
+ let contributor_data_default = ["default data"];
+ 
+contributor_information(contributor_data_default).then(res => {console.log(res)});
