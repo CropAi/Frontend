@@ -180,7 +180,7 @@ a{
     border-radius:1rem;
     color:var(--white);
     text-transform:uppercase;
-    
+    position: relative;
 }
 
 .btn-submit{
@@ -357,12 +357,14 @@ a{
     position: relative;
 }
 
-.upload-btn-wrapper input[type=file] {
-  font-size: 2rem;
+.upload-btn-wrapper input[type=file],
+.upload-btn-wrapper input[type=file]::-webkit-file-upload-button {
   position: absolute;
-  left: 80%;
-  top: 50%;
-  transform:translate(-50%,-50%);
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
   opacity:0;
   cursor: pointer;
 }
@@ -406,12 +408,6 @@ a{
     }
     .btn-blue{
         font-size:1.3rem;
-    }
-    .upload-btn-wrapper input[type=file] {
-        font-size: 1.4rem;
-        left: 100%;
-        top: 60%;
-        transform:translate(-60%,-80%);
     }
 }
 
