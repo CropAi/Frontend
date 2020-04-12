@@ -7,29 +7,33 @@ const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.add("hidden");
-    document.body.style.marginBottom = "0%";
+    bottomContainer.classList.remove("hidden");
+    if(screen.width<=480){
+      document.getElementById("para-cont-id").style.fontSize="10px";
+    }
+    else{
+      document.getElementById("para-cont-id").style.fontSize="18px";
+    }
 }
 
 const show_input_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
-    document.body.style.marginBottom = "0%";
+    bottomContainer.classList.remove("hidden");
+    if(screen.width<=480){
+      document.getElementById("para-cont-id").style.fontSize="10px";
+    }
+    else{
+      document.getElementById("para-cont-id").style.fontSize="18px";
+    }
 }
 
 const show_result_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.remove("hidden");
-    if(screen.width<=480){
-      document.body.style.marginBottom = "60%";
-    }
-    else if(screen.width<=980){
-      document.body.style.marginBottom = "30%";
-    }
-    else{
-      document.body.style.marginBottom = "15%";
-    }
+    bottomContainer.classList.add("hidden");
 }
 
 
