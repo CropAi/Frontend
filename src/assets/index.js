@@ -113,11 +113,11 @@ const update_result = (report) => {
 
 const analyze_click = () => {
 		const DUMMY_URL = "./img/dummy-image.svg";
-		const uploadButton = document.getElementById("uploadButton");
+		const uploadButtonSpan = document.getElementById("uploadButtonText");
         window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
         document.getElementById("leaf_input").value = "";
 		document.getElementById("showImage").src = DUMMY_URL;
-		uploadButton.textContent = "Upload a file";
+		uploadButtonSpan.innerHTML = "Upload a file";
         show_input_container();
     }
 
@@ -125,10 +125,10 @@ const analyze_click = () => {
     const showImage = event => {
         const imageForm = document.getElementById("showImage");
 		const imageResult = document.getElementById("leaf_image");
-		const uploadButton = document.getElementById("uploadButton");
+		const uploadButtonSpan = document.getElementById("uploadButtonText");
         imageForm.src = URL.createObjectURL(event.target.files[0]);
 		imageResult.src = URL.createObjectURL(event.target.files[0]);
-		uploadButton.textContent = "Change Image";
+		uploadButtonSpan.innerHTML = "Change Image";
     }
 
     /* Getting the query from the url */
