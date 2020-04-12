@@ -409,12 +409,6 @@ a{
     .btn-blue{
         font-size:1.3rem;
     }
-    .upload-btn-wrapper input[type=file] {
-        font-size: 1.4rem;
-        left: 100%;
-        top: 60%;
-        transform:translate(-60%,-80%);
-    }
 }
 
 @media only screen and (max-width:600px){
