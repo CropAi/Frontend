@@ -292,7 +292,6 @@ a{
     font-weight:normal;
     padding:0.6rem;
   }
-
 }
 
 /*
@@ -580,15 +579,15 @@ a{
     Open Source Contribuor Bar
   ------------------------------
 */
+.fixed-bottom{
+  width: 50%;
+  margin-left: 25%;
+}
 .bottom-content{
-  width: 45%;
   background-color: #12a845;
   color: white;
   padding:10px;
   border-radius: 30px 30px;
-  margin-left: 27%;
-  margin-top: 40%;
-  float: left;
 }
 .bottom-content .paragraph-content{
   font-size: 18px;

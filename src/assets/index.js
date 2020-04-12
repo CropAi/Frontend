@@ -3,26 +3,33 @@ const inputContainer = document.getElementById("input_container");
 const resultContainer = document.getElementById("result_container");
 const bottomContainer = document.getElementById("bottom-data");
 
-
 const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.add("hidden");
-    bottomContainer.style.margin = "40% 1% 0% 27%";
+    document.body.style.marginBottom = "0%";
 }
 
 const show_input_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
-    bottomContainer.style.margin = "40% 1% 0% 27%";
+    document.body.style.marginBottom = "0%";
 }
 
 const show_result_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.remove("hidden");
-    bottomContainer.style.margin = "5% 2% 0% 27%";
+    if(screen.width<=480){
+      document.body.style.marginBottom = "60%";
+    }
+    else if(screen.width<=980){
+      document.body.style.marginBottom = "30%";
+    }
+    else{
+      document.body.style.marginBottom = "15%";
+    }
 }
 
 
