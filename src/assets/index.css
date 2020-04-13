@@ -7,10 +7,10 @@
   --light-blue:rgb(23, 139, 185);
 }
 
-/* 
+/*
 ---------------------
 GLOBAL PRESETS
---------------------- 
+---------------------
 */
 
 *,*::after,*::before{
@@ -35,7 +35,7 @@ body{
 
 }
 
-/* 
+/*
 ----------------------------
     GLOBAL CLASSES AND STYLES
 ----------------------------
@@ -53,7 +53,7 @@ a{
 }
 
 
-/* 
+/*
 ----------------------------
   Classes for decoration
 ----------------------------
@@ -71,7 +71,7 @@ a{
   right:10rem;
   animation:moveUp 2s ease-in-out infinite alternate-reverse;
   transform-origin: bottom;
-  
+
 }
 
 .leaf-2{
@@ -93,7 +93,7 @@ a{
 }
 
 
-/* 
+/*
 ---------------------------
   TYPOGRAPHY
 ---------------------------
@@ -107,7 +107,7 @@ a{
 
 .display-3{
     text-align:center;
-    
+
 }
 
 .display-4{
@@ -117,7 +117,7 @@ a{
 }
 
 
-/* 
+/*
 ---------------------
   LOGO STYLES
 ---------------------
@@ -135,7 +135,7 @@ a{
 }
 
 
-/* 
+/*
 ---------------------
   BUTTONS
 ---------------------
@@ -155,7 +155,7 @@ a{
   border-radius:2rem;
   margin:1rem;
   border:1px solid var(--primary-green);
-  padding:1rem 2rem; 
+  padding:1rem 2rem;
   font-size:2rem;
   transition: transform 200ms ease-in-out;
   letter-spacing:2px;
@@ -190,7 +190,7 @@ a{
     margin-top:1rem;
 }
 
-/* 
+/*
 ---------------------------------
   Landing Page Styles
 ---------------------------------
@@ -207,7 +207,7 @@ a{
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
- 
+
 }
 
 .btn-container{
@@ -229,7 +229,7 @@ a{
 
 }
 
-/* 
+/*
 ---------------------------
   MEDIA QUERIES Landing Page
 ---------------------------
@@ -240,24 +240,24 @@ a{
   .container{
     max-width:95%;
     margin:0 auto;
-    
+
   }
-  
+
  #about_content{
     font-size:1.8rem;
     width:100%;
     font-weight:normal;
-  } 
-  
+  }
+
   .display-1{
     font-size:6rem;
   }
 
   .btn{
-    
+
     font-size:1.7rem;
   }
-  
+
 }
 
 
@@ -291,11 +291,10 @@ a{
     width:100%;
     font-weight:normal;
     padding:0.6rem;
-  } 
-  
+  }
 }
 
-/* 
+/*
 ----------------------------
   ANIMATIONS
 ----------------------------
@@ -304,7 +303,7 @@ a{
 @keyframes moveUp{
   from{
     transform:translateY(-1rem) rotateZ(2deg);
-  
+
   }
   to{
     transform:translateY(0) rotateZ(-2deg);;
@@ -315,11 +314,11 @@ a{
 @keyframes moveDown{
   from{
     transform:translateY(0) rotateZ(2deg);
-    
+
   }
   to{
     transform:translateY(1rem) rotateZ(-2deg);;
-    
+
   }
 }
 
@@ -335,7 +334,7 @@ a{
 
 
 
-/* 
+/*
 ----------------------
     INPUT CONTAINER
 -----------------------
@@ -416,7 +415,7 @@ a{
         top:70%;
         width:90%;
         transform:translate(-50%,-50%);
-        
+
     }
 }
 
@@ -446,14 +445,14 @@ a{
   }
 }
 
-/* 
+/*
   -----------------
-    RESULT SECTION 
+    RESULT SECTION
   -----------------
 */
 
 #result_container{
-  
+
   height:max-content;
   width:70vw;
   margin:2rem auto;
@@ -478,7 +477,7 @@ a{
   width:18rem;
   height:20rem;
   overflow:hidden;
-  
+
 }
 
 .img-result-container img{
@@ -486,7 +485,7 @@ a{
   z-index:-4;
   width:18rem;
   height:20rem;
- 
+
 }
 
 
@@ -521,7 +520,7 @@ a{
 }
 
 
-/* 
+/*
 --------------------------
   Media Queries for Result
 ---------------------------
@@ -543,7 +542,7 @@ a{
   .display-4{
     font-size:3rem;
     text-align:center;
-    
+
   }
 
   .result .img-result-container{
@@ -569,4 +568,47 @@ a{
     padding:0.6rem 0.2rem;
     width:98%;
   }
+}
+
+/*
+  ------------------------------
+    Open Source Contribuor Bar
+  ------------------------------
+*/
+.fixed-bottom{
+  width: 50%;
+  margin-left: 25%;
+}
+.bottom-content{
+  background-color: #12a845;
+  color: white;
+  padding:10px;
+  border-radius: 30px 30px;
+}
+.bottom-content .paragraph-content{
+  font-size: 18px;
+  margin: 0px;
+}
+.bottom-content .paragraph-content a:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* visited link */
+.bottom-content .paragraph-content a:visited {
+  color: red;
+  text-decoration: none;
+}
+
+/* mouse over link */
+.bottom-content .paragraph-content a:hover {
+  font-size: 22px;
+  color: blue;
+  text-decoration: none;
+}
+
+/* selected link */
+.bottom-content .paragraph-content a:active {
+  color: red;
+  text-decoration: none;
 }
