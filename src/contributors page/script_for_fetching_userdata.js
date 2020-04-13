@@ -1,5 +1,5 @@
 let contributor_information = async contributor_data_default => {
-  let contributor_data = [];
+  let contributor_data = {};
   const mentor_usernames = ['rajats98','vaibagga','tanishq9','gshanbhag525','Sulekhiya'];
   const repos = ['Frontend','Backend','Data-Modeling','Android-Application'];
   const requests = repos.map(repo => fetch(`https://api.github.com/repos/CropAi/${repo}/contributors`));
@@ -39,6 +39,6 @@ let contributor_information = async contributor_data_default => {
   return contributor_data;
 }
  
- let contributor_data_default = ["default data"];
+let contributor_data_default = {"default":"default data"};
  
 contributor_information(contributor_data_default).then(res => {console.log(res)});
