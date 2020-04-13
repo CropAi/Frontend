@@ -575,18 +575,16 @@ a{
     Open Source Contribuor Bar
   ------------------------------
 */
-.fixed-bottom{
-  width: 50%;
-  margin-left: 25%;
-}
+
 .bottom-content{
-  background-color: #12a845;
+  /*background-color: #12a845;*/
+  opacity: 80%;
   color: white;
-  padding:10px;
-  border-radius: 30px 30px;
+  padding:5px;
+  border-radius: 20px;
 }
 .bottom-content .paragraph-content{
-  font-size: 18px;
+  font-size: 1.2rem;
   margin: 0px;
 }
 .bottom-content .paragraph-content a:link {
@@ -602,7 +600,7 @@ a{
 
 /* mouse over link */
 .bottom-content .paragraph-content a:hover {
-  font-size: 22px;
+  font-size: 1.3rem;
   color: blue;
   text-decoration: none;
 }

@@ -8,12 +8,6 @@ const show_landing_container = () => {
     inputContainer.classList.add("hidden");
     resultContainer.classList.add("hidden");
     bottomContainer.classList.remove("hidden");
-    if(screen.width<=480){
-      document.getElementById("para-cont-id").style.fontSize="10px";
-    }
-    else{
-      document.getElementById("para-cont-id").style.fontSize="18px";
-    }
 }
 
 const show_input_container = () => {
@@ -21,12 +15,6 @@ const show_input_container = () => {
     inputContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
     bottomContainer.classList.remove("hidden");
-    if(screen.width<=480){
-      document.getElementById("para-cont-id").style.fontSize="10px";
-    }
-    else{
-      document.getElementById("para-cont-id").style.fontSize="18px";
-    }
 }
 
 const show_result_container = () => {
