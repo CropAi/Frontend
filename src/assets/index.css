@@ -180,7 +180,6 @@ a{
     border-radius:1rem;
     color:var(--white);
     text-transform:uppercase;
-
 }
 
 .btn-submit{
@@ -356,19 +355,21 @@ a{
     position: relative;
 }
 
-.upload-btn-wrapper input[type=file] {
-  font-size: 2rem;
+.upload-btn-wrapper input[type=file],
+.upload-btn-wrapper input[type=file]::-webkit-file-upload-button {
   position: absolute;
-  left: 80%;
-  top: 50%;
-  transform:translate(-50%,-50%);
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
   opacity:0;
   cursor: pointer;
 }
 
 .img-container{
-    width:18rem;
-    height:18rem;
+    width:16rem;
+    height:16rem;
     margin:0 auto;
     position:relative;
 }
@@ -376,19 +377,19 @@ a{
 .img-uploaded{
     width:16rem;
     height:16rem;
+    text-align:center;
 }
 
-.img-tagline{
-    text-align:center;
-    position:fixed;
-    top:40%;
-    left:50%;
-    transform:translate(-55%,-40%);
-    font-size:1.3rem;
-    z-index:-4;
-    color:var(--secondary-green);
-    font-weight:bold;
-}
+/* .img-dummy{
+  position:absolute;
+  top:0;
+  left:0;
+  transform:translate(0);
+  width:16rem;
+  height:16rem;
+  z-index:-10;
+} */
+
 
 /* Media Queries for Input */
 
@@ -405,12 +406,6 @@ a{
     }
     .btn-blue{
         font-size:1.3rem;
-    }
-    .upload-btn-wrapper input[type=file] {
-        font-size: 1.4rem;
-        left: 100%;
-        top: 60%;
-        transform:translate(-60%,-80%);
     }
 }
 
