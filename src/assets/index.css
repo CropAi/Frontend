@@ -381,6 +381,13 @@ a{
     text-align:center;
 }
 
+.image-error {
+	font-size: 16px;
+	color: red;
+	margin: 1px 0;
+	display: none;
+}
+
 /* .img-dummy{
   position:absolute;
   top:0;
