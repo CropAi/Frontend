@@ -180,6 +180,7 @@ a{
     border-radius:1rem;
     color:var(--white);
     text-transform:uppercase;
+    position: relative;
 }
 
 .btn-submit{
