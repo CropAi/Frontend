@@ -1,23 +1,39 @@
 const landingContainer = document.getElementById("landing_container");
 const inputContainer = document.getElementById("input_container");
 const resultContainer = document.getElementById("result_container");
+const bottomContainer = document.getElementById("bottom-data");
 
 const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.add("hidden");
+    bottomContainer.classList.remove("hidden");
+    if(screen.width<=480){
+      document.getElementById("para-cont-id").style.fontSize="10px";
+    }
+    else{
+      document.getElementById("para-cont-id").style.fontSize="18px";
+    }
 }
 
 const show_input_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
+    bottomContainer.classList.remove("hidden");
+    if(screen.width<=480){
+      document.getElementById("para-cont-id").style.fontSize="10px";
+    }
+    else{
+      document.getElementById("para-cont-id").style.fontSize="18px";
+    }
 }
 
 const show_result_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.remove("hidden");
+    bottomContainer.classList.add("hidden");
 }
 
 
