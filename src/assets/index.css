@@ -180,7 +180,6 @@ a{
     border-radius:1rem;
     color:var(--white);
     text-transform:uppercase;
-    position: relative;
 }
 
 .btn-submit{
@@ -575,7 +574,6 @@ a{
     Open Source Contribuor Bar
   ------------------------------
 */
-
 .bottom-content{
   /*background-color: #12a845;*/
   opacity: 80%;
@@ -600,6 +598,7 @@ a{
 
 /* mouse over link */
 .bottom-content .paragraph-content a:hover {
+
   font-size: 1.3rem;
   color: blue;
   text-decoration: none;
