@@ -62,14 +62,15 @@
       </div>
 
       <div class="file-select mx-auto p-2">
-        <form class="upload-form" onchange="showImage(event)">
+        <form class="upload-form" onchange="showImage(event)" onsubmit="validateAndDisplay()">
           <div class="upload-btn-wrapper mx-auto">
+			<div id="image-error" class="alert alert-danger image-error">* Upload an Image</div>  
             <button type="button" class="btn btn-blue btn-sm">
 				<span id="uploadButtonText">Upload Image </span>
-				<input type="file" id="leaf_input" name="leaf_input" accept="image/x-png,image/gif,image/jpeg" required>
+				<input type="file" id="leaf_input" name="leaf_input" accept="image/x-png,image/gif,image/jpeg">
 			</button>
           </div>
-          <button class="btn btn-green btn-submit" type="submit" onClick="empty()">Submit</button>
+          <button class="btn btn-green btn-submit" type="submit" >Submit</button>
         </form>
       </div>
   </div>
