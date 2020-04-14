@@ -122,12 +122,22 @@ const analyze_click = () => {
 
     // function to insert input image on form and result section
     const showImage = event => {
+		const DUMMY_URL = "./img/dummy-image.svg";
         const imageForm = document.getElementById("showImage");
 		const imageResult = document.getElementById("leaf_image");
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
 		const imageError = document.getElementById("image-error");
-        imageForm.src = URL.createObjectURL(event.target.files[0]);
-		imageResult.src = URL.createObjectURL(event.target.files[0]);
+		const imageFile = event.target.files[0];
+		
+		if(!(/\.(gif|jpe?g|tiff|png|webp|bmp)$/i).test(imageFile.name))
+		{	//Show error and reset image.
+			validateAndDisplay(true);
+			imageForm.src = DUMMY_URL;
+			event.target.value = "";
+			return false;
+		}
+		imageForm.src = URL.createObjectURL(imageFile);
+		imageResult.src = URL.createObjectURL(imageFile);
 		uploadButtonSpan.innerHTML = "Change Image";
 		imageError.style.display = "none";
     }
@@ -162,10 +172,17 @@ const analyze_click = () => {
 
 
 /* Warning message if input form is not added*/
-function validateAndDisplay() {
+function validateAndDisplay(fileNotImage = false) {
+	var imageError = document.getElementById("image-error");
+	if(fileNotImage)
+	{
+		imageError.textContent = "* File not an Image";
+		imageError.style.display = "block";
+		return false;
+	}
 	event.preventDefault();
 	var x = document.getElementById("leaf_input").value;
-	var imageError = document.getElementById("image-error");
+	imageError.textContent = "* Upload an Image";
 
     if (x == "") {
 		imageError.style.display = "block";
