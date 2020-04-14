@@ -24,28 +24,6 @@ const show_result_container = () => {
     bottomContainer.classList.add("hidden");
 }
 
-//show name of the image
-const get_img_name = (event) => {
-    const filename=document.getElementById('leaf_input');
-    const label = document.getElementById('img-label');
-    const img = document.getElementById('showImage');
-    label.innerText=filename.files.item(0).name;
-    if(screen.width<=850){
-      label.style.fontSize ="10px";
-      label.style.padding ="1px";
-      label.style.margin ="3px";
-    }
-    else{
-      label.style.padding ="3px";
-      label.style.margin ="5px";
-      label.style.fontSize ="15px";
-    }
-    label.style.color = "white";
-    label.style.backgroundColor = "red";
-    label.style.borderRadius = "25px 25px";
-    label.style.textAlign ="center";
-};
-
 // toggle About
 const showAbout = () => {
     document.getElementById("about_content").classList.toggle("hidden");
@@ -135,6 +113,14 @@ const update_result = (report) => {
 
     });
 
+function handle_name(img_name){
+  if(name.length<12){
+    return img_name.slice(0,11)+"....";
+  }
+  else{
+    return img_name;
+  }
+}
 
 const analyze_click = () => {
 		const DUMMY_URL = "./img/dummy-image.svg";
@@ -149,11 +135,23 @@ const analyze_click = () => {
     // function to insert input image on form and result section
     const showImage = event => {
         const imageForm = document.getElementById("showImage");
-		const imageResult = document.getElementById("leaf_image");
-		const uploadButtonSpan = document.getElementById("uploadButtonText");
+    		const imageResult = document.getElementById("leaf_image");
+    		const uploadButtonSpan = document.getElementById("uploadButtonText");
+        //-------------
+        /*
+        Process take place in following steps:
+          1) Get DOM model of leaf_input
+          2) Get DOM model of img-lab
+          3) Pass the file name of leaf_input to img-lab
+          4) Value will be subsitute on panel
+        */
+        const filename=document.getElementById('leaf_input');
+        const label = document.getElementById('img-lab');
+        label.innerText= handle_name(filename.files.item(0).name);
+        //-------------
         imageForm.src = URL.createObjectURL(event.target.files[0]);
-		imageResult.src = URL.createObjectURL(event.target.files[0]);
-		uploadButtonSpan.innerHTML = "Change Image";
+    		imageResult.src = URL.createObjectURL(event.target.files[0]);
+    		uploadButtonSpan.innerHTML = "Change Image";
     }
 
     /* Getting the query from the url */
@@ -192,4 +190,5 @@ function empty() {
         alert("Image must be uploaded");
         return false;
     }
+    document.getElementById("img-lab").innerHTML = "";
 }

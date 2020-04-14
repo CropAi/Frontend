@@ -532,6 +532,9 @@ a{
     width:90%;
     margin-top:10rem;
   }
+  .chip #img-lab{
+    font-size: 5px;
+  }
 }
 
 @media only screen and (max-width:680px){
@@ -560,13 +563,18 @@ a{
   .information li{
     font-size:1.3rem;
   }
-
+  .chip #img-lab{
+    font-size: 5px;
+  }
 }
 
 @media only screen and (max-width:480px){
   #result_container{
     padding:0.6rem 0.2rem;
     width:98%;
+  }
+  .chip #img-lab{
+    font-size: 6px;
   }
 }
 
@@ -613,4 +621,16 @@ a{
 
 .file-select{
   margin-top: 10%;
+}
+
+.chip{
+  color: white;
+  background-color: red;
+  text-align: center;
+  border-radius: 25px 25px;
+  margin: 5px;
+}
+
+.chip #img-lab{
+  font-size: 20px;
 }
