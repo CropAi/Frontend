@@ -129,7 +129,7 @@ const analyze_click = () => {
 		const imageError = document.getElementById("image-error");
 		const imageFile = event.target.files[0];
 		
-		if(!(/\.(gif|jpe?g|tiff|png|webp|bmp)$/i).test(imageFile.name))
+		if(!(/\.(gif|jpe?g|tiff|jfif|png|webp|bmp)$/i).test(imageFile.name))
 		{	//Show error and reset image.
 			validateAndDisplay(true);
 			imageForm.src = DUMMY_URL;
