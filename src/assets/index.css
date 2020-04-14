@@ -382,10 +382,12 @@ a{
 }
 
 .image-error {
-	font-size: 16px;
+	font-size: 1.5rem;
 	color: red;
-	margin: 1px 0;
 	display: none;
+	text-align: center;
+	margin: 10px 2rem;
+	border-radius: 1rem;
 }
 
 /* .img-dummy{
@@ -414,7 +416,11 @@ a{
     }
     .btn-blue{
         font-size:1.3rem;
-    }
+	}
+	.image-error {
+		font-size: 1rem;
+		margin: 10px 1rem;
+	}
 }
 
 @media only screen and (max-width:600px){
