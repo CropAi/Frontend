@@ -124,16 +124,11 @@ const update_result = (report) => {
         });
 };
     // form submission
-    const form = document.querySelector(".upload-form");
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
+    // const form = document.querySelector(".upload-form");
+    // form.addEventListener("submit", (e) => {
+        
 
-        // on successful response
-        window.history.pushState("Result Page", "Crop AI", '?q=result');
-        update_result(analysis_report_json);
-        show_result_container();
-
-    });
+    // });
 
 
 const analyze_click = () => {
@@ -151,9 +146,11 @@ const analyze_click = () => {
         const imageForm = document.getElementById("showImage");
 		const imageResult = document.getElementById("leaf_image");
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
+		const imageError = document.getElementById("image-error");
         imageForm.src = URL.createObjectURL(event.target.files[0]);
 		imageResult.src = URL.createObjectURL(event.target.files[0]);
 		uploadButtonSpan.innerHTML = "Change Image";
+		imageError.style.display = "none";
     }
 
     /* Getting the query from the url */
@@ -186,10 +183,17 @@ const analyze_click = () => {
 
 
 /* Warning message if input form is not added*/
-function empty() {
-    var x = document.getElementById("leaf_input").value;
+function validateAndDisplay() {
+	event.preventDefault();
+	var x = document.getElementById("leaf_input").value;
+	var imageError = document.getElementById("image-error");
+
     if (x == "") {
-        alert("Image must be uploaded");
+		imageError.style.display = "block";
         return false;
-    }
+	}
+    // on successful response
+    window.history.pushState("Result Page", "Crop AI", '?q=result');
+    update_result(analysis_report_json);
+    show_result_container();
 }
