@@ -591,6 +591,11 @@ a{
   text-decoration: none;
 }
 
+.bottom-content .paragraph-content a {
+  color: red;
+  text-decoration: none;
+}
+
 /* visited link */
 .bottom-content .paragraph-content a:visited {
   color: red;
