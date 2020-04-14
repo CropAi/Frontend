@@ -59,6 +59,7 @@
 
       <div class="img-container mx-auto mb-2">
         <img src="./img/dummy-image.svg"  class="img-uploaded img-fluid" id="showImage">
+        <p id="img-label"></p>
       </div>
 
       <div class="file-select mx-auto p-2">
@@ -66,7 +67,7 @@
           <div class="upload-btn-wrapper mx-auto">
             <button type="button" class="btn btn-blue btn-sm">
 				<span id="uploadButtonText">Upload Image </span>
-				<input type="file" id="leaf_input" name="leaf_input" accept="image/x-png,image/gif,image/jpeg" required>
+				<input type="file" id="leaf_input" name="leaf_input" accept="image/x-png,image/gif,image/jpeg" onchange="get_img_name(event)" required>
 			</button>
           </div>
           <button class="btn btn-green btn-submit" type="submit" onClick="empty()">Submit</button>

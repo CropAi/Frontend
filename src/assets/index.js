@@ -24,6 +24,27 @@ const show_result_container = () => {
     bottomContainer.classList.add("hidden");
 }
 
+//show name of the image
+const get_img_name = (event) => {
+    const filename=document.getElementById('leaf_input');
+    const label = document.getElementById('img-label');
+    const img = document.getElementById('showImage');
+    label.innerText=filename.files.item(0).name;
+    if(screen.width<=850){
+      label.style.fontSize ="10px";
+      label.style.padding ="1px";
+      label.style.margin ="3px";
+    }
+    else{
+      label.style.padding ="3px";
+      label.style.margin ="5px";
+      label.style.fontSize ="15px";
+    }
+    label.style.color = "white";
+    label.style.backgroundColor = "red";
+    label.style.borderRadius = "25px 25px";
+    label.style.textAlign ="center";
+};
 
 // toggle About
 const showAbout = () => {

@@ -610,3 +610,7 @@ a{
   color: red;
   text-decoration: none;
 }
+
+.file-select{
+  margin-top: 10%;
+}
