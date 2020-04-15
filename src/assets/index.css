@@ -558,8 +558,13 @@ a{
 
   }
 
-  .result .img-result-container{
-    display:none;
+  .img-result-container{
+    position: relative;
+    margin: 40px auto 5px auto;
+  }
+  
+  .img-result-container img{
+    border-top-right-radius: 0rem;
   }
 
   .card-title{
