@@ -488,6 +488,10 @@ a{
 
 }
 
+ .card-text{
+   margin-top: 30px;
+ }
+
  .img-result-container{
   justify-content: center;
   align-items: center;
