@@ -38,7 +38,3 @@ let contributor_information = async contributor_data_default => {
   }
   return contributor_data;
 }
- 
-let contributor_data_default = {"default":"default data"};
- 
-contributor_information(contributor_data_default).then(res => {console.log(res)});
