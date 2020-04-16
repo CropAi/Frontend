@@ -389,6 +389,15 @@ a{
     text-align:center;
 }
 
+.image-error {
+	font-size: 1.5rem;
+	color: red;
+	display: none;
+	text-align: center;
+	margin: 10px 2rem;
+	border-radius: 1rem;
+}
+
 /* .img-dummy{
   position:absolute;
   top:0;
@@ -415,7 +424,11 @@ a{
     }
     .btn-blue{
         font-size:1.3rem;
-    }
+	}
+	.image-error {
+		font-size: 1rem;
+		margin: 10px 1rem;
+	}
 }
 
 @media only screen and (max-width:600px){
@@ -544,9 +557,6 @@ a{
     width:90%;
     margin-top:10rem;
   }
-  .chip #img-lab{
-    font-size: 5px;
-  }
 }
 
 @media only screen and (max-width:680px){
@@ -564,7 +574,7 @@ a{
     position: relative;
     margin: 40px auto 5px auto;
   }
-  
+
   .img-result-container img{
     border-top-right-radius: 0rem;
   }
@@ -580,18 +590,13 @@ a{
   .information li{
     font-size:1.3rem;
   }
-  .chip #img-lab{
-    font-size: 5px;
-  }
+
 }
 
 @media only screen and (max-width:480px){
   #result_container{
     padding:0.6rem 0.2rem;
     width:98%;
-  }
-  .chip #img-lab{
-    font-size: 6px;
   }
 }
 
@@ -611,16 +616,12 @@ a{
   font-size: 1.2rem;
   margin: 0px;
 }
-.bottom-content .paragraph-content a:link {
-  color: black;
-  text-decoration: none;
-}
 
-/* visited link */
-.bottom-content .paragraph-content a:visited {
+.bottom-content .paragraph-content a {
   color: red;
   text-decoration: none;
 }
+
 
 /* mouse over link */
 .bottom-content .paragraph-content a:hover {
@@ -630,15 +631,10 @@ a{
   text-decoration: none;
 }
 
-/* selected link */
-.bottom-content .paragraph-content a:active {
-  color: red;
-  text-decoration: none;
-}
-
-.file-select{
-  margin-top: 10%;
-}
+/* ----------------------------------------------- */
+/* #file-select-content{
+  padding-top: 10%;
+} */
 
 .chip{
   color: white;
