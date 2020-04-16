@@ -107,6 +107,7 @@ a{
 
 .display-3{
     text-align:center;
+    font-weight: 500;
 
 }
 
@@ -181,6 +182,13 @@ a{
     color:var(--white);
     text-transform:uppercase;
     position: relative;
+    transition: transform 200ms ease-in-out;
+}
+
+.btn-blue:hover{
+  box-shadow:0rem 0.2rem 0.5rem var(--black);
+  transform:translateY(-2px);
+  color:var(--white);
 }
 
 .btn-submit{
@@ -467,6 +475,10 @@ a{
 
 }
 
+ .card-text{
+   margin-top: 30px;
+ }
+
  .img-result-container{
   justify-content: center;
   align-items: center;
@@ -548,8 +560,13 @@ a{
 
   }
 
-  .result .img-result-container{
-    display:none;
+  .img-result-container{
+    position: relative;
+    margin: 40px auto 5px auto;
+  }
+  
+  .img-result-container img{
+    border-top-right-radius: 0rem;
   }
 
   .card-title{
