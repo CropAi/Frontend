@@ -301,5 +301,3 @@ const contributor_data_default = {
     "designation": "participant"
   }
 }
-
-console.log(contributor_data_default);
