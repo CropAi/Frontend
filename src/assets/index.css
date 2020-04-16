@@ -574,7 +574,7 @@ a{
     position: relative;
     margin: 40px auto 5px auto;
   }
-  
+
   .img-result-container img{
     border-top-right-radius: 0rem;
   }
@@ -629,4 +629,21 @@ a{
   font-size: 1.3rem;
   color: blue;
   text-decoration: none;
+}
+
+/* ----------------------------------------------- */
+/* #file-select-content{
+  padding-top: 10%;
+} */
+
+.chip{
+  color: white;
+  background-color: red;
+  text-align: center;
+  border-radius: 25px 25px;
+  margin: 5px;
+}
+
+.chip #img-lab{
+  font-size: 20px;
 }

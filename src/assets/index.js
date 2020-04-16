@@ -105,10 +105,18 @@ const update_result = (report) => {
     // form submission
     // const form = document.querySelector(".upload-form");
     // form.addEventListener("submit", (e) => {
-        
+
 
     // });
 
+function handle_name(img_name){
+    if(name.length<12){
+        return img_name.slice(0,11)+"....";
+    }
+    else{
+        return img_name;
+      }
+}
 
 const analyze_click = () => {
 		const DUMMY_URL = "./img/dummy-image.svg";
@@ -117,6 +125,8 @@ const analyze_click = () => {
         document.getElementById("leaf_input").value = "";
 		document.getElementById("showImage").src = DUMMY_URL;
 		uploadButtonSpan.innerHTML = "Upload a file";
+    document.getElementById("img-lab").innerHTML = "";
+    document.getElementById("file-select-content").style.paddingTop = "";
         show_input_container();
     }
 
@@ -128,7 +138,7 @@ const analyze_click = () => {
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
 		const imageError = document.getElementById("image-error");
 		const imageFile = event.target.files[0];
-		
+
 		if(!(/\.(gif|jpe?g|tiff|jfif|png|webp|bmp)$/i).test(imageFile.name))
 		{	//Show error and reset image.
 			validateAndDisplay(true);
@@ -140,6 +150,20 @@ const analyze_click = () => {
 		imageResult.src = URL.createObjectURL(imageFile);
 		uploadButtonSpan.innerHTML = "Change Image";
 		imageError.style.display = "none";
+    //-------------
+      /*
+      Process take place in following steps:
+        1) Get DOM model of leaf_input
+        2) Get DOM model of img-lab
+        3) Pass the file name of leaf_input to img-lab
+        4) Value will be subsitute on panel
+      */
+    const filename=document.getElementById('leaf_input');
+    const label = document.getElementById('img-lab');
+    const file_select_content = document.getElementById('file-select-content');
+    label.innerText= handle_name(filename.files.item(0).name);
+    file_select_content.style.paddingTop="10%";
+    //-------------
     }
 
     /* Getting the query from the url */
