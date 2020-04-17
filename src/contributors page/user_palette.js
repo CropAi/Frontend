@@ -9,15 +9,15 @@ const user_palette = [
 	},
 	{
 		background: "#e03131",
-		color: "red"
+		color: "white"
 	},
 	{
 		background: "#4263eb",
-		color: "blue"
+		color: "white"
 	},
 	{
 		background: "#0c8599",
-		color: "Cyan"
+		color: "white"
 	}
 	
 	]
