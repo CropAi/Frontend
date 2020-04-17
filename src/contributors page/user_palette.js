@@ -1,4 +1,8 @@
 const user_palette = [
+    {
+        background: "SlateBlue",
+	    color: "white"
+    },
 
 	{
 		background: "cornflowerblue",
