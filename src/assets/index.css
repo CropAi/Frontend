@@ -647,3 +647,12 @@ a{
 .chip #img-lab{
   font-size: 20px;
 }
+/* -------------------------------------------------------- */
+#abt-data-cont {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#abt-data-cont.fade_effect {
+  opacity: 0;
+}
