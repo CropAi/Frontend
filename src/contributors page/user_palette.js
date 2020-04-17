@@ -6,7 +6,10 @@ const user_palette = [
 {
 	background: "orange",
 	color: "black"
+},
+{
+	background: "rgb(145, 189, 58)",
+	color: "black"
 }
-
 
 ]
