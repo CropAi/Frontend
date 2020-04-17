@@ -27,9 +27,8 @@ const show_result_container = () => {
 
 // toggle About
 const showAbout = () => {
-    document.getElementById("about_content").classList.toggle("hidden");
-    document.getElementById("about_content").classList.add("fade");
-
+    var about_dom = document.getElementById("abt-data-cont")
+    about_dom.classList.toggle('fade_effect');
 }
 
 // dummy data to be removed after Api integration
