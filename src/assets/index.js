@@ -1,23 +1,27 @@
 const landingContainer = document.getElementById("landing_container");
 const inputContainer = document.getElementById("input_container");
 const resultContainer = document.getElementById("result_container");
+const bottomContainer = document.getElementById("bottom-data");
 
 const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.add("hidden");
+    bottomContainer.classList.remove("hidden");
 }
 
 const show_input_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
+    bottomContainer.classList.remove("hidden");
 }
 
 const show_result_container = () => {
     landingContainer.classList.add("hidden");
     inputContainer.classList.add("hidden");
     resultContainer.classList.remove("hidden");
+    bottomContainer.classList.add("hidden");
 }
 
 
@@ -99,32 +103,67 @@ const update_result = (report) => {
         });
 };
     // form submission
-    const form = document.querySelector(".upload-form");
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
+    // const form = document.querySelector(".upload-form");
+    // form.addEventListener("submit", (e) => {
 
-        // on successful response
-        window.history.pushState("Result Page", "Crop AI", '?q=result');
-        update_result(analysis_report_json);
-        show_result_container();
 
-    });
+    // });
 
+function handle_name(img_name){
+    if(name.length<12){
+        return img_name.slice(0,11)+"....";
+    }
+    else{
+        return img_name;
+      }
+}
 
 const analyze_click = () => {
-        const DUMMY_URL = "./img/dummy-image.svg";
+		const DUMMY_URL = "./img/dummy-image.svg";
+		const uploadButtonSpan = document.getElementById("uploadButtonText");
         window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
         document.getElementById("leaf_input").value = "";
-        document.getElementById("showImage").src = DUMMY_URL;
+		document.getElementById("showImage").src = DUMMY_URL;
+		uploadButtonSpan.innerHTML = "Upload a file";
+    document.getElementById("img-lab").innerHTML = "";
+    document.getElementById("file-select-content").style.paddingTop = "";
         show_input_container();
     }
 
     // function to insert input image on form and result section
     const showImage = event => {
+		const DUMMY_URL = "./img/dummy-image.svg";
         const imageForm = document.getElementById("showImage");
-        const imageResult = document.getElementById("leaf_image");
-        imageForm.src = URL.createObjectURL(event.target.files[0]);
-        imageResult.src = URL.createObjectURL(event.target.files[0]);
+		const imageResult = document.getElementById("leaf_image");
+		const uploadButtonSpan = document.getElementById("uploadButtonText");
+		const imageError = document.getElementById("image-error");
+		const imageFile = event.target.files[0];
+
+		if(!(/\.(gif|jpe?g|tiff|jfif|png|webp|bmp)$/i).test(imageFile.name))
+		{	//Show error and reset image.
+			validateAndDisplay(true);
+			imageForm.src = DUMMY_URL;
+			event.target.value = "";
+			return false;
+		}
+		imageForm.src = URL.createObjectURL(imageFile);
+		imageResult.src = URL.createObjectURL(imageFile);
+		uploadButtonSpan.innerHTML = "Change Image";
+		imageError.style.display = "none";
+    //-------------
+      /*
+      Process take place in following steps:
+        1) Get DOM model of leaf_input
+        2) Get DOM model of img-lab
+        3) Pass the file name of leaf_input to img-lab
+        4) Value will be subsitute on panel
+      */
+    const filename=document.getElementById('leaf_input');
+    const label = document.getElementById('img-lab');
+    const file_select_content = document.getElementById('file-select-content');
+    label.innerText= handle_name(filename.files.item(0).name);
+    file_select_content.style.paddingTop="10%";
+    //-------------
     }
 
     /* Getting the query from the url */
@@ -157,10 +196,24 @@ const analyze_click = () => {
 
 
 /* Warning message if input form is not added*/
-function empty() {
-    var x = document.getElementById("leaf_input").value;
+function validateAndDisplay(fileNotImage = false) {
+	var imageError = document.getElementById("image-error");
+	if(fileNotImage)
+	{
+		imageError.textContent = "* File not an Image";
+		imageError.style.display = "block";
+		return false;
+	}
+	event.preventDefault();
+	var x = document.getElementById("leaf_input").value;
+	imageError.textContent = "* Upload an Image";
+
     if (x == "") {
-        alert("Image must be uploaded");
+		imageError.style.display = "block";
         return false;
-    }
+	}
+    // on successful response
+    window.history.pushState("Result Page", "Crop AI", '?q=result');
+    update_result(analysis_report_json);
+    show_result_container();
 }
