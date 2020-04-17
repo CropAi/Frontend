@@ -136,7 +136,17 @@ const analyze_click = () => {
 		const imageResult = document.getElementById("leaf_image");
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
 		const imageError = document.getElementById("image-error");
-		const imageFile = event.target.files[0];
+        const imageFile = event.target.files[0];
+        
+        if (typeof imageFile == "undefined") {
+            imageForm.src = DUMMY_URL;
+            const label = document.getElementById('img-lab');
+            const file_select_content = document.getElementById('file-select-content');
+            label.innerText= '';
+            file_select_content.style.paddingTop="0%";
+            alert('Image Not Uploaded');
+			return false;   
+        }
 
 		if(!(/\.(gif|jpe?g|tiff|jfif|png|webp|bmp)$/i).test(imageFile.name))
 		{	//Show error and reset image.
