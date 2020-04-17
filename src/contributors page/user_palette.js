@@ -6,6 +6,10 @@ const user_palette = [
 {
 	background: "orange",
 	color: "black"
+},
+{
+    background: "SlateBlue",
+	color: "white"
 }
 
 
