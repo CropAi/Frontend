@@ -27,9 +27,8 @@ const show_result_container = () => {
 
 // toggle About
 const showAbout = () => {
-    document.getElementById("about_content").classList.toggle("hidden");
-    document.getElementById("about_content").classList.add("fade");
-
+    var about_dom = document.getElementById("abt-data-cont")
+    about_dom.classList.toggle('fade_effect');
 }
 
 // dummy data to be removed after Api integration
@@ -213,6 +212,34 @@ function validateAndDisplay(fileNotImage = false) {
         return false;
 	}
     // on successful response
+
+    //making an AJAX call to get result back!
+
+    let formData = new FormData();
+    const imageFile = $("#leaf_input")[0];
+    formData.append('file', imageFile.files[0]);
+
+
+    $.ajax({
+        type: 'POST',
+        url: 'https://crop-leaf.herokuapp.com/file_upload',
+        data: formData,
+        cache: false,
+        mimeType: "multipart/form-data",
+        contentType: false,
+        processData: false,
+        success: function (data) {
+            console.log("Successful reception of data!!");
+            console.log(data);
+        },
+        error: function (data) {
+            console.log("error");
+            console.log(data);
+        }
+    });
+
+
+
     window.history.pushState("Result Page", "Crop AI", '?q=result');
     update_result(analysis_report_json);
     show_result_container();
