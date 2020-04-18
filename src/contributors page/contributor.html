@@ -46,12 +46,12 @@
     <div class="container">
         <div class="row">
           <div class="col-lg">
-            <a class="btn switch btn-outline-primary" href="#" role="button">Admin And Mentors</a>
-            <a class="btn switch btn-outline-primary" href="#" role="button">Participants</a>
+            <a class="btn switch btn-outline-info active" id="Participants_button" href="#" role="button" onclick="show_participants_div()">Participants</a>
+            <a class="btn switch btn-outline-info" href="#" id="Mentors_button" role="button" onclick="show_mentor_div()">Admin And Mentors</a>
           </div>
         </div>
           
-      <div id="Participants">
+      <div id="Participants" class="">
         <div class="row">
             <div class="col-sm col-md-4 col-lg-3">
                 <div class="card" style="width: 18rem;">
@@ -153,7 +153,7 @@
     </div>
 
             
-  <div id="Mentors">
+  <div id="Mentors" class="hidden">
     <div class="row">
         <div class="col-sm col-md-4 col-lg-3">
             <div class="card" style="width: 18rem;">
