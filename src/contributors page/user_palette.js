@@ -28,9 +28,9 @@ const user_palette = [
 		color: "white"
 	},
   {
-	background: "rgb(145, 189, 58)",
-	color: "black"
-}
+		background: "rgb(145, 189, 58)",
+		color: "black"
+	}
 
 
 
