@@ -136,7 +136,17 @@ const analyze_click = () => {
 		const imageResult = document.getElementById("leaf_image");
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
 		const imageError = document.getElementById("image-error");
-		const imageFile = event.target.files[0];
+        const imageFile = event.target.files[0];
+        
+        if (typeof imageFile == "undefined") {
+            imageForm.src = DUMMY_URL;
+            const label = document.getElementById('img-lab');
+            const file_select_content = document.getElementById('file-select-content');
+            label.innerText= '';
+            file_select_content.style.paddingTop="0%";
+            alert('Image Not Uploaded');
+			return false;   
+        }
 
 		if(!(/\.(gif|jpe?g|tiff|jfif|png|webp|bmp)$/i).test(imageFile.name))
 		{	//Show error and reset image.
@@ -211,10 +221,8 @@ function validateAndDisplay(fileNotImage = false) {
 		imageError.style.display = "block";
         return false;
 	}
-    // on successful response
 
     //making an AJAX call to get result back!
-
     let formData = new FormData();
     const imageFile = $("#leaf_input")[0];
     formData.append('file', imageFile.files[0]);
@@ -239,7 +247,7 @@ function validateAndDisplay(fileNotImage = false) {
     });
 
 
-
+    //on successful response
     window.history.pushState("Result Page", "Crop AI", '?q=result');
     update_result(analysis_report_json);
     show_result_container();
