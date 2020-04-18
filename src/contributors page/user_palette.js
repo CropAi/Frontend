@@ -30,8 +30,11 @@ const user_palette = [
   {
 		background: "rgb(145, 189, 58)",
 		color: "black"
+	},
+	{
+	        background:"#FF00FF",
+	        color:"white"
 	}
-
 
 
 
