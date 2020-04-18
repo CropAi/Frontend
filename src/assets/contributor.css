@@ -53,3 +53,8 @@
     opacity: 1;
     transform: scale(1.13);
   }
+
+.hidden{
+display:none;
+}
+
