@@ -227,7 +227,8 @@ const analyze_click = () => {
             console.log("Successful reception of data!!");
             console.log(data);
         },
-        error: function (data) {
+        error: function (err) {
+	    alert("Something went wrong, Please try again after some time");
             console.log("error");
             console.log(data);
         }
