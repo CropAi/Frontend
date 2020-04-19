@@ -230,7 +230,7 @@ const analyze_click = () => {
         error: function (err) {
 	    alert("Something went wrong, Please try again after some time");
             console.log("error");
-            console.log(data);
+            console.log(err);
         }
     });
 
