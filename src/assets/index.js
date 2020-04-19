@@ -59,14 +59,14 @@ const showAbout = () => {
 
 
 const update_result = (report) => {
-    //clearing previous results, if any
+    // clearing previous results, if any
     var tags = ["#symptoms", "#treatment", "#products"];
 
     for (var i = 0; i < tags.length; i++) {
         const del_list = document.querySelector(tags[i]);
         del_list.innerHTML = '';
 
-    }  //adding current result
+    }  // Adding current result
         const show_disease = document.querySelector("#disease");
         show_disease.textContent = report.Disease;
 
@@ -101,12 +101,6 @@ const update_result = (report) => {
                 .appendChild(anchor);
         });
 };
-    // form submission
-    // const form = document.querySelector(".upload-form");
-    // form.addEventListener("submit", (e) => {
-
-
-    // });
 
 function handle_name(img_name){
     if(name.length<12){
@@ -149,7 +143,7 @@ const analyze_click = () => {
         }
 
 		if(!(/\.(gif|jpe?g|tiff|jfif|png|webp|bmp)$/i).test(imageFile.name))
-		{	//Show error and reset image.
+		{	// Show error and reset image.
 			validateAndDisplay(true);
 			imageForm.src = DUMMY_URL;
 			event.target.value = "";
@@ -158,30 +152,23 @@ const analyze_click = () => {
 		imageForm.src = URL.createObjectURL(imageFile);
 		imageResult.src = URL.createObjectURL(imageFile);
 		uploadButtonSpan.innerHTML = "Change Image";
-		imageError.style.display = "none";
-    //-------------
-      /*
-      Process take place in following steps:
-        1) Get DOM model of leaf_input
-        2) Get DOM model of img-lab
-        3) Pass the file name of leaf_input to img-lab
-        4) Value will be subsitute on panel
-      */
+        imageError.style.display = "none";
+        
+    
+    // Adding image name
     const filename=document.getElementById('leaf_input');
     const label = document.getElementById('img-lab');
     const file_select_content = document.getElementById('file-select-content');
     label.innerText= handle_name(filename.files.item(0).name);
     file_select_content.style.paddingTop="10%";
-    //-------------
     }
 
-    /* Getting the query from the url */
+    // Getting the query from the url 
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     let SectionToBeDisplay = urlParams.get('q')
 
     SectionToBeDisplay = SectionToBeDisplay || 'landing';
-    // console.log(SectionToBeDisplay);
 
 
     if (SectionToBeDisplay == 'analyze') {
@@ -204,8 +191,8 @@ const analyze_click = () => {
     });
 
 
-/* Warning message if input form is not added*/
-function validateAndDisplay(fileNotImage = false) {
+    // Warning message if input form is not added
+    function validateAndDisplay(fileNotImage = false) {
 	var imageError = document.getElementById("image-error");
 	if(fileNotImage)
 	{
@@ -222,7 +209,7 @@ function validateAndDisplay(fileNotImage = false) {
         return false;
 	}
 
-    //making an AJAX call to get result back!
+    // making an AJAX call to get result back!
     let formData = new FormData();
     const imageFile = $("#leaf_input")[0];
     formData.append('file', imageFile.files[0]);
@@ -246,4 +233,5 @@ function validateAndDisplay(fileNotImage = false) {
             console.log(data);
         }
     });
+
 }
