@@ -226,8 +226,6 @@ function validateAndDisplay(fileNotImage = false) {
     let formData = new FormData();
     const imageFile = $("#leaf_input")[0];
     formData.append('file', imageFile.files[0]);
-
-    const analysis_report_json={};
     $.ajax({
         type: 'POST',
         url: 'https://crop-leaf.herokuapp.com/file_upload',
@@ -236,20 +234,16 @@ function validateAndDisplay(fileNotImage = false) {
         mimeType: "multipart/form-data",
         contentType: false,
         processData: false,
-        success: function (data) {
+        success: function (analysis_report_json) {
+            //on successful response
             console.log("Successful reception of data!!");
-            analysis_report_json = data;
-            console.log(data);
+            window.history.pushState("Result Page", "Crop AI", '?q=result');
+            update_result(analysis_report_json);
+            show_result_container();
         },
         error: function (data) {
             console.log("error");
             console.log(data);
         }
     });
-
-
-    //on successful response
-    window.history.pushState("Result Page", "Crop AI", '?q=result');
-    update_result(analysis_report_json);
-    show_result_container();
 }
