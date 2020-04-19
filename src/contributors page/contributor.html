@@ -7,7 +7,7 @@
 
   <!-- add icon link -->
   <link rel="shortcut icon" href="../../designs/logo-designs/cropAi-logo-favicon.png" type="image/x-icon">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -46,12 +46,12 @@
     <div class="container">
         <div class="row">
           <div class="col-lg">
-            <a class="btn switch btn-outline-primary" href="#" role="button">Admin And Mentors</a>
-            <a class="btn switch btn-outline-primary" href="#" role="button">Participants</a>
+            <a class="btn switch btn-outline-info active" id="Participants_button" href="#" role="button" onclick="show_participants_div()">Participants</a>
+            <a class="btn switch btn-outline-info" href="#" id="Mentors_button" role="button" onclick="show_mentor_div()">Admin And Mentors</a>
           </div>
         </div>
-          
-      <div id="Participants">
+
+      <div id="Participants" class="">
         <div class="row">
             <div class="col-sm col-md-4 col-lg-3">
                 <div class="card" style="width: 18rem;">
@@ -152,8 +152,8 @@
         </div>
     </div>
 
-            
-  <div id="Mentors">
+
+  <div id="Mentors" class="hidden">
     <div class="row">
         <div class="col-sm col-md-4 col-lg-3">
             <div class="card" style="width: 18rem;">
@@ -254,10 +254,10 @@
       </div>
    </div>
 </div>
-
+    <script src="../contributors page/user_palette.js"></script>
     <script src="../contributors page/default_contributors.js"></script>
     <script src="../contributors page/script_for_fetching_userdata.js"></script>
-    <script src="../contributor.js"></script>
+    <script src="../assets/contributor.js"></script>
 
   </body>
 </html>

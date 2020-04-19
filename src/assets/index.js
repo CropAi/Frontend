@@ -27,9 +27,8 @@ const show_result_container = () => {
 
 // toggle About
 const showAbout = () => {
-    document.getElementById("about_content").classList.toggle("hidden");
-    document.getElementById("about_content").classList.add("fade");
-
+    var about_dom = document.getElementById("abt-data-cont")
+    about_dom.classList.toggle('fade_effect');
 }
 
 // dummy data to be removed after Api integration
@@ -60,14 +59,14 @@ const analysis_report_json = {
 
 
 const update_result = (report) => {
-    //clearing previous results, if any
+    // clearing previous results, if any
     var tags = ["#symptoms", "#treatment", "#products"];
 
     for (var i = 0; i < tags.length; i++) {
         const del_list = document.querySelector(tags[i]);
         del_list.innerHTML = '';
 
-    }  //adding current result
+    }  // Adding current result
         const show_disease = document.querySelector("#disease");
         show_disease.textContent = report.Disease;
 
@@ -102,12 +101,6 @@ const update_result = (report) => {
                 .appendChild(anchor);
         });
 };
-    // form submission
-    // const form = document.querySelector(".upload-form");
-    // form.addEventListener("submit", (e) => {
-
-
-    // });
 
 function handle_name(img_name){
     if(name.length<12){
@@ -137,10 +130,20 @@ const analyze_click = () => {
 		const imageResult = document.getElementById("leaf_image");
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
 		const imageError = document.getElementById("image-error");
-		const imageFile = event.target.files[0];
+        const imageFile = event.target.files[0];
+        
+        if (typeof imageFile == "undefined") {
+            imageForm.src = DUMMY_URL;
+            const label = document.getElementById('img-lab');
+            const file_select_content = document.getElementById('file-select-content');
+            label.innerText= '';
+            file_select_content.style.paddingTop="0%";
+            alert('Image Not Uploaded');
+			return false;   
+        }
 
 		if(!(/\.(gif|jpe?g|tiff|jfif|png|webp|bmp)$/i).test(imageFile.name))
-		{	//Show error and reset image.
+		{	// Show error and reset image.
 			validateAndDisplay(true);
 			imageForm.src = DUMMY_URL;
 			event.target.value = "";
@@ -149,30 +152,23 @@ const analyze_click = () => {
 		imageForm.src = URL.createObjectURL(imageFile);
 		imageResult.src = URL.createObjectURL(imageFile);
 		uploadButtonSpan.innerHTML = "Change Image";
-		imageError.style.display = "none";
-    //-------------
-      /*
-      Process take place in following steps:
-        1) Get DOM model of leaf_input
-        2) Get DOM model of img-lab
-        3) Pass the file name of leaf_input to img-lab
-        4) Value will be subsitute on panel
-      */
+        imageError.style.display = "none";
+        
+    
+    // Adding image name
     const filename=document.getElementById('leaf_input');
     const label = document.getElementById('img-lab');
     const file_select_content = document.getElementById('file-select-content');
     label.innerText= handle_name(filename.files.item(0).name);
     file_select_content.style.paddingTop="10%";
-    //-------------
     }
 
-    /* Getting the query from the url */
+    // Getting the query from the url 
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     let SectionToBeDisplay = urlParams.get('q')
 
     SectionToBeDisplay = SectionToBeDisplay || 'landing';
-    // console.log(SectionToBeDisplay);
 
 
     if (SectionToBeDisplay == 'analyze') {
@@ -195,8 +191,8 @@ const analyze_click = () => {
     });
 
 
-/* Warning message if input form is not added*/
-function validateAndDisplay(fileNotImage = false) {
+    // Warning message if input form is not added
+    function validateAndDisplay(fileNotImage = false) {
 	var imageError = document.getElementById("image-error");
 	if(fileNotImage)
 	{
@@ -212,6 +208,32 @@ function validateAndDisplay(fileNotImage = false) {
 		imageError.style.display = "block";
         return false;
 	}
+
+    // making an AJAX call to get result back!
+    let formData = new FormData();
+    const imageFile = $("#leaf_input")[0];
+    formData.append('file', imageFile.files[0]);
+
+
+    $.ajax({
+        type: 'POST',
+        url: 'https://crop-leaf.herokuapp.com/file_upload',
+        data: formData,
+        cache: false,
+        mimeType: "multipart/form-data",
+        contentType: false,
+        processData: false,
+        success: function (data) {
+            console.log("Successful reception of data!!");
+            console.log(data);
+        },
+        error: function (data) {
+            console.log("error");
+            console.log(data);
+        }
+    });
+
+
     // on successful response
     window.history.pushState("Result Page", "Crop AI", '?q=result');
     update_result(analysis_report_json);

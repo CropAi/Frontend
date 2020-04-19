@@ -42,3 +42,19 @@
     display:flex;
     justify-content: flex-end;
 }
+
+
+.card{
+    opacity: 0.9;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover{
+    opacity: 1;
+    transform: scale(1.13);
+  }
+
+.hidden{
+display:none;
+}
+
