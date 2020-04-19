@@ -32,41 +32,41 @@ const showAbout = () => {
 }
 
 // dummy data to be removed after Api integration
-const analysis_report_json = {
-    Disease: "Pepper Bell Healthy",
-    Symptoms: {
-        1: "Initial symptoms of infection are the formation of small, circular, water-soaked spots on leaves, stems, petioles and/or peduncles",
-        2: "Infected Pepper Bell have Circular lesions on fruit which contain tan to orange to black concentric rings in the center.",
-        3: "It can have lesions may also occur on leaves and stems and appear as irregularly shaped gray spots with dark margins",
-        4: "Seeds did not germinate; seedlings collapsing and dying; dark stems which are shriveled near the soil line",
-        5: " Water-soaked lesions on the stem and discolored roots.",
-        6: "High numbers of lesions may form on leaves causing them to turn yellow and drop from the plant.",
-    },
-    Treatment: {
-        1: "Plant only diseasefree, certified seed",
-        2: "Always plant disease-free seeds and transplants.",
-        3: "Seeds can be freed from infection by treating with hot water.",
-        4: "Use disease free planting material; remove and destroy all crop debris after harvest, or plow material deeply under soil",
-        5: "Magnesium deficiency can be prevented by applying dolomite lime to the soil, if an increase in soil pH is required, or through applications of a fertilizer containing magnesium.",
-    },
-    Recommended_Product: {
-        1: "Chlorothalonil-720-SFT : https://www.amazon.com/Chlorothalonil-Generic-Daconil-weatherstik-quali-1060/dp/B004GTOKSO",
-        2: " Tafgor-Dimethoate : https://www.amazon.in/Tata-TATA-Tafgor-Dimethoate-Insecticide/dp/B074CCXPKF",
-        3: "Ethion Insecticide : https://www.indiamart.com/proddetail/ethion-insecticide-12777127212.html",
-        4: "Vector Super : https://www.amazon.in/Vector-100ML-IMIDACLOPRID-Systemic-Insecticide/dp/B07D7YTYTB",
-    },
-};
+// const analysis_report_json = {
+//     Disease: "Pepper Bell Healthy",
+//     Symptoms: {
+//         1: "Initial symptoms of infection are the formation of small, circular, water-soaked spots on leaves, stems, petioles and/or peduncles",
+//         2: "Infected Pepper Bell have Circular lesions on fruit which contain tan to orange to black concentric rings in the center.",
+//         3: "It can have lesions may also occur on leaves and stems and appear as irregularly shaped gray spots with dark margins",
+//         4: "Seeds did not germinate; seedlings collapsing and dying; dark stems which are shriveled near the soil line",
+//         5: " Water-soaked lesions on the stem and discolored roots.",
+//         6: "High numbers of lesions may form on leaves causing them to turn yellow and drop from the plant.",
+//     },
+//     Treatment: {
+//         1: "Plant only diseasefree, certified seed",
+//         2: "Always plant disease-free seeds and transplants.",
+//         3: "Seeds can be freed from infection by treating with hot water.",
+//         4: "Use disease free planting material; remove and destroy all crop debris after harvest, or plow material deeply under soil",
+//         5: "Magnesium deficiency can be prevented by applying dolomite lime to the soil, if an increase in soil pH is required, or through applications of a fertilizer containing magnesium.",
+//     },
+//     Recommended_Product: {
+//         1: "Chlorothalonil-720-SFT : https://www.amazon.com/Chlorothalonil-Generic-Daconil-weatherstik-quali-1060/dp/B004GTOKSO",
+//         2: " Tafgor-Dimethoate : https://www.amazon.in/Tata-TATA-Tafgor-Dimethoate-Insecticide/dp/B074CCXPKF",
+//         3: "Ethion Insecticide : https://www.indiamart.com/proddetail/ethion-insecticide-12777127212.html",
+//         4: "Vector Super : https://www.amazon.in/Vector-100ML-IMIDACLOPRID-Systemic-Insecticide/dp/B07D7YTYTB",
+//     },
+// };
 
 
 const update_result = (report) => {
-    //clearing previous results, if any
+    // clearing previous results, if any
     var tags = ["#symptoms", "#treatment", "#products"];
 
     for (var i = 0; i < tags.length; i++) {
         const del_list = document.querySelector(tags[i]);
         del_list.innerHTML = '';
 
-    }  //adding current result
+    }  // Adding current result
         const show_disease = document.querySelector("#disease");
         show_disease.textContent = report.Disease;
 
@@ -101,12 +101,6 @@ const update_result = (report) => {
                 .appendChild(anchor);
         });
 };
-    // form submission
-    // const form = document.querySelector(".upload-form");
-    // form.addEventListener("submit", (e) => {
-
-
-    // });
 
 function handle_name(img_name){
     if(name.length<12){
@@ -137,7 +131,7 @@ const analyze_click = () => {
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
 		const imageError = document.getElementById("image-error");
         const imageFile = event.target.files[0];
-        
+
         if (typeof imageFile == "undefined") {
             imageForm.src = DUMMY_URL;
             const label = document.getElementById('img-lab');
@@ -145,11 +139,11 @@ const analyze_click = () => {
             label.innerText= '';
             file_select_content.style.paddingTop="0%";
             alert('Image Not Uploaded');
-			return false;   
+			return false;
         }
 
 		if(!(/\.(gif|jpe?g|tiff|jfif|png|webp|bmp)$/i).test(imageFile.name))
-		{	//Show error and reset image.
+		{	// Show error and reset image.
 			validateAndDisplay(true);
 			imageForm.src = DUMMY_URL;
 			event.target.value = "";
@@ -158,30 +152,23 @@ const analyze_click = () => {
 		imageForm.src = URL.createObjectURL(imageFile);
 		imageResult.src = URL.createObjectURL(imageFile);
 		uploadButtonSpan.innerHTML = "Change Image";
-		imageError.style.display = "none";
-    //-------------
-      /*
-      Process take place in following steps:
-        1) Get DOM model of leaf_input
-        2) Get DOM model of img-lab
-        3) Pass the file name of leaf_input to img-lab
-        4) Value will be subsitute on panel
-      */
+        imageError.style.display = "none";
+        
+    
+    // Adding image name
     const filename=document.getElementById('leaf_input');
     const label = document.getElementById('img-lab');
     const file_select_content = document.getElementById('file-select-content');
     label.innerText= handle_name(filename.files.item(0).name);
     file_select_content.style.paddingTop="10%";
-    //-------------
     }
 
-    /* Getting the query from the url */
+    // Getting the query from the url 
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     let SectionToBeDisplay = urlParams.get('q')
 
     SectionToBeDisplay = SectionToBeDisplay || 'landing';
-    // console.log(SectionToBeDisplay);
 
 
     if (SectionToBeDisplay == 'analyze') {
@@ -204,8 +191,8 @@ const analyze_click = () => {
     });
 
 
-/* Warning message if input form is not added*/
-function validateAndDisplay(fileNotImage = false) {
+    // Warning message if input form is not added
+    function validateAndDisplay(fileNotImage = false) {
 	var imageError = document.getElementById("image-error");
 	if(fileNotImage)
 	{
@@ -222,12 +209,10 @@ function validateAndDisplay(fileNotImage = false) {
         return false;
 	}
 
-    //making an AJAX call to get result back!
+    // making an AJAX call to get result back!
     let formData = new FormData();
     const imageFile = $("#leaf_input")[0];
     formData.append('file', imageFile.files[0]);
-
-
     $.ajax({
         type: 'POST',
         url: 'https://crop-leaf.herokuapp.com/file_upload',
@@ -236,19 +221,19 @@ function validateAndDisplay(fileNotImage = false) {
         mimeType: "multipart/form-data",
         contentType: false,
         processData: false,
-        success: function (data) {
+        success: function (analysis_report_json) {
+            analysis_report_json = JSON.parse(analysis_report_json);
+            //on successful response
             console.log("Successful reception of data!!");
-            console.log(data);
+            window.history.pushState("Result Page", "Crop AI", '?q=result');
+            update_result(analysis_report_json);
+            show_result_container();
         },
-        error: function (data) {
+        error: function (err) {
+            alert("Something went wrong, Please try again after some time");
             console.log("error");
-            console.log(data);
+            console.log(err);
         }
     });
 
-
-    //on successful response
-    window.history.pushState("Result Page", "Crop AI", '?q=result');
-    update_result(analysis_report_json);
-    show_result_container();
 }
