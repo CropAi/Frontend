@@ -229,7 +229,8 @@ const analyze_click = () => {
             update_result(analysis_report_json);
             show_result_container();
         },
-        error: function (data) {
+        error: function (err) {
+	    alert("Something went wrong, Please try again after some time");
             console.log("error");
             console.log(data);
         }
