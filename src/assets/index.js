@@ -222,6 +222,7 @@ const analyze_click = () => {
         contentType: false,
         processData: false,
         success: function (analysis_report_json) {
+            analysis_report_json = JSON.parse(analysis_report_json);
             //on successful response
             console.log("Successful reception of data!!");
             window.history.pushState("Result Page", "Crop AI", '?q=result');
