@@ -18,3 +18,50 @@ const show_mentor_div = () => {
     Participants_button.classList.remove("active");
     Mentors_button.classList.add("active");
 }
+
+
+// color Palette for the 
+const bgColors = {
+    'Frontend': 'green',
+    'Android-Application': 'blue',
+    'Backend': 'brown',
+    'Data-Modeling': 'orange'
+}
+
+
+// function to generate repository tags
+const repositoryTags = repository => {
+
+    const tags = repository.map(repo =>
+        `<span class="badge badge-space" style="background-color:${bgColors[repo]};">${repo}</span>`)
+    return tags;
+
+}
+
+
+// function to create user-card : paramter expected- user object
+const create_user_card = user => {
+
+    // destructure the user object into keys pairs
+    const { login, avatar_url, html_url, repository, designation } = user;
+
+    const cardComponent =
+     `<div class="col-sm col-md-4 col-lg-3">
+        <div class="card" style="width: 18rem;">
+            <img src=${avatar_url} class="card-img-top" alt=${login}>
+                <div class="card-body">
+                    <h5 class="card-title">${login}</h5>
+                        ${repositoryTags(repository).join(' ')}
+                    <a href = ${html_url} target="__blank">
+                        <i class="fa fa-github" aria-hidden="true" style="font-size: 2rem;" ></i>
+                    </a>
+                </div>
+        </div>
+    </div>`;
+
+    // designation can be 'mentor' or 'participant'
+    document.getElementById(`${designation}`).innerHTML+=cardComponent;
+
+}
+
+

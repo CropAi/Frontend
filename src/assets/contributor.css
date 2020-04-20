@@ -66,3 +66,11 @@ display:none;
     box-shadow: none!important;
     outline: 0;
 }
+
+
+.badge-space{
+    padding:0.3rem 0.3rem;
+    display:inline-block;
+    color:white;
+    font-weight:normal;
+}
