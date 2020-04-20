@@ -45,17 +45,23 @@ const create_user_card = user => {
     // destructure the user object into keys pairs
     const { login, avatar_url, html_url, repository, designation } = user;
 
-    const cardComponent = `<div class="card" style="width: 18rem;">
-                  <img src=${avatar_url} class="card-img-top" alt=${login}>
-                    <div class="card-body">
-                        <h5 class="card-title">${login}</h5>
+    const cardComponent =
+     `<div class="col-sm col-md-4 col-lg-3">
+        <div class="card" style="width: 18rem;">
+            <img src=${avatar_url} class="card-img-top" alt=${login}>
+                <div class="card-body">
+                    <h5 class="card-title">${login}</h5>
                         ${repositoryTags(repository).join(' ')}
-                        <a href = ${html_url} target="__blank">
-                            <i class="fa fa-github" aria-hidden="true" style="font-size: 2rem;" ></i>
-                        </a>
-                    </div>
-                </div>`;
-    return cardComponent;
+                    <a href = ${html_url} target="__blank">
+                        <i class="fa fa-github" aria-hidden="true" style="font-size: 2rem;" ></i>
+                    </a>
+                </div>
+        </div>
+    </div>`;
+
+    // designation can be 'mentor' or 'participant'
+    document.getElementById(`${designation}`).innerHTML+=cardComponent;
 
 }
+
 
