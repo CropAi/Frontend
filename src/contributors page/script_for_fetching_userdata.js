@@ -36,5 +36,13 @@ let contributor_information = async contributor_data_default => {
       }
     }
   }
+  contributor_data["Sulekhiya"] = {
+    "login": "Sulekhiya",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/32355917",
+    "html_url": "https://github.com/Sulekhiya",
+    "repository": [],
+    "designation": "mentor"  // to be updated to admin later
+  }
+
   return contributor_data;
 }
