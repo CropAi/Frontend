@@ -58,5 +58,10 @@ const user_palette = [
 	{	
 		background: "#E48AFF",
 		color: "white"
+	},	
+	{
+		background : "purple",
+		color: "black"
 	}
+
 ]
