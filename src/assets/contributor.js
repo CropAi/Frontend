@@ -37,3 +37,23 @@ const repositoryTags = repository => {
     return tags;
 
 }
+
+
+// function to create user-card : paramter expected- user object
+const create_user_card = user => {
+
+    // destructure the user object into keys pairs
+    const { login, avatar_url, html_url, repository, designation } = user;
+
+    const cardComponent = `<div class="card" style="width: 18rem;">
+                  <img src=${avatar_url} class="card-img-top" alt=${login}>
+                    <div class="card-body">
+                        <h5 class="card-title">${login}</h5>
+                        ${repositoryTags(repository).join(' ')}
+                        <a href = ${html_url} target="__blank">
+                            <i class="fa fa-github" aria-hidden="true" style="font-size: 2rem;" ></i>
+                        </a>
+                    </div>
+                </div>`;
+
+}
