@@ -3,8 +3,6 @@ const Participants_button = document.getElementById("Participants_button");
 const Mentor = document.getElementById("Mentors");
 const Mentors_button = document.getElementById("Mentors_button");
 
-contributor_information(contributor_data_default).then(res => {console.log(res)});
-
 const show_participants_div = () => {
     Participants.classList.remove("hidden");
     Mentor.classList.add("hidden");
@@ -64,4 +62,6 @@ const create_user_card = user => {
 
 }
 
-
+//getting contributors details
+contributor_information(contributor_data_default)
+    .then(contributors => {console.log(contributors)});
