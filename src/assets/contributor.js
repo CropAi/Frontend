@@ -18,3 +18,22 @@ const show_mentor_div = () => {
     Participants_button.classList.remove("active");
     Mentors_button.classList.add("active");
 }
+
+
+// color Palette for the 
+const bgColors = {
+    'Frontend': 'green',
+    'Android-Application': 'blue',
+    'Backend': 'brown',
+    'Data-Modeling': 'orange'
+}
+
+
+// function to generate repository tags
+const repositoryTags = repository => {
+
+    const tags = repository.map(repo =>
+        `<span class="badge badge-space" style="background-color:${bgColors[repo]};">${repo}</span>`)
+    return tags;
+
+}
