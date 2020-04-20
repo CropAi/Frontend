@@ -68,3 +68,9 @@ display:none;
 }
 
 
+.badge-space{
+    padding:0.3rem 0.3rem;
+    display:inline-block;
+    color:white;
+    font-weight:normal;
+}
