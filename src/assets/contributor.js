@@ -55,5 +55,7 @@ const create_user_card = user => {
                         </a>
                     </div>
                 </div>`;
+    return cardComponent;
 
 }
+
