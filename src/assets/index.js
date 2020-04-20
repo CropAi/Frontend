@@ -68,7 +68,7 @@ const update_result = (report) => {
 
     }  // Adding current result
         const show_disease = document.querySelector("#disease");
-        show_disease.textContent = report.Disease;
+        show_disease.textContent = report.category;
 
         const show_symptoms = document.querySelector("#symptoms");
         const symptoms = Object.values(report.Symptoms);
