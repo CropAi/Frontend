@@ -3,6 +3,23 @@ const inputContainer = document.getElementById("input_container");
 const resultContainer = document.getElementById("result_container");
 const bottomContainer = document.getElementById("bottom-data");
 
+// For loading spinner
+const formInput = document.getElementById("form-input");
+const submitButton = document.getElementById("submit-btn");
+const loadingBtn = document.getElementById("loading-btn");
+
+const showLoadingSpinner = () => {
+    formInput.classList.add('hidden');
+    submitButton.classList.add('hidden');
+    loadingBtn.classList.remove('hidden');
+}
+
+const hideLoadingSpinner = () => {
+    formInput.classList.remove('hidden');
+    submitButton.classList.remove('hidden');
+    loadingBtn.classList.add('hidden');
+}
+
 const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
@@ -112,6 +129,7 @@ function handle_name(img_name){
 }
 
 const analyze_click = () => {
+        hideLoadingSpinner();
 		const DUMMY_URL = "./img/dummy-image.svg";
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
         window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
@@ -208,7 +226,7 @@ const analyze_click = () => {
 		imageError.style.display = "block";
         return false;
 	}
-
+    showLoadingSpinner();
     // making an AJAX call to get result back!
     let formData = new FormData();
     const imageFile = $("#leaf_input")[0];
