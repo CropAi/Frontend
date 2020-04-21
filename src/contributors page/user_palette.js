@@ -70,5 +70,9 @@ const user_palette = [
         {
 		background : "rgb(0,250,154)",
 		color: "black"
+	},
+	{
+		background: "#13F164",
+		color:"black"
 	}
 ]
