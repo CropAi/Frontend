@@ -87,3 +87,10 @@ display:none;
     height:2rem;
     display:block;
 }
+
+.card a:link,
+.card a:visited,
+.card a:hover,
+.card a:active{
+    text-decoration: none;
+}
