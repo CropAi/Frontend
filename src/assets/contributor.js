@@ -44,8 +44,8 @@ const create_user_card = user => {
     const { login, avatar_url, html_url, repository, designation } = user;
 
     const cardComponent =
-     `<div class="col-sm col-md-4 col-lg-3">
-        <div class="card" style="width: 18rem;">
+     `<div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
             <img src=${avatar_url} class="card-img-top" alt=${login}>
                 <div class="card-body">
                     <h5 class="card-title">${login}</h5>
