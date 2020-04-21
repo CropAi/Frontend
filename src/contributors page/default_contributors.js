@@ -4,7 +4,8 @@ const contributor_data_default = {
     "avatar_url": "https://avatars3.githubusercontent.com/u/33171120?v=4",
     "html_url": "https://github.com/rajats98",
     "repository": [
-      "Frontend"
+      "Frontend",
+      "Backend"
     ],
     "designation": "mentor"
   },
@@ -39,20 +40,20 @@ const contributor_data_default = {
     ],
     "designation": "participant"
   },
-  "Sapna2001": {
-    "login": "Sapna2001",
-    "avatar_url": "https://avatars3.githubusercontent.com/u/56690856?v=4",
-    "html_url": "https://github.com/Sapna2001",
+  "Adyasha8105": {
+    "login": "Adyasha8105",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/54095539?v=4",
+    "html_url": "https://github.com/Adyasha8105",
     "repository": [
       "Frontend",
       "Backend"
     ],
     "designation": "participant"
   },
-  "Adyasha8105": {
-    "login": "Adyasha8105",
-    "avatar_url": "https://avatars1.githubusercontent.com/u/54095539?v=4",
-    "html_url": "https://github.com/Adyasha8105",
+  "Sapna2001": {
+    "login": "Sapna2001",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/56690856?v=4",
+    "html_url": "https://github.com/Sapna2001",
     "repository": [
       "Frontend",
       "Backend"
@@ -64,7 +65,8 @@ const contributor_data_default = {
     "avatar_url": "https://avatars0.githubusercontent.com/u/25302027?v=4",
     "html_url": "https://github.com/Satyam3976",
     "repository": [
-      "Frontend"
+      "Frontend",
+      "Backend"
     ],
     "designation": "participant"
   },
@@ -78,12 +80,32 @@ const contributor_data_default = {
     ],
     "designation": "participant"
   },
+  "shwetagurnani": {
+    "login": "shwetagurnani",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/43384092?v=4",
+    "html_url": "https://github.com/shwetagurnani",
+    "repository": [
+      "Frontend",
+      "Backend"
+    ],
+    "designation": "participant"
+  },
   "goyalmuskan": {
     "login": "goyalmuskan",
     "avatar_url": "https://avatars3.githubusercontent.com/u/47412347?v=4",
     "html_url": "https://github.com/goyalmuskan",
     "repository": [
       "Frontend"
+    ],
+    "designation": "participant"
+  },
+  "shreyakapoor08": {
+    "login": "shreyakapoor08",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/31164665?v=4",
+    "html_url": "https://github.com/shreyakapoor08",
+    "repository": [
+      "Frontend",
+      "Backend"
     ],
     "designation": "participant"
   },
@@ -100,15 +122,6 @@ const contributor_data_default = {
     "login": "Mustafiz04",
     "avatar_url": "https://avatars1.githubusercontent.com/u/49086821?v=4",
     "html_url": "https://github.com/Mustafiz04",
-    "repository": [
-      "Frontend"
-    ],
-    "designation": "participant"
-  },
-  "shwetagurnani": {
-    "login": "shwetagurnani",
-    "avatar_url": "https://avatars3.githubusercontent.com/u/43384092?v=4",
-    "html_url": "https://github.com/shwetagurnani",
     "repository": [
       "Frontend"
     ],
@@ -133,6 +146,15 @@ const contributor_data_default = {
     ],
     "designation": "participant"
   },
+  "anurajbhandari5": {
+    "login": "anurajbhandari5",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/56197368?v=4",
+    "html_url": "https://github.com/anurajbhandari5",
+    "repository": [
+      "Frontend"
+    ],
+    "designation": "participant"
+  },
   "Kashish-max": {
     "login": "Kashish-max",
     "avatar_url": "https://avatars3.githubusercontent.com/u/53968505?v=4",
@@ -142,10 +164,38 @@ const contributor_data_default = {
     ],
     "designation": "participant"
   },
+  "darkmatter18": {
+    "login": "darkmatter18",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/30409045?v=4",
+    "html_url": "https://github.com/darkmatter18",
+    "repository": [
+      "Frontend"
+    ],
+    "designation": "participant"
+  },
   "roshankcjha": {
     "login": "roshankcjha",
     "avatar_url": "https://avatars2.githubusercontent.com/u/52818437?v=4",
     "html_url": "https://github.com/roshankcjha",
+    "repository": [
+      "Frontend"
+    ],
+    "designation": "participant"
+  },
+  "Geesa-Vihara": {
+    "login": "Geesa-Vihara",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/48402385?v=4",
+    "html_url": "https://github.com/Geesa-Vihara",
+    "repository": [
+      "Frontend",
+      "Backend"
+    ],
+    "designation": "participant"
+  },
+  "pratyushraj7": {
+    "login": "pratyushraj7",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/42607563?v=4",
+    "html_url": "https://github.com/pratyushraj7",
     "repository": [
       "Frontend"
     ],
@@ -182,15 +232,6 @@ const contributor_data_default = {
     ],
     "designation": "participant"
   },
-  "shreyakapoor08": {
-    "login": "shreyakapoor08",
-    "avatar_url": "https://avatars1.githubusercontent.com/u/31164665?v=4",
-    "html_url": "https://github.com/shreyakapoor08",
-    "repository": [
-      "Backend"
-    ],
-    "designation": "participant"
-  },
   "gshanbhag525": {
     "login": "gshanbhag525",
     "avatar_url": "https://avatars2.githubusercontent.com/u/17478096?v=4",
@@ -200,6 +241,24 @@ const contributor_data_default = {
       "Data-Modeling"
     ],
     "designation": "mentor"
+  },
+  "dibakar95": {
+    "login": "dibakar95",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/29605266?v=4",
+    "html_url": "https://github.com/dibakar95",
+    "repository": [
+      "Backend"
+    ],
+    "designation": "participant"
+  },
+  "Kuljeet-123": {
+    "login": "Kuljeet-123",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/48275443?v=4",
+    "html_url": "https://github.com/Kuljeet-123",
+    "repository": [
+      "Backend"
+    ],
+    "designation": "participant"
   },
   "subhashreetrip": {
     "login": "subhashreetrip",
@@ -299,5 +358,12 @@ const contributor_data_default = {
       "Data-Modeling"
     ],
     "designation": "participant"
+  },
+  "Sulekhiya": {
+    "login": "Sulekhiya",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/32355917",
+    "html_url": "https://github.com/Sulekhiya",
+    "repository": [],
+    "designation": "mentor"
   }
 }
