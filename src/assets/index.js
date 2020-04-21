@@ -129,7 +129,6 @@ function handle_name(img_name){
 }
 
 const analyze_click = () => {
-        hideLoadingSpinner();
 		const DUMMY_URL = "./img/dummy-image.svg";
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
         window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
@@ -240,6 +239,7 @@ const analyze_click = () => {
         contentType: false,
         processData: false,
         success: function (analysis_report_json) {
+            hideLoadingSpinner();
             analysis_report_json = JSON.parse(analysis_report_json);
             //on successful response
             console.log("Successful reception of data!!");
@@ -248,6 +248,7 @@ const analyze_click = () => {
             show_result_container();
         },
         error: function (err) {
+            hideLoadingSpinner();
             alert("Something went wrong, Please try again after some time");
             console.log("error");
             console.log(err);
