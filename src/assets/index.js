@@ -3,6 +3,23 @@ const inputContainer = document.getElementById("input_container");
 const resultContainer = document.getElementById("result_container");
 const bottomContainer = document.getElementById("bottom-data");
 
+// For loading spinner
+const formInput = document.getElementById("form-input");
+const submitButton = document.getElementById("submit-btn");
+const loadingBtn = document.getElementById("loading-btn");
+
+const showLoadingSpinner = () => {
+    formInput.classList.add('hidden');
+    submitButton.classList.add('hidden');
+    loadingBtn.classList.remove('hidden');
+}
+
+const hideLoadingSpinner = () => {
+    formInput.classList.remove('hidden');
+    submitButton.classList.remove('hidden');
+    loadingBtn.classList.add('hidden');
+}
+
 const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
@@ -208,7 +225,7 @@ const analyze_click = () => {
 		imageError.style.display = "block";
         return false;
 	}
-
+    showLoadingSpinner();
     // making an AJAX call to get result back!
     let formData = new FormData();
     const imageFile = $("#leaf_input")[0];
@@ -222,6 +239,7 @@ const analyze_click = () => {
         contentType: false,
         processData: false,
         success: function (analysis_report_json) {
+            hideLoadingSpinner();
             analysis_report_json = JSON.parse(analysis_report_json);
             //on successful response
             console.log("Successful reception of data!!");
@@ -230,6 +248,7 @@ const analyze_click = () => {
             show_result_container();
         },
         error: function (err) {
+            hideLoadingSpinner();
             alert("Something went wrong, Please try again after some time");
             console.log("error");
             console.log(err);
