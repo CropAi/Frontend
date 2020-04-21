@@ -74,3 +74,16 @@ display:none;
     color:white;
     font-weight:normal;
 }
+
+.links{
+    margin-top:0.5rem;
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.gssoc-profile{
+    width:2rem;
+    height:2rem;
+    display:block;
+}

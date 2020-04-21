@@ -42,6 +42,7 @@ const create_user_card = user => {
 
     // destructure the user object into keys pairs
     const { login, avatar_url, html_url, repository, designation } = user;
+    const gssocProfileLink = `https://www.gssoc.tech/profile.html?id=${login}`;
 
     const cardComponent =
      `<div class="col-sm col-md-4 col-lg-3">
@@ -50,9 +51,15 @@ const create_user_card = user => {
                 <div class="card-body">
                     <h5 class="card-title">${login}</h5>
                         ${repositoryTags(repository).join(' ')}
-                    <a href = ${html_url} target="__blank">
-                        <i class="fa fa-github" aria-hidden="true" style="font-size: 2rem;" ></i>
-                    </a>
+                    
+                    <div class="links">
+                      <a href=${gssocProfileLink} target="__blank">
+                        <img src="../img/gssoc-logo.png" alt="Participant GSSoC Profile" class="gssoc-profile">
+                      </a>
+                      <a href=${html_url} target="__blank">
+                        <i class="fa fa-github" aria-hidden="true" style="font-size: 2rem;"></i>
+                      </a>
+                    </div>
                 </div>
         </div>
     </div>`;
