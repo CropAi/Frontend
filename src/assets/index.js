@@ -199,7 +199,7 @@ const analyze_click = () => {
     }
 
     else {
-        window.history.pushState("Landing Page", "Crop AI", 'index.html');
+        // window.history.pushState("Landing Page", "Crop AI", 'index.html');
         show_landing_container();
     }
 
