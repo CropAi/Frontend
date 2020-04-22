@@ -71,4 +71,8 @@ const create_user_card = user => {
 
 //getting contributors details
 contributor_information(contributor_data_default)
-    .then(contributors => {console.log(contributors)});
+    .then(contributors => {
+        for (const contributor in contributors){
+            create_user_card(contributors[contributor]);
+        }
+    });
