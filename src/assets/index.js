@@ -3,6 +3,23 @@ const inputContainer = document.getElementById("input_container");
 const resultContainer = document.getElementById("result_container");
 const bottomContainer = document.getElementById("bottom-data");
 
+// For loading spinner
+const formInput = document.getElementById("form-input");
+const submitButton = document.getElementById("submit-btn");
+const loadingBtn = document.getElementById("loading-btn");
+
+const showLoadingSpinner = () => {
+    formInput.classList.add('hidden');
+    submitButton.classList.add('hidden');
+    loadingBtn.classList.remove('hidden');
+}
+
+const hideLoadingSpinner = () => {
+    formInput.classList.remove('hidden');
+    submitButton.classList.remove('hidden');
+    loadingBtn.classList.add('hidden');
+}
+
 const show_landing_container = () => {
     landingContainer.classList.remove("hidden");
     inputContainer.classList.add("hidden");
@@ -32,30 +49,30 @@ const showAbout = () => {
 }
 
 // dummy data to be removed after Api integration
-const analysis_report_json = {
-    Disease: "Pepper Bell Healthy",
-    Symptoms: {
-        1: "Initial symptoms of infection are the formation of small, circular, water-soaked spots on leaves, stems, petioles and/or peduncles",
-        2: "Infected Pepper Bell have Circular lesions on fruit which contain tan to orange to black concentric rings in the center.",
-        3: "It can have lesions may also occur on leaves and stems and appear as irregularly shaped gray spots with dark margins",
-        4: "Seeds did not germinate; seedlings collapsing and dying; dark stems which are shriveled near the soil line",
-        5: " Water-soaked lesions on the stem and discolored roots.",
-        6: "High numbers of lesions may form on leaves causing them to turn yellow and drop from the plant.",
-    },
-    Treatment: {
-        1: "Plant only diseasefree, certified seed",
-        2: "Always plant disease-free seeds and transplants.",
-        3: "Seeds can be freed from infection by treating with hot water.",
-        4: "Use disease free planting material; remove and destroy all crop debris after harvest, or plow material deeply under soil",
-        5: "Magnesium deficiency can be prevented by applying dolomite lime to the soil, if an increase in soil pH is required, or through applications of a fertilizer containing magnesium.",
-    },
-    Recommended_Product: {
-        1: "Chlorothalonil-720-SFT : https://www.amazon.com/Chlorothalonil-Generic-Daconil-weatherstik-quali-1060/dp/B004GTOKSO",
-        2: " Tafgor-Dimethoate : https://www.amazon.in/Tata-TATA-Tafgor-Dimethoate-Insecticide/dp/B074CCXPKF",
-        3: "Ethion Insecticide : https://www.indiamart.com/proddetail/ethion-insecticide-12777127212.html",
-        4: "Vector Super : https://www.amazon.in/Vector-100ML-IMIDACLOPRID-Systemic-Insecticide/dp/B07D7YTYTB",
-    },
-};
+// const analysis_report_json = {
+//     Disease: "Pepper Bell Healthy",
+//     Symptoms: {
+//         1: "Initial symptoms of infection are the formation of small, circular, water-soaked spots on leaves, stems, petioles and/or peduncles",
+//         2: "Infected Pepper Bell have Circular lesions on fruit which contain tan to orange to black concentric rings in the center.",
+//         3: "It can have lesions may also occur on leaves and stems and appear as irregularly shaped gray spots with dark margins",
+//         4: "Seeds did not germinate; seedlings collapsing and dying; dark stems which are shriveled near the soil line",
+//         5: " Water-soaked lesions on the stem and discolored roots.",
+//         6: "High numbers of lesions may form on leaves causing them to turn yellow and drop from the plant.",
+//     },
+//     Treatment: {
+//         1: "Plant only diseasefree, certified seed",
+//         2: "Always plant disease-free seeds and transplants.",
+//         3: "Seeds can be freed from infection by treating with hot water.",
+//         4: "Use disease free planting material; remove and destroy all crop debris after harvest, or plow material deeply under soil",
+//         5: "Magnesium deficiency can be prevented by applying dolomite lime to the soil, if an increase in soil pH is required, or through applications of a fertilizer containing magnesium.",
+//     },
+//     Recommended_Product: {
+//         1: "Chlorothalonil-720-SFT : https://www.amazon.com/Chlorothalonil-Generic-Daconil-weatherstik-quali-1060/dp/B004GTOKSO",
+//         2: " Tafgor-Dimethoate : https://www.amazon.in/Tata-TATA-Tafgor-Dimethoate-Insecticide/dp/B074CCXPKF",
+//         3: "Ethion Insecticide : https://www.indiamart.com/proddetail/ethion-insecticide-12777127212.html",
+//         4: "Vector Super : https://www.amazon.in/Vector-100ML-IMIDACLOPRID-Systemic-Insecticide/dp/B07D7YTYTB",
+//     },
+// };
 
 
 const update_result = (report) => {
@@ -68,7 +85,7 @@ const update_result = (report) => {
 
     }  // Adding current result
         const show_disease = document.querySelector("#disease");
-        show_disease.textContent = report.Disease;
+        show_disease.textContent = report.category;
 
         const show_symptoms = document.querySelector("#symptoms");
         const symptoms = Object.values(report.Symptoms);
@@ -131,7 +148,7 @@ const analyze_click = () => {
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
 		const imageError = document.getElementById("image-error");
         const imageFile = event.target.files[0];
-        
+
         if (typeof imageFile == "undefined") {
             imageForm.src = DUMMY_URL;
             const label = document.getElementById('img-lab');
@@ -139,7 +156,7 @@ const analyze_click = () => {
             label.innerText= '';
             file_select_content.style.paddingTop="0%";
             alert('Image Not Uploaded');
-			return false;   
+			return false;
         }
 
 		if(!(/\.(gif|jpe?g|tiff|jfif|png|webp|bmp)$/i).test(imageFile.name))
@@ -208,13 +225,11 @@ const analyze_click = () => {
 		imageError.style.display = "block";
         return false;
 	}
-
+    showLoadingSpinner();
     // making an AJAX call to get result back!
     let formData = new FormData();
     const imageFile = $("#leaf_input")[0];
     formData.append('file', imageFile.files[0]);
-
-
     $.ajax({
         type: 'POST',
         url: 'https://crop-leaf.herokuapp.com/file_upload',
@@ -223,20 +238,21 @@ const analyze_click = () => {
         mimeType: "multipart/form-data",
         contentType: false,
         processData: false,
-        success: function (data) {
+        success: function (analysis_report_json) {
+            hideLoadingSpinner();
+            analysis_report_json = JSON.parse(analysis_report_json);
+            //on successful response
             console.log("Successful reception of data!!");
-            console.log(data);
+            window.history.pushState("Result Page", "Crop AI", '?q=result');
+            update_result(analysis_report_json);
+            show_result_container();
         },
         error: function (err) {
-	    alert("Something went wrong, Please try again after some time");
+            hideLoadingSpinner();
+            alert("Something went wrong, Please try again after some time");
             console.log("error");
             console.log(err);
         }
     });
 
-
-    // on successful response
-    window.history.pushState("Result Page", "Crop AI", '?q=result');
-    update_result(analysis_report_json);
-    show_result_container();
 }

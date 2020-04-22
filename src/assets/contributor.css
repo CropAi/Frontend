@@ -58,3 +58,39 @@
 display:none;
 }
 
+.badge-info{
+    font-size: 20px;
+}
+
+.btn:focus, .btn:active, .btn:hover{
+    box-shadow: none!important;
+    outline: 0;
+}
+
+
+.badge-space{
+    padding:0.3rem 0.3rem;
+    display:inline-block;
+    color:white;
+    font-weight:normal;
+}
+
+.links{
+    margin-top:0.5rem;
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.gssoc-profile{
+    width:2rem;
+    height:2rem;
+    display:block;
+}
+
+.card a:link,
+.card a:visited,
+.card a:hover,
+.card a:active{
+    text-decoration: none;
+}

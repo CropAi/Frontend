@@ -1,5 +1,13 @@
 const user_palette = [
   {
+    background:"#005b96",
+    color:"white"
+  },
+  {
+	  background: "green",
+	  color: "black"
+  },
+  {
 	  background: "cornflowerblue",
 	  color: "white"
   },
@@ -39,8 +47,32 @@ const user_palette = [
 		background: "#2db7cc",
 		color: "white"
 	},
-	{	
+	{
 		background: "#ff948a",
 		color: "black"
+	},
+	{
+		background: "#50FDFF",
+		color: "white"
+	},
+	{
+		background: "#FFBFCA",
+		color: "white"
+	},
+	{
+		background: "#E48AFF",
+		color: "white"
+	},
+	{
+		background : "purple",
+		color: "black"
+	},
+        {
+		background : "rgb(0,250,154)",
+		color: "black"
+	},
+	{
+		background: "#13F164",
+		color:"black"
 	}
 ]
