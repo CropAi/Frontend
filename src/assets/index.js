@@ -129,7 +129,7 @@ function handle_name(img_name){
 }
 
 const analyze_click = () => {
-		const DUMMY_URL = "./img/dummy-image.svg";
+		const DUMMY_URL = "./src/img/dummy-image.svg";
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
         window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
         document.getElementById("leaf_input").value = "";
@@ -142,7 +142,7 @@ const analyze_click = () => {
 
     // function to insert input image on form and result section
     const showImage = event => {
-		const DUMMY_URL = "./img/dummy-image.svg";
+		const DUMMY_URL = "./src/img/dummy-image.svg";
         const imageForm = document.getElementById("showImage");
 		const imageResult = document.getElementById("leaf_image");
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
