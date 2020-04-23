@@ -39,6 +39,7 @@ const show_result_container = () => {
     inputContainer.classList.add("hidden");
     resultContainer.classList.remove("hidden");
     bottomContainer.classList.add("hidden");
+    document.getElementById("title").innerHTML = "Crop AI | Analysis Report";
 }
 
 
@@ -46,6 +47,7 @@ const show_result_container = () => {
 const showAbout = () => {
     var about_dom = document.getElementById("abt-data-cont")
     about_dom.classList.toggle('fade_effect');
+    document.getElementById("title").innerHTML = "Crop AI | Home"; 
 }
 
 
@@ -104,8 +106,8 @@ function handle_name(img_name){
 }
 
 
-let visitingFromAnalyse = false;
-const analyze_click = () => {
+    let visitingFromAnalyse = false;
+    const analyze_click = () => {
         visitingFromAnalyse = true;
 		const DUMMY_URL = "./src/img/dummy-image.svg";
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
@@ -115,6 +117,7 @@ const analyze_click = () => {
 		uploadButtonSpan.innerHTML = "Upload a file";
         document.getElementById("img-lab").innerHTML = "";
         document.getElementById("file-select-content").style.paddingTop = "";
+        document.getElementById("title").innerHTML = "Crop AI | Analyze Crop";
         show_input_container();
     }
 
