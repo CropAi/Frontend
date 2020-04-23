@@ -110,7 +110,7 @@ const update_result = (report) => {
             const list = document.createElement("li");
             const anchor = document.createElement("a");
             anchor.setAttribute("href", url);
-
+            anchor.setAttribute('target', '_blank');
             anchor.textContent = med;
             document
                 .querySelector("#products")
@@ -170,8 +170,8 @@ const analyze_click = () => {
 		imageResult.src = URL.createObjectURL(imageFile);
 		uploadButtonSpan.innerHTML = "Change Image";
         imageError.style.display = "none";
-        
-    
+
+
     // Adding image name
     const filename=document.getElementById('leaf_input');
     const label = document.getElementById('img-lab');
@@ -180,7 +180,7 @@ const analyze_click = () => {
     file_select_content.style.paddingTop="10%";
     }
 
-    // Getting the query from the url 
+    // Getting the query from the url
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     let SectionToBeDisplay = urlParams.get('q')
