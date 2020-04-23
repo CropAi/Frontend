@@ -4,33 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- add icon link -->
     <link rel="shortcut icon" href="../../../designs/logo-designs/cropAi-logo-favicon.png" type="image/x-icon">
     <title>Landing Page-3</title>
-    <link rel="stylesheet" href="../../assets/landing-3.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Custom StyleSheeet -->
+    <!-- <link rel="stylesheet" href="../../assets/landing-3.css"> -->
+    <link rel="stylesheet" href="../../assets/landing.css">
+   
 </head>
 
 <body>
 
-  <div id="navbar">
-    <a href="/">
-      <img src="../../../designs/logo-designs//cropAi-logo-croped.png" width="110px">
-    </a>
-    <div id="navbar-right">
-      <a class="active" href="/">HOME</a>
-      <a href="/?q=analyze">ANALYZE CROP</a>
-      <a href="/src/contributors/">TEAM</a>
+  <!-- Logo  -->
+    <div class="logo-box">
+        <a href="/">
+          <img src="../../../designs/logo-designs//cropAi-logo-croped.png" class="logo">
+        </a>
     </div>
-  </div>
+  
+    <nav id="navbar" class="navbar">
+      <ul class="navbar-items">
+        <li class="navbar-item">
+          <a href="/" class="navbar-link">Home</a>
+        </li>
+        <li class="navbar-item">
+          <a href="/" class="navbar-link">Analyze crop</a>
+        </li>
+        <li class="navbar-item">
+          <a href="/" class="navbar-link">Team</a>
+        </li>
+      </ul>
+  </nav>
 
+ 
+
+  <!-- Main section -->
+  <section  class="main-section">
+   
+      <div class="image-section">
+        <img class="tree-img" src="../../../designs/Web Designs/design-3/Resources/tree.png"  alt="Image of a Tree">
+      </div>
+      
+      <div class="content-section">
+        <h1 class="text-center main-text">CROP AI</h1>
+        <p class="text-center text-ab" >
+          The Crop Advisory App for Farmers and gardeners.
+        </p>
+     
+        <button class="button" onclick="goToAnalyzePage()">
+            START ANALYSING &RightArrow;
+        </button>
+      </div>
+  </section>
+
+  
+  <!-- Decoration Glass -->
+  <img class="glass-img" src="../../../designs/Web Designs/design-3/Resources/glass.png" alt="Magnifying glass">
+ 
+
+  <!--  Script for the Page -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  
   <script>
-    window.onscroll = function() {scrollFunction()};
-    
+    window.onscroll = function () { scrollFunction() };
+
     function scrollFunction() {
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         document.getElementById("navbar").style.padding = "20px 10px";
@@ -42,21 +87,12 @@
     }
   </script>
 
-  <!-- Main section -->
-  <section id="main-section">
-    <div class="row">
-      <div class="col-sm-4" style="padding: 0px">
-        <img id="tree-img" src="../../../designs/Web Designs/design-3/Resources/tree.png" alt="tree">
-      </div>
-      <div class=" col-sm-6" style="padding: 0px">
-        <h1 class="text-center main-text "> CROP AI </h1>
-        <p class="text-center text-ab" >This is a crop advisory app for farmers and <br>gardeners. </p>
-        <center><button onclick="window.location.href = '/?q=analyze';" class=" button-1 ">START ANALYSING<a c style="font-weight: lighter;font-size: 1.2em;" href="../../../index.html?q=analyze" >&nbsp;<i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i></a></button></center>
-      </div>
-      <div class="col-sm-2">
-        <img class="glass-img" src="../../../designs/Web Designs/design-3/Resources/glass.png" alt="glass">
-      </div>
-    </div>
-  </section>
+  <script>
+    const goToAnalyzePage=()=>{
+      window.location.href="/?q=analyze"
+    }
+  </script>
 </body>
+
+
 </html>

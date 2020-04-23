@@ -1,6 +1,22 @@
+*,*::after,*::before{
+    padding:0;
+    margin:0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size:62.5%;
+}
+
+
 body{
-    height: 100%; 
+    box-sizing: border-box;
+    min-height: 100vh;
+    max-height:100vh; 
     font-family: 'Open Sans', sans-serif;
+    overflow:hidden;
+    line-height: 1.5;
+    color:#333;
 }
 
 #navbar {
@@ -429,3 +445,26 @@ body{
 }
 
 
+.logo-box{
+  width:20rem;
+  position: absolute;
+  top:2rem;
+  left:1rem;
+}
+
+
+.logo{
+  max-width:100%;
+  text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Navbar Styling */
+.navbar{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}

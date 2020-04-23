@@ -1,0 +1,163 @@
+/* Global Styles */
+
+*,*::after,*::before{
+    padding:0;
+    margin:0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size:62.5%;
+}
+
+
+body{
+    box-sizing: border-box;
+    min-height: 100vh;
+    max-height:100vh; 
+    font-family: 'Open Sans', sans-serif;
+    overflow:hidden;
+    line-height: 1.5;
+    color:#333;
+    background:#f7f7f7;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+ul{
+    list-style:none;
+}
+
+
+/* Decoration Glass */
+
+.glass-img{
+   height:25rem;
+   width:25rem;
+   position: absolute;
+   right:0%;
+}
+
+
+/* Logo Styles */
+.logo-box{
+  width:20rem;
+  position: absolute;
+  top:1rem;
+  left:1rem;
+  z-index: 2;
+}
+
+
+.logo{
+  max-width:100%;
+  text-align: center;
+}
+
+/*  Navbar styling */
+.navbar{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    background:#fff;
+}
+
+.navbar-items{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right:2rem;
+    margin-top:1rem;
+}
+
+.navbar-item{
+    padding:2rem 2rem;
+}
+.navbar-link:link,
+.navbar-link:visited{
+    font-size:2rem;
+    color:#023417b2;
+    font-weight:bold;
+    letter-spacing: 1px;
+}
+
+.navbar-link:hover,
+.navbar-link:active{
+    font-size:2rem;
+    color:#058139fa;
+    font-weight:bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+/* Main Section */
+
+.main-section{
+    display:flex;
+    width:90%;
+    margin:0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.image-section{
+    width:40rem;
+    height:60rem;
+    margin-top:2rem;
+ 
+}
+.tree-img{
+    max-width:100%;
+    max-height:100%;
+}
+
+.content-section{
+    width:80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:2rem;
+    margin:0 auto;
+    
+}
+
+.main-text{
+    font-weight: 600;
+    color: #023417;
+    font-size:8rem;
+    letter-spacing: 2px;
+    justify-self: flex-start;
+   
+}
+
+.text-ab{
+    font-size:2.5rem;
+    font-weight: bold;
+    color: #023417;
+    margin:2rem;
+    justify-self: flex-start;
+}
+
+.button{
+    font-size:2rem;
+    background-color: #023417;
+    padding:1rem 1.3rem;
+    color:white;
+    border:none;
+    outline:none;
+    box-shadow: 2px 4px 7px #000;
+    border-radius:3px;
+    transition:ease-in-out;
+    justify-self: flex-start;
+}
+
+.button:hover{
+    background-color: #08883e;
+    transform:translateY(-5px)
+}
