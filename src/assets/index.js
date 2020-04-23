@@ -103,15 +103,18 @@ function handle_name(img_name){
       }
 }
 
+
+let visitingFromAnalyse = false;
 const analyze_click = () => {
+        visitingFromAnalyse = true;
 		const DUMMY_URL = "./src/img/dummy-image.svg";
 		const uploadButtonSpan = document.getElementById("uploadButtonText");
         window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
         document.getElementById("leaf_input").value = "";
 		document.getElementById("showImage").src = DUMMY_URL;
 		uploadButtonSpan.innerHTML = "Upload a file";
-    document.getElementById("img-lab").innerHTML = "";
-    document.getElementById("file-select-content").style.paddingTop = "";
+        document.getElementById("img-lab").innerHTML = "";
+        document.getElementById("file-select-content").style.paddingTop = "";
         show_input_container();
     }
 
@@ -169,8 +172,16 @@ const analyze_click = () => {
     }
 
     else if (SectionToBeDisplay == 'result') {
-        window.history.pushState("Result Page", "Crop AI", '?q=result');
-        show_result_container();
+
+        if (!visitingFromAnalyse) {
+            window.history.pushState("Result Page", "Crop AI", '?q=analyze');
+            show_input_container();
+        }
+        else {
+            window.history.pushState("Result Page", "Crop AI", '?q=result');
+            show_result_container();
+        }
+        
     }
 
     else {
