@@ -43,6 +43,11 @@
     justify-content: flex-end;
 }
 
+.card-body{
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
 
 .card{
     opacity: 0.9;
@@ -86,6 +91,14 @@ display:none;
     width:2rem;
     height:2rem;
     display:block;
+}
+
+.gssoc-profile:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fa:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card a:link,

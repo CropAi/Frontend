@@ -48,8 +48,8 @@ const create_user_card = user => {
      `<div class="col-sm-6 col-md-4 col-lg-3">
         <div class="card">
             <img src=${avatar_url} class="card-img-top" alt=${login}>
-                <div class="card-body">
-                    <h5 class="card-title">${login}</h5>
+                <div class="card-body" style="background-color:${user_palette[Math.floor(Math.random()*user_palette.length)].background};">
+                    <h5 class="card-title" style="color:${user_palette[Math.floor(Math.random()*user_palette.length)].color};">${login}</h5>
                         ${repositoryTags(repository).join(' ')}
                     
                     <div class="links">
@@ -71,4 +71,8 @@ const create_user_card = user => {
 
 //getting contributors details
 contributor_information(contributor_data_default)
-    .then(contributors => {console.log(contributors)});
+    .then(contributors => {
+        for (const contributor in contributors){
+            create_user_card(contributors[contributor]);
+        }
+    });
