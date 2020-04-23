@@ -31,32 +31,6 @@ const showAbout = () => {
     about_dom.classList.toggle('fade_effect');
 }
 
-// dummy data to be removed after Api integration
-const analysis_report_json = {
-    Disease: "Pepper Bell Healthy",
-    Symptoms: {
-        1: "Initial symptoms of infection are the formation of small, circular, water-soaked spots on leaves, stems, petioles and/or peduncles",
-        2: "Infected Pepper Bell have Circular lesions on fruit which contain tan to orange to black concentric rings in the center.",
-        3: "It can have lesions may also occur on leaves and stems and appear as irregularly shaped gray spots with dark margins",
-        4: "Seeds did not germinate; seedlings collapsing and dying; dark stems which are shriveled near the soil line",
-        5: " Water-soaked lesions on the stem and discolored roots.",
-        6: "High numbers of lesions may form on leaves causing them to turn yellow and drop from the plant.",
-    },
-    Treatment: {
-        1: "Plant only diseasefree, certified seed",
-        2: "Always plant disease-free seeds and transplants.",
-        3: "Seeds can be freed from infection by treating with hot water.",
-        4: "Use disease free planting material; remove and destroy all crop debris after harvest, or plow material deeply under soil",
-        5: "Magnesium deficiency can be prevented by applying dolomite lime to the soil, if an increase in soil pH is required, or through applications of a fertilizer containing magnesium.",
-    },
-    Recommended_Product: {
-        1: "Chlorothalonil-720-SFT : https://www.amazon.com/Chlorothalonil-Generic-Daconil-weatherstik-quali-1060/dp/B004GTOKSO",
-        2: " Tafgor-Dimethoate : https://www.amazon.in/Tata-TATA-Tafgor-Dimethoate-Insecticide/dp/B074CCXPKF",
-        3: "Ethion Insecticide : https://www.indiamart.com/proddetail/ethion-insecticide-12777127212.html",
-        4: "Vector Super : https://www.amazon.in/Vector-100ML-IMIDACLOPRID-Systemic-Insecticide/dp/B07D7YTYTB",
-    },
-};
-
 
 const update_result = (report) => {
     // clearing previous results, if any
