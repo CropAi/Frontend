@@ -1,6 +1,6 @@
 const user_palette = [
   {
-    background:"#005b96",
+    background:"green",
     color:"white"
   },
   {
@@ -78,5 +78,9 @@ const user_palette = [
 	{
 		background: "#ececec",
 		color:"#222831"
+	},
+	{
+		background: "#097722",
+		color:"white"
 	}
 ]
