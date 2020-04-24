@@ -105,8 +105,8 @@ let visitingFromAnalyse = false;
 
 const analyze_click = () => {
     visitingFromAnalyse = true;
-	const DUMMY_URL = "./src/img/dummy-image.svg";
-	const uploadButtonSpan = document.getElementById("uploadButtonText");
+    const DUMMY_URL = "./src/img/dummy-image.svg";
+    const uploadButtonSpan = document.getElementById("uploadButtonText");
     window.history.pushState('Analyze Page', 'Crop AI', '?q=analyze');
     document.getElementById("leaf_input").value = "";
     document.getElementById("showImage").src = DUMMY_URL;
@@ -119,11 +119,11 @@ const analyze_click = () => {
 
 // function to insert input image on form and result section
 const showImage = event => {
-	const DUMMY_URL = "./src/img/dummy-image.svg";
+    const DUMMY_URL = "./src/img/dummy-image.svg";
     const imageForm = document.getElementById("showImage");
-	const imageResult = document.getElementById("leaf_image");
-	const uploadButtonSpan = document.getElementById("uploadButtonText");
-	const imageError = document.getElementById("image-error");
+    const imageResult = document.getElementById("leaf_image");
+    const uploadButtonSpan = document.getElementById("uploadButtonText");
+    const imageError = document.getElementById("image-error");
     const imageFile = event.target.files[0];
 
     if (typeof imageFile == "undefined") {
@@ -133,15 +133,15 @@ const showImage = event => {
         label.innerText= '';
         file_select_content.style.paddingTop="0%";
         alert('Image Not Uploaded');
-		return false;
+        return false;
     }
 
 	if(!(/\.(gif|jpe?g|tiff|jfif|png|webp|bmp)$/i).test(imageFile.name)) {	
         // Show error and reset image.
-		validateAndDisplay(true);
-		imageForm.src = DUMMY_URL;
-		event.target.value = "";
-		return false;
+        validateAndDisplay(true);
+        imageForm.src = DUMMY_URL;
+        event.target.value = "";
+        return false;
     }
     
     imageForm.src = URL.createObjectURL(imageFile);
@@ -189,21 +189,21 @@ window.addEventListener('popstate', () => {
 
  // Warning message if input form is not added
 function validateAndDisplay(fileNotImage = false) {
-	var imageError = document.getElementById("image-error");
-	if(fileNotImage)
-	{
-		imageError.textContent = "* File not an Image";
-		imageError.style.display = "block";
-		return false;
-	}
-	event.preventDefault();
-	var x = document.getElementById("leaf_input").value;
-    imageError.textContent = "* Upload an Image";
-    
-    if (x == "") {
-		imageError.style.display = "block";
+    var imageError = document.getElementById("image-error");
+    if(fileNotImage)
+    {
+        imageError.textContent = "* File not an Image";
+        imageError.style.display = "block";
         return false;
 	}
+    event.preventDefault();
+    var x = document.getElementById("leaf_input").value;
+    imageError.textContent = "* Upload an Image";
+
+    if (x == "") {
+        imageError.style.display = "block";
+        return false;
+    }
     showLoadingSpinner();
 
     // making an AJAX call to get result back!
