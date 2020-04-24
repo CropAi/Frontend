@@ -302,42 +302,6 @@ a{
   }
 }
 
-/*
-----------------------------
-  ANIMATIONS
-----------------------------
-*/
-
-@keyframes moveUp{
-  from{
-    transform:translateY(-1rem) rotateZ(2deg);
-
-  }
-  to{
-    transform:translateY(0) rotateZ(-2deg);;
-
-  }
-}
-
-@keyframes moveDown{
-  from{
-    transform:translateY(0) rotateZ(2deg);
-
-  }
-  to{
-    transform:translateY(1rem) rotateZ(-2deg);;
-
-  }
-}
-
-@keyframes fadeIn{
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity:1;
-  }
-}
 
 
 
@@ -398,15 +362,7 @@ a{
 	border-radius: 1rem;
 }
 
-/* .img-dummy{
-  position:absolute;
-  top:0;
-  left:0;
-  transform:translate(0);
-  width:16rem;
-  height:16rem;
-  z-index:-10;
-} */
+
 
 
 /* Media Queries for Input */
@@ -525,10 +481,7 @@ a{
   text-align:left;
 }
 
-.information li{
-  font-size:1.7rem;
-  color:var(--black)
-}
+
 
 .information a:link,
 .information a:visited{
@@ -631,22 +584,7 @@ a{
   text-decoration: none;
 }
 
-/* ----------------------------------------------- */
-/* #file-select-content{
-  padding-top: 10%;
-} */
 
-.chip{
-  color: white;
-  background-color: red;
-  text-align: center;
-  border-radius: 25px 25px;
-  margin: 5px;
-}
-
-.chip #img-lab{
-  font-size: 20px;
-}
 /* -------------------------------------------------------- */
 #abt-data-cont {
   opacity: 1;
