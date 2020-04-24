@@ -21,14 +21,21 @@
 <body>
 
   <!-- Logo  -->
-    <div class="logo-box">
-        <a href="/">
-          <img src="../../../designs/logo-designs//cropAi-logo-croped.png" class="logo">
-        </a>
-    </div>
-  
+   
+  <!-- <div class="logo-box">
+    <a href="/">
+      <img src="../../../designs/logo-designs//cropAi-logo-croped.png" class="logo">
+    </a>
+  </div> -->
     <nav id="navbar" class="navbar">
-      <ul class="navbar-items">
+    
+    <div class="logo-box">
+      <a href="/">
+        <img src="../../../designs/logo-designs//cropAi-logo-croped.png" class="logo">
+      </a>
+    </div>
+
+    <ul class="navbar-items">
         <li class="navbar-item">
           <a href="/" class="navbar-link">Home</a>
         </li>
@@ -38,7 +45,7 @@
         <li class="navbar-item">
           <a href="/src/contributors/" class="navbar-link">Team</a>
         </li>
-      </ul>
+    </ul>
   </nav>
 
  
@@ -76,6 +83,21 @@
   <script>
     const goToAnalyzePage=()=>{
       window.location.href="/?q=analyze"
+    }
+  </script>
+
+  <script>
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("navbar").style.backgroundColor = "#ffffffce";
+       
+      } 
+      else {
+        document.getElementById("navbar").style.backgroundColor = "#ffffff";
+        
+      }
     }
   </script>
 </body>
