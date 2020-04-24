@@ -67,10 +67,10 @@ ul{
     align-items: center;
     background:#fff;
     box-shadow: 1px 0px 5px #07b910;
-    height:15vh;
     position: sticky;
     top:0;
     width:100%;
+    transition:padding 500ms ease-in-out;
    
 }
 
