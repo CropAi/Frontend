@@ -7,12 +7,24 @@ const bottomContainer = document.getElementById("bottom-data");
 const formInput = document.getElementById("form-input");
 const submitButton = document.getElementById("submit-btn");
 const loadingBtn = document.getElementById("loading-btn");
+const countdown = document.getElementById("countdown");
 
 const showLoadingSpinner = () => {
     formInput.classList.add('hidden');
     submitButton.classList.add('hidden');
     loadingBtn.classList.remove('hidden');
+    // Adding a count down timer for 30 sec
+    var timeleft = 30;
+    (function timer(){
+        if (--timeleft < 0) return;
+        setTimeout(function(){
+            countdown.innerHTML = timeleft + ' secs';
+            timer();
+        }, 1000);
+    })();
 }
+
+
 
 const hideLoadingSpinner = () => {
     formInput.classList.remove('hidden');
