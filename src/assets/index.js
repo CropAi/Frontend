@@ -14,11 +14,13 @@ const showLoadingSpinner = () => {
     submitButton.classList.add('hidden');
     loadingBtn.classList.remove('hidden');
     // Adding a count down timer for 30 sec
+    countdown.innerHTML ='30 seconds';
     var timeleft = 30;
+   
     (function timer(){
         if (--timeleft < 0) return;
         setTimeout(function(){
-            countdown.innerHTML = timeleft + ' secs';
+            countdown.innerHTML = timeleft + ' seconds';
             timer();
         }, 1000);
     })();
