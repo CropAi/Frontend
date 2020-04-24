@@ -32,7 +32,7 @@
                 <div class="hero-content">
                     <div class="title">CROP AI</div>
                     <h1> A crop advisory app for farmers and gardeners</h1>
-                    <button class="button" onclick="window.location.href='/?q=analyze'">Analyze</button>
+                    <button class="button" onclick="takeToAnalyze()">Analyze</button>
                 </div>
                 <div class="col-7">
                     <div class="hero-images">
@@ -41,19 +41,7 @@
                 </div>
           </div>
    </header>
-    <script>
-        window.onscroll = function() {scrollFunction()};
-        
-        function scrollFunction() {
-          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("navbar").style.padding = "20px 10px";
-            document.getElementById("navbar").style.backgroundColor = "#ffffffce";
-          } else {
-            document.getElementById("navbar").style.padding = "26px 10px"; 
-            document.getElementById("navbar").style.backgroundColor = "#ffffff";
-          }
-        }
-      </script>
+    
 
     <!-- Latest compiled and minified JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
@@ -62,6 +50,27 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </script>
+
+    <script>
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+          document.getElementById("navbar").style.padding = "20px 10px";
+          document.getElementById("navbar").style.backgroundColor = "#ffffffce";
+        } else {
+          document.getElementById("navbar").style.padding = "26px 10px";
+          document.getElementById("navbar").style.backgroundColor = "#ffffff";
+        }
+      }
+    </script>
+
+    <script>
+      function takeToAnalyze(){
+        window.location.href='/?q=analyze';
+      }
+    </script>
+
 </body>
 
 </html>
