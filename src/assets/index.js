@@ -106,15 +106,6 @@ const update_result = (report) => {
     });
 };
 
-function handle_name(img_name) {
-    if(name.length < 12) {
-        return img_name.slice(0, 11)+"....";
-    }
-    else {
-        return img_name;
-    }
-}
-
 let visitingFromAnalyse = false;
 
 const analyze_click = () => {
@@ -138,11 +129,11 @@ const showImage = event => {
     const imageResult = document.getElementById("leaf_image");
     const uploadButtonSpan = document.getElementById("uploadButtonText");
     const imageError = document.getElementById("image-error");
-    const imageFile = event.target.files[0];
+	const imageFile = event.target.files[0];
+	const label = document.getElementById('img-lab');
 
     if (typeof imageFile == "undefined") {
         imageForm.src = DUMMY_URL;
-        const label = document.getElementById('img-lab');
         const file_select_content = document.getElementById('file-select-content');
         label.innerText= '';
         file_select_content.style.paddingTop="0%";
@@ -154,7 +145,8 @@ const showImage = event => {
         // Show error and reset image.
         validateAndDisplay(true);
         imageForm.src = DUMMY_URL;
-        event.target.value = "";
+		event.target.value = "";
+		label.innerText = "";
         return false;
     }
     
@@ -162,13 +154,7 @@ const showImage = event => {
     imageResult.src = URL.createObjectURL(imageFile);
     uploadButtonSpan.innerHTML = "Change Image";
     imageError.style.display = "none";
-
-    // Adding image name
-    const filename=document.getElementById('leaf_input');
-    const label = document.getElementById('img-lab');
-    const file_select_content = document.getElementById('file-select-content');
-    label.innerText= handle_name(filename.files.item(0).name);
-    file_select_content.style.paddingTop="10%";
+	label.innerText = imageFile.name;
 }
 
 // Getting the query from the url
