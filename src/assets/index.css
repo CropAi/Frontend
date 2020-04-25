@@ -154,7 +154,6 @@ a{
   background:var(--primary-green);
   color:var(--white);
   border-radius:2rem;
-  margin:1rem;
   border:1px solid var(--primary-green);
   padding:1rem 2rem;
   font-size:2rem;
@@ -222,6 +221,9 @@ a{
   text-align: center;
   padding:0;
   margin:0;
+}
+.btn-container .btn-green {
+	margin: 1rem;
 }
 
 /* About Text */

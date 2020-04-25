@@ -61,11 +61,10 @@
 
       <div class="img-container mx-auto mb-2">
         <img src="./src/img/dummy-image.svg"  class="img-uploaded img-fluid" id="showImage">
-        <div class="chip">
-          <p id = "img-lab"></p>
-        </div>
       </div>
-
+	  <div class="chip">
+		<p id = "img-lab"></p>
+	  </div>
       <div id="file-select-content">
         <div class="file-select mx-auto p-2">
           <form class="upload-form" onchange="showImage(event)" onsubmit="validateAndDisplay()">
@@ -78,11 +77,11 @@
               </button>
               </div>
             </div>  
-            <div class="" id="submit-btn">
+            <div id="submit-btn">
               <button class="btn btn-green btn-submit" type="submit" >Submit</button>
             </div>
             <div class="hidden"  id="loading-btn">
-              <button class="btn btn btn-green btn-submit" type="button" disabled>
+              <button class="btn btn-green btn-submit" type="button" disabled>
                 <span class="spinner-border" role="status" aria-hidden="true"></span>
                 <div id="countdown"></div>
                 
