@@ -231,7 +231,7 @@ function validateAndDisplay(fileNotImage = false) {
             hideLoadingSpinner();
             alert("Something went wrong, Please try again after some time");
             console.log("error");
-            console.log(err);
+            console.error(err);
         }
     });
 }
