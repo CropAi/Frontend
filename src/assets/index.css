@@ -400,6 +400,68 @@ a{
 
 
 
+/* Image Label */
+
+.chip{
+	text-align: center;
+	margin: 5px 0;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	max-width: 100%;
+  }
+  
+.img-lab{
+	color:#b5b910;
+	border-radius: 15px 15px;
+	background-color:  #5e5e3c;
+	font-size: 20px;
+	margin: 0;
+	white-space: nowrap;
+	flex-basis: 250px;
+	max-width: 250px;
+	padding: 5px 10px;
+	letter-spacing: 1.2px;
+	text-overflow: ellipsis;
+	display: none;
+	overflow: hidden !important;
+}
+.img-lab span{
+	  width: 100%;
+	  display: inline-block;
+	  overflow: hidden;
+}
+.chip:hover .mytooltip {
+	  visibility: visible;
+}
+.mytooltip{
+	visibility: hidden;
+	width: 120px;
+	background-color: rgba(0,0,0,0.8);
+	color: #fff;
+	text-align: center;
+	padding: 5px 3px;
+	border-radius: 6px;
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	transform: translate(-50px, -50%);
+  z-index: 2;
+}
+.mytooltip span {
+	display: inline-block;
+	width: 100%;
+}
+.mytooltip::after {
+	  content: " ";
+	  position: absolute;
+	  top: 50%;
+	  right: 100%;
+	  margin-top: -5px;
+	  border-width: 5px;
+	  border-style: solid;
+	  border-color: transparent rgba(0,0,0,0.8) transparent transparent;
+}
 
 /* Media Queries for Input */
 
@@ -421,6 +483,11 @@ a{
 		font-size: 1rem;
 		margin: 10px 1rem;
 	}
+	.img-lab {
+		flex-basis: 130px;
+		max-width: 130px;
+        font-size: 13px;
+	}
 }
 
 @media only screen and (max-width:600px){
@@ -438,7 +505,6 @@ a{
     top:50%;
     width:max-content;
     max-height:80vh;
-    overflow:hidden;
  }
   .img-container{
     width:14rem;
@@ -628,17 +694,6 @@ a{
   padding-top: 10%;
 } */
 
-.chip{
-  color: white;
-  background-color: red;
-  text-align: center;
-  border-radius: 25px 25px;
-  margin: 5px;
-}
-
-.chip #img-lab{
-  font-size: 20px;
-}
 /* -------------------------------------------------------- */
 #abt-data-cont {
   opacity: 1;

@@ -116,7 +116,7 @@ const analyze_click = () => {
     document.getElementById("leaf_input").value = "";
     document.getElementById("showImage").src = DUMMY_URL;
     uploadButtonSpan.innerHTML = "Upload a file";
-    document.getElementById("img-lab").innerHTML = "";
+    document.getElementById("label-text").innerHTML = "";
     document.getElementById("file-select-content").style.paddingTop = "";
     document.getElementById("title").innerHTML = "Crop AI | Analyze Crop";
     show_input_container();
@@ -130,13 +130,16 @@ const showImage = event => {
     const uploadButtonSpan = document.getElementById("uploadButtonText");
     const imageError = document.getElementById("image-error");
 	const imageFile = event.target.files[0];
-	const label = document.getElementById('img-lab');
+	const label = document.getElementById('label-text');
+	const imgLab = document.getElementById('img-lab');
+	const tooltipLabel = document.getElementById('tooltip-text');
 
     if (typeof imageFile == "undefined") {
         imageForm.src = DUMMY_URL;
         const file_select_content = document.getElementById('file-select-content');
-        label.innerText= '';
-        file_select_content.style.paddingTop="0%";
+		label.innerText= '';
+		imgLab.style.display = "none";
+		file_select_content.style.paddingTop="0%";
         alert('Image Not Uploaded');
         return false;
     }
@@ -147,7 +150,9 @@ const showImage = event => {
         imageForm.src = DUMMY_URL;
 		event.target.value = "";
 		label.innerText = "";
-        return false;
+		imgLab.style.display = "none";
+		tooltipLabel.innerText = "";
+		return false;
     }
     
     imageForm.src = URL.createObjectURL(imageFile);
@@ -155,6 +160,8 @@ const showImage = event => {
     uploadButtonSpan.innerHTML = "Change Image";
     imageError.style.display = "none";
 	label.innerText = imageFile.name;
+	tooltipLabel.innerText = imageFile.name;
+	imgLab.style.display = "block";
 }
 
 // Getting the query from the url
