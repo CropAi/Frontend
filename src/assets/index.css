@@ -486,7 +486,8 @@ a{
 	.img-lab {
 		flex-basis: 130px;
 		max-width: 130px;
-        font-size: 13px;
+		font-size: 13px;
+		padding: 2px 10px;
 	}
 }
 
