@@ -107,3 +107,14 @@ display:none;
 .card a:active{
     text-decoration: none;
 }
+
+
+@media only screen and (max-width:575px){
+    .card{
+        width:18rem;
+        margin:1rem auto;
+    }
+    .card:first-child{
+        margin-top:3rem;
+    }
+}
