@@ -230,8 +230,7 @@ function validateAndDisplay(fileNotImage = false) {
         error: function (err) {
             hideLoadingSpinner();
             alert("Something went wrong, Please try again after some time");
-            console.log("error");
-            console.error(err);
+            console.error("Error getting data",err);
         }
     });
 }
