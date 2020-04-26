@@ -118,3 +118,9 @@ display:none;
         margin-top:3rem;
     }
 }
+
+@media only screen and (max-width:385px){
+    .h1{
+        font-size:2.8rem;
+    }
+}
