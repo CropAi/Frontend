@@ -48,9 +48,7 @@ a{
   text-decoration:none;
 }
 
-.fade{
-  animation: fadeIn 1s ease-in-out;
-}
+
 
 
 /*
@@ -400,15 +398,7 @@ a{
 	border-radius: 1rem;
 }
 
-/* .img-dummy{
-  position:absolute;
-  top:0;
-  left:0;
-  transform:translate(0);
-  width:16rem;
-  height:16rem;
-  z-index:-10;
-} */
+
 
 
 /* Media Queries for Input */
