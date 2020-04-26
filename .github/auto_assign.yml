@@ -1,0 +1,11 @@
+addReviewers: true
+
+addAssignees: false
+
+reviewers:
+  - rajats98
+
+numberOfReviewers: 0
+
+skipKeywords:
+  - wip
