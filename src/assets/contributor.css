@@ -110,8 +110,13 @@ display:none;
 
 
 @media only screen and (max-width:575px){
+
+    .container{
+        max-width:80%;
+        margin:0 auto;
+    }
     .card{
-        width:18rem;
+        width:80%;
         margin:1rem auto;
     }
     .card:first-child{
@@ -121,6 +126,7 @@ display:none;
 
 @media only screen and (max-width:385px){
     .h1{
-        font-size:2.8rem;
+        font-size:1.8rem;
     }
 }
+
