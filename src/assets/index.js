@@ -63,6 +63,7 @@ const showAbout = () => {
     document.getElementById("title").innerHTML = "Crop AI | Home"; 
 }
 
+// Function to display the result of analysis
 const update_result = (report) => {
     // clearing previous results, if any
     var tags = ["#symptoms", "#treatment", "#products"];
@@ -108,6 +109,7 @@ const update_result = (report) => {
 
 let visitingFromAnalyse = false;
 
+// Display form to submit image of crop for analysis
 const analyze_click = () => {
     visitingFromAnalyse = true;
     const DUMMY_URL = "./src/img/dummy-image.svg";
