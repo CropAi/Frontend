@@ -200,9 +200,9 @@ ul {
 
 @media only screen and (max-width:525px) {
     .navbar {
-        flex-direction: column;
-        height: max-content;
-        opacity: 0.7;    
+       flex-direction: column;
+       height: max-content;
+       opacity: 0.7;    
     }
     .navbar-items {
        flex-direction: column;
