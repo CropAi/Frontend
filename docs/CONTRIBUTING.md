@@ -67,7 +67,7 @@ git pull upstream dev
 * Push your local branch to the remote repository.
 
 ```terminal
-git push --set-upstream origin dev
+git push -u origin dev
 ```
 
 * Create a Pull Request!
