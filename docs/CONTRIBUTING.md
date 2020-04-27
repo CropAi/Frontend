@@ -49,7 +49,7 @@ git branch dev
 git checkout dev
 ```
 
-* Pull the code from the upstream dev branch
+* Pull the code from the upstream dev branch.
 
 ```terminal
 git pull upstream dev
