@@ -13,43 +13,63 @@ The intention of the project is to familiarise the student with open source deve
 - jQuery
 - Bootstrap
 
-### How to contribute:
+### How to contribute :
 
-**1.** Fork [this](https://github.com/CropAi/Frontend) repository.
+# Creating PR on dev branch! #
 
-**2.** Clone the forked repository.
+* Fork [this](https://github.com/CropAi/Frontend) repository.
+
+* Clone the forked repository.
 
 ```terminal
 git clone https://github.com/<your-github-username>/CropAi/Frontend
 ```
 
-**3.** Navigate to the project directory.
+* Navigate to the project directory.
 
 ```terminal
 cd CropAi/Frontend
 ```
 
-**4.** Create a new branch.
+* Add the original repository as a remote called upstream.
 
 ```terminal
-git checkout -b <your_branch_name>
+git remote add upstream https://github.com/CropAi/Frontend.git
 ```
 
-**5.** Make changes in source code.
+* Create a new branch dev in your forked repository.
 
-**6.** Commit your changes.
+```terminal
+git branch dev
+```
+
+* Switch to that branch dev.
+
+```terminal
+git checkout dev
+```
+
+* Pull the code from the upstream dev branch
+
+```terminal
+git pull upstream dev
+```
+
+* Make changes in that code.
+
+* Commit your changes.
 
 ```terminal
   git add .
   git commit -m "<your_commit_message>"
 ```
 
-**7.** Push your local branch to the remote repository.
+* Push your local branch to the remote repository.
 
 ```terminal
-git push -u origin <your_branch_name>
+git push --set-upstream origin dev
 ```
 
-**8.** Create a Pull Request!
+* Create a Pull Request!
 
 **Congratulations!** You have just made your contribution to [CropAi](https://github.com/CropAi/Frontend) project.
