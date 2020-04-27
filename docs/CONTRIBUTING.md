@@ -49,7 +49,7 @@ git branch dev
 git checkout dev
 ```
 
-* Pull the code from the upstream dev branch
+* Pull the code from the upstream dev branch.
 
 ```terminal
 git pull upstream dev
@@ -67,7 +67,7 @@ git pull upstream dev
 * Push your local branch to the remote repository.
 
 ```terminal
-git push --set-upstream origin dev
+git push -u origin dev
 ```
 
 * Create a Pull Request!
