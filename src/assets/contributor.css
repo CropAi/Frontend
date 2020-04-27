@@ -116,8 +116,7 @@ display:none;
         margin:0 auto;
     }
     .card{
-        width:80%;
-        margin:1rem auto;
+        width:100%;
     }
     .card:first-child{
         margin-top:3rem;
