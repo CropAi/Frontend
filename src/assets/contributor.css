@@ -107,3 +107,25 @@ display:none;
 .card a:active{
     text-decoration: none;
 }
+
+
+@media only screen and (max-width:575px){
+
+    .container{
+        max-width:80%;
+        margin:0 auto;
+    }
+    .card{
+        width:100%;
+    }
+    .card:first-child{
+        margin-top:3rem;
+    }
+}
+
+@media only screen and (max-width:385px){
+    .h1{
+        font-size:1.8rem;
+    }
+}
+
