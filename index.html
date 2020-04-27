@@ -91,9 +91,13 @@
   <div id="landing_container" class="hidden">
     <div class="container">
       <h1 class="display-1">CROP AI</h1>
-      <div class="btn-container">
-        <button class="btn btn-green" onclick="showAbout()">About</button>
-        <button class="btn btn-green" onclick="analyze_click()">ANALYZE</button>
+      <div class="row">
+        <div class="col-md-6 text-md-right">
+          <button class="btn btn-green" onclick="showAbout()">About</button>
+        </div>
+        <div class="col-md-6 text-md-left">
+          <button class="btn btn-green" onclick="analyze_click()">ANALYZE</button>
+        </div>
       </div>
       <div id="abt-data-cont" class="fade_effect">
         <p id="about_content" class="mt-1 mx-auto">
