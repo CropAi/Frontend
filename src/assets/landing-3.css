@@ -32,21 +32,21 @@ ul {
 
 /* Decoration Glass */
 .glass-img {
-   height:20rem;
-   width:20rem;
-   position: absolute;
-   right:-3rem;
-   top:40%;
+    height:20rem;
+    width:20rem;
+    position: absolute;
+    right:-3rem;
+    top:40%;
 }
 
 /* Logo Styles */
 .logo-box {
-  width:20rem;
+    width:20rem;
 }
 
 .logo {
-  max-width:100%;
-  text-align: center;
+    max-width:100%;
+    text-align: center;
 }
 
 /*  Navbar styling */
@@ -200,40 +200,40 @@ ul {
 
 @media only screen and (max-width:525px) {
     .navbar {
-       flex-direction: column;
-       height: max-content;
-       opacity: 0.7;    
+        flex-direction: column;
+        height: max-content;
+        opacity: 0.7;    
     }
     .navbar-items {
-       flex-direction: column;
-       align-items: flex-start;
-       justify-content: flex-start; 
-       margin-top:0.2rem;
-       padding:0;
-       align-self: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start; 
+        margin-top:0.2rem;
+        padding:0;
+        align-self: flex-start;
     }
     .main-text {
-       font-size:6.2rem;
+        font-size:6.2rem;
     }
     .text-ab {
-       font-size:2.3rem;
+        font-size:2.3rem;
     }
     .main-section {
-       padding-top:0rem;
-       margin-top:0rem;
+        padding-top:0rem;
+        margin-top:0rem;
         min-height:110vh;
     }
     .content-section {
-      position:fixed;
-      top:70%;
-      left:50%;
-      transform:translate(-50%,-50%);
+        position:fixed;
+        top:70%;
+        left:50%;
+        transform:translate(-50%,-50%);
     } 
     .tree-img {
-      display:none;
+        display:none;
     }
     .image-section {
-       display:none;
+        display:none;
     }  
 }
 
