@@ -75,3 +75,15 @@ Feel free to ask your queries!! 🙌
 ## Slack Channel
 
 - [#proj_cropai](https://gssoc20.slack.com/messages/proj_cropai)
+
+
+## 📝 License
+
+This project is under the [GNU General Public License v3.0](LICENSE).
+
+Thanks to [Netlify](https://cropai.netlify.app/) & [Heroku](https://crop-leaf.herokuapp.com) for free hosting our application. ❤️ 
+
+[![Netlify Status](https://img.shields.io/badge/Netlify-Success-Orange)](https://cropai.netlify.app/)  [![Heroku Status](https://img.shields.io/badge/Heroku-Success-brightgreen)](https://crop-leaf.herokuapp.com)
+
+## 👨‍💻👩‍💻 Contributors
+Special Thanks to many of our [contributors](https://cropai.netlify.app/src/contributors/) for contributing to this project. ❤️
