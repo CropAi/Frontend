@@ -14,37 +14,109 @@ body {
   box-sizing: border-box;
 }
 
-.landing-page {
-  max-height: 100vh;
-  overflow: hidden;
+
+
+.navbar{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: sticky;
+  width:100%;
+  top:0;
+  background:#fff;;
+  height:10vh;
 }
 
-.logo-box{
-  margin-top: 1px;
-  display: contents;
+.navbar-items{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right:2rem;
+  list-style: none;
+ 
+}
+
+.navbar-item{
+  padding:0rem 1rem;
+}
+
+.navbar-item a{
+  font-size:2rem;
+  color:#737373;
+  transition:1s ease-in-out;
+  font-weight: bold;
+}
+
+.navbar-item a:hover{
+  color: #189128;
+  text-decoration: none;
+}
+
+.landing-page {
+  padding-top:3rem;
+  min-height: 100vh;
+  width: 100%;
+  transition:0.6s ease-out;
+}
+
+.logo-box {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  width: 15rem;
+  z-index: 199;
 }
 
 .logo {
   width: 15rem;
-  display: inline-block;
+  text-align: center;
 }
 
 .hero-box {
   display: flex;
   align-items: center;
-  max-height: 90vh;
+  justify-content: space-between;
+  width:100%;
+  margin:0 auto;
 }
+
 .hero-content {
-  width: 40%;
-  margin-left: 6%;
-  margin-top: 8%;
+  flex: 0 0 1;
+  padding:4rem;
+  min-width:50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.hero-content .title {
-  font-size: 100px;
+
+.tagline{
+  font-size:2.2rem;
+
+}
+
+
+.hero-images {
+  flex:0 0 1;
+  padding:4rem;
+  min-width:50%;
+}
+
+.design-one {
+  max-width: 100%;
+  max-height:100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.title {
+  font-size: 7rem;
   color: #3a7528;
   font-family: "Open Sans Semibold";
 }
-.hero-content .button {
+
+.button {
   background-color: #3a7528;
   color: #fff;
   width: 200px;
@@ -53,116 +125,81 @@ body {
   margin-top: 25px;
   font-size: x-large;
 }
-.hero-content h1 {
-  color: #828282;
-  font-family: open sans semibold;
-  font-size: 30px;
-}
-.content {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  margin-top: 4%;
+
+@media (max-width:950px){
+  html{
+    font-size:50%;
+  }
+
+  .hero-box{
+    flex-direction: column;
+  }
+
+  .hero-images{
+    width:60%;
+    margin:0 auto;
+  }
 }
 
-.hero-images img {
-  margin-top: 10%;
-  max-width: 100%;
+@media only screen and (max-width:858px){
+  .title{
+    font-size:6rem;
+  }
+  .logo-box{
+    top:1.5rem;
+  }
 }
 
-#navbar {
-  overflow: hidden;
-  background-color: #ffffff;
-  padding: 10px 10px;
-  transition: 0.6s;
-  position: fixed;
-  width: 100%;
+@media only screen and (max-width:680px){
+  
+  .logo-box{
+    top:2rem;
+  }
+  .hero-images{
+    width:70%;
+    margin:0 auto;
+  }
+  
 }
 
-#navbar a {
-  float: left;
-  color: #737373;
-  text-align: center;
-  padding: 5px;
-  padding-right: 20px;
-  text-decoration: none;
-  font-size: 20px;
-  line-height: 25px;
-  border-radius: 4px;
-  transition: 1s;
-  font-weight: bold;
-}
-
-#navbar a:hover {
-  color: #189128;
-  transition: 1s;
-}
-
-#navbar-right {
-  float: right;
-}
-
-@media screen and (max-width: 640px) {
+@media only screen and (max-width:555px){
  
-  #navbar {
-    padding: 10px 10px !important;
+  .logo-box{
+    top:2rem;
   }
-  
-  #navbar a {
-    float: none;
-    text-align: right;
-    list-style: none;
-    font-size: 10px;
+  .hero-images{
+    width:70%;
+    margin:0 auto;
+  }
+  .landing-page{
+    padding-top:4rem;
+  }
+  .tagline{
+    font-size:2.6rem;
+  }
+}
+
+@media only screen and (max-width:505px){
+  html{
+    font-size:44%;
   }
 
-  .hero-images img {
-    margin-top: 40%;
-    max-width: 110%;
-  }
-  
-  .logo {
-    width: 10rem;
-    margin-top: 0;
-  }
-  
-  .hero-content h1 {
-    font-size: 25px;
-  }
-  
-  .hero-content .title {
-    font-size: 40px;
-    margin-top: 20%;
-  }
- 
-  .hero-content .button {
-    width: 100px;
-    height: 30px;
-    margin-top: 10px;
-    font-size: large;
-  }
- 
-  .hero-content {
-    margin-top: 15%;
-    width: 100%;
-    margin-left: 0;
-    text-align: center;
-  }
-  
-  .content {
-    display: inline-block;
-  }
-  
-  .col-7 {
-    max-width: 90%;
+  .landing-page{
+    padding-top: 10rem;;
+    overflow-x:hidden;
   }
 
   .logo-box{
-    margin-top: 0;
+    top:2.4rem;
   }
-}
-@media screen and (max-width: 1076px) {
-  
-  .hero-images img {
-    margin-top: 40%;
+
+  .hero-images{
+    width:100%;
+    transform: scale(1.1);
+    overflow:hidden;
+  }
+  .tagline{
+    text-justify: inter-word;
+    text-align:center;
   }
 }
