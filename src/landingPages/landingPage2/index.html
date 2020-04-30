@@ -14,31 +14,40 @@
   </head>
 
 <body>
-    <header class="landing-page">
-             <div id="navbar">
-               <div id="navbar-right">
-                  <a class="active" href="/">HOME</a>
-                      <a href="/?q=analyze">ANALYZE CROP</a>
-                      <a href="/src/contributors">TEAM</a>
-                </div>
-               <div class="logo-box">
-                  <a href="/">
-                    <img src="../../../designs/logo-designs/cropAi-logo-croped.png" alt="Logo" class="logo">
-                  </a>
-               </div>
-             </div>
+   
+    <div class="logo-box">
+      <a href="/">
+        <img src="../../../designs/logo-designs/cropAi-logo-croped.png" alt="Logo" class="logo">
+      </a>
+    </div>
+    <nav id="navbar" class="navbar">
+      
+      <ul class="navbar-items">
+        <li class="navbar-item">
+          <a  href="/">HOME</a>
+        </li>
+        <li class="navbar-item">
+          <a href="/?q=analyze">ANALYZE CROP</a>
+        </li>
+        <li class="navbar-item">
+          <a href="/src/contributors">TEAM</a>
+        </li>
+      </ul>
+    
+    </nav>
+
+    <header class="landing-page" id="landing-page">
             
-        <div class="content">
+        <div class="hero-box" >
                 <div class="hero-content">
-                    <div class="title">CROP AI</div>
-                    <h1> A crop advisory app for farmers and gardeners</h1>
+                    <h1 class="title">CROP AI</h1>
+                    <p class="tagline"> A crop advisory app for farmers and gardeners</p>
                     <button class="button" onclick="takeToAnalyze()">Analyze</button>
                 </div>
-                <div class="col-7">
-                    <div class="hero-images">
-                      <img class="design-one" src="../../../designs/Web Designs//design-2/All Pictures/used in landing page.jpg" alt="Cover Image">
-                    </div>
+               <div class="hero-images">
+                  <img class="design-one" src="../../../designs/Web Designs//design-2/All Pictures/used in landing page.jpg" alt="Cover Image">
                 </div>
+               
           </div>
    </header>
     
@@ -55,12 +64,19 @@
       window.onscroll = function () { scrollFunction() };
 
       function scrollFunction() {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+          
+          document.getElementById("navbar").style.backgroundColor = "#f7f7f7d5";
           document.getElementById("navbar").style.padding = "20px 10px";
-          document.getElementById("navbar").style.backgroundColor = "#ffffffce";
+          // document.getElementById("landing-page").style.paddingTop = "10rem";
+          
+
         } else {
-          document.getElementById("navbar").style.padding = "26px 10px";
+          
           document.getElementById("navbar").style.backgroundColor = "#ffffff";
+          document.getElementById("navbar").style.padding = "26px 10px";
+          // document.getElementById("landing-page").style.paddingTop = "4rem";
+
         }
       }
     </script>
