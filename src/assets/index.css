@@ -224,6 +224,16 @@ a{
 	margin: 1rem;
 }
 
+/*
+Button Margin
+*/
+
+@media screen and (min-width: 421px ) and (max-width: 575px) {
+  .btn-margin {
+    margin-bottom: 30px;
+  }
+}
+
 /* About Text */
 
 #about_content{
