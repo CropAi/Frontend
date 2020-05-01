@@ -73,8 +73,8 @@ const create_user_card = user => {
 contributor_information(contributor_data_default)
     .then(contributors => {
         const loader = document.getElementById("loader-spinner");
-        // loader.remove();
-        // for (const contributor in contributors){
-        //     create_user_card(contributors[contributor]);
-        // }
+        loader.remove();
+        for (const contributor in contributors){
+            create_user_card(contributors[contributor]);
+        }
     });
