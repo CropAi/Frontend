@@ -121,7 +121,9 @@ const analyze_click = () => {
     document.getElementById("label-text").innerHTML = "";
     document.getElementById("file-select-content").style.paddingTop = "";
     document.getElementById("title").innerHTML = "Crop AI | Analyze Crop";
-    show_input_container();
+	document.getElementById('label-text').innerText= '';
+	document.getElementById('img-lab').style.display = "none";
+	show_input_container();
 }
 
 // function to insert input image on form and result section
