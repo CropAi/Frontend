@@ -717,3 +717,26 @@ Button Margin
 #abt-data-cont.fade_effect {
   opacity: 0;
 }
+
+.back-btn{
+  background:var(--primary-green);
+  color:var(--white);
+  border-radius:1.5rem;
+  border:1px solid var(--primary-green);
+  padding:1rem 2rem;
+  font-size:1.5rem;
+  transition: transform 200ms ease-in-out;
+  letter-spacing:1.5px;
+}
+
+ .back-btn:hover {
+    background:var(--primary-green);
+    box-shadow:0rem 0.2rem 0.5rem var(--black);
+    transform:translateY(-2px);
+    color:var(--white);
+ }
+.position{
+  position:absolute;
+  top:5px;
+  right:5px;
+}
