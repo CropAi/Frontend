@@ -83,4 +83,20 @@ const user_palette = [
 		background: "#097722",
 		color:"white"
 	}
+	{
+	background: "Teal",
+	color: "black"
+        },
+	{
+	background: "DeepSkyBlue",
+	color: "black"
+        },
+	{
+	background: "MediumVioletRed",
+	color: "white"
+        },
+	{
+	background: "FireBrick",
+	color: "white"
+        }
 ]
