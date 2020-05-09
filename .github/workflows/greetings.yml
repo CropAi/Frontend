@@ -11,10 +11,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         pr-message: |
             Congratulations on your first Pull Request and welcome to the Crop AI!
-            If you have any issues or are unsure about any anything please check our
-            Contribution Guide (https://github.com/CropAi/Frontend/blob/master/docs/CONTRIBUTING.md)
-            
-            In case of doubts contact the developers at:
-            Mailing List: rajats1.kv2srg@gmail.com
+            In case of any doubts. Feel free to contact the mentors at:
+            Email: rajats1.kv2srg@gmail.com
             Slack: https://app.slack.com/client/TRN1H1V43/CUCKLD3C5
        
