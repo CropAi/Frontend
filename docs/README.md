@@ -96,7 +96,7 @@ Click on the `Analyze` button to be able to interact with the web application.
 
 Just the page you need to use the most exciting stuff and analyze crop diseases.
 
-Use the `Upload Image` button to upload you desired image to analyze and it show have a preview ready for you to see, just as a confirmation.
+Use the `Upload Image` button to upload your desired image to analyze and it should have a preview ready for you to see, just as a confirmation.
 
 Just in case you selected the incorrect image  ( yes it happens with us as well 😴)  you can always use the `Change Image` button to change the image.
 
