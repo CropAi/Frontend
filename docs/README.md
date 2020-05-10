@@ -71,6 +71,56 @@ Before contributing to this project do check [CONTRIBUTING.md](./CONTRIBUTING.md
 
 Feel free to ask your queries!! 🙌
 
+## Guide to using the Web Application
+
+Now comes the most exciting part of the project. Understanding and making use of the actual Web Application. So let's get started. 🥳 👽
+
+1. Start off by visiting the hosted application using this [CropAI Analyzer](https://cropai.netlify.app/) 👻
+
+2. Open the application on your personal browser  and you should have it ready to use.
+
+3. As every typical Web Application we made sure you get the most exciting User Experience working on the application ......🧓
+
+SPOILER ALERT: Be ready to have you mind blown..😜😏
+
+### HOME PAGE
+
+The home provides you with a brief description about who we are, what we do and why we made the application. 
+
+Click on the `Analyze` button to be able to interact with the web application.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/49617450/81492233-f70f5580-92b3-11ea-995e-3292d513b8da.png">
+</p>
+
+### ANALYZE PAGE
+
+Just the page you need to use the most exciting stuff and analyze crop diseases.
+
+Use the `Upload Image` button to upload you desired image to analyze and it show have a preview ready for you to see, just as a confirmation.
+
+Just in case you selected the incorrect image  ( yes it happens with us as well 😴)  you can always use the `Change Image` button to change the image.
+
+It should look something like this:
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/49617450/81492412-fdea9800-92b4-11ea-90e8-24c1c14b6fa5.png">
+</p>
+
+
+Hit the `Submit` Button and relax and let our application to the rest of the work for you! 😇 😉
+
+
+### RESULT PAGE
+
+It's finally that time, as everything we did was to lead us to this moment. 
+It should have the results right infront of you (I know it takes 30 seconds), but as you know,***"GOOD THINGS IN LIFE TAKES TIME"***.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/49617450/81492499-dea03a80-92b5-11ea-9363-58712175609a.png">
+</p>
+
+I'm pretty sure you want to go again on this since it's as exciting as it's gets. 
+
+You may use the `ANALYZE ANOTHER CROP` Crop at the bottom of the page.
+
 
 ## Slack Channel
 
