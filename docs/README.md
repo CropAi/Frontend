@@ -73,19 +73,20 @@ Feel free to ask your queries!! 🙌
 
 ## Guide to using the Web Application
 
+
 Now comes the most exciting part of the project. Understanding and making use of the actual Web Application. So let's get started. 🥳 👽
 
 1. Start off by visiting the hosted application using this [CropAI Analyzer](https://cropai.netlify.app/) 👻
 
-2. Open the application on your personal browser  and you should have it ready to use.
+2. Open the application on your personal browser and you should have it ready to use.
 
-3. As every typical Web Application we made sure you get the most exciting User Experience working on the application ......🧓
+3. As every typical Web Application, we made sure you get the most exciting User Experience working on the application ......🧓
 
-SPOILER ALERT: Be ready to have you mind blown..😜😏
+SPOILER ALERT: Be ready to have your mind blown...😜😏
 
 ### HOME PAGE
 
-The home provides you with a brief description about who we are, what we do and why we made the application. 
+The home provides you with a brief description about who we are, what we do, and why we made the application. 
 
 Click on the `Analyze` button to be able to interact with the web application.
 <p align="center">
@@ -117,7 +118,7 @@ It should have the results right infront of you (I know it takes 30 seconds), bu
   <img src="https://user-images.githubusercontent.com/49617450/81492499-dea03a80-92b5-11ea-9363-58712175609a.png">
 </p>
 
-I'm pretty sure you want to go again on this since it's as exciting as it's gets. 
+I'm pretty sure you want to go again on this since it's as exciting as it gets. 
 
 You may use the `ANALYZE ANOTHER CROP` Crop at the bottom of the page.
 
