@@ -1,5 +1,5 @@
 # FRONTEND FOR CROP ANALYZER APP :fallen_leaf:
-
+ 
 ## INTRODUCTION
 
 [<img src="https://img.shields.io/badge/GSSOC-20-orange?style=for-the-badge">](https://www.gssoc.tech/)<br />
