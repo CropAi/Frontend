@@ -114,7 +114,11 @@ const user_palette = [
 	{
 	background: "FireBrick",
 	color: "white"
-        },
+	},
+	{
+	background: "#FF6600",
+	color: "black"
+	},
 	{
 		background: "#2e2d2c",
 		color: "white"
