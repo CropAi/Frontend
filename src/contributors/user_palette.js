@@ -134,5 +134,9 @@ const user_palette = [
 	{
 		background:"#193f59",
 		color: "white"
+	},
+	{
+		background:"coral",
+		color: "white"
 	}
 ]
