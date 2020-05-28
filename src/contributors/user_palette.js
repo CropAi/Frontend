@@ -43,6 +43,10 @@ const user_palette = [
     background:"#FF00FF",
     color:"white"
 	},
+  {
+		background : "purple",
+		color: "black"
+	},
 	{
 		background: "#2db7cc",
 		color: "white"
@@ -92,6 +96,10 @@ const user_palette = [
 		color:"white"
 	},
 	{
+		background: "#FFFF00",
+		color: "black"
+	},
+	{
 		background:"#99ff66",
 		color:"black"
 	},
@@ -110,5 +118,21 @@ const user_palette = [
 	{
 	background: "FireBrick",
 	color: "white"
-        }
+	},
+	{
+	background: "#FF6600",
+	color: "black"
+	},
+	{
+		background: "#2e2d2c",
+		color: "white"
+	},
+	{
+		background:"#ebcbac",
+		color: "black"
+	},
+	{
+		background:"#193f59",
+		color: "white"
+	}
 ]
