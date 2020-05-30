@@ -182,6 +182,7 @@
     </div>
 </div>
 
+<button class="back-btn position" onclick="goBack()">BACK</button>
 
   <!-- Bottom Decoration plant -->
   <div class="grass">
@@ -208,9 +209,11 @@
   </script>
 
   <!-- Custom Scripts -->
-  <script src="./src/assets/index.js"></script>
+  <script src="./src/assets/index.js" charset="utf-8"  defer></script>
+  <script>
+    function goBack() {
+  window.history.back();
+   }
+  </script>
 </body>
-
-
-
 </html>
