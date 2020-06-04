@@ -3,6 +3,7 @@ let contributor_information = async contributor_data_default => {
   const mentor_usernames = ['rajats98','vaibagga','tanishq9','gshanbhag525','Sulekhiya'];
   const repos = ['Frontend','Backend','Data-Modeling','Android-Application'];
   const requests = repos.map(repo => fetch(`https://api.github.com/repos/CropAi/${repo}/contributors`));
+  requests.push(fetch(`https://api.github.com/repos/CropAi/Frontend/contributors?page=2`));
   let responses;
   // Extracting the information of participants
   try{
